@@ -18,6 +18,8 @@ public class AABBlocks {
             DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
 
     //Cloud Islands
+    public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
 
