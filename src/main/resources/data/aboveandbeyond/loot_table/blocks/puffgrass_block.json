@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "aboveandbeyond:puffgrass_block"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "aboveandbeyond:blocks/puffgrass_block"
+}
