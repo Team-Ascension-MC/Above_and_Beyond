@@ -6,10 +6,10 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aboveandbeyond:bleached_gravel"
+          "name": "aboveandbeyond:zen_gravel"
         }
       ]
     }
   ],
-  "random_sequence": "aboveandbeyond:blocks/bleached_gravel"
+  "random_sequence": "aboveandbeyond:blocks/zen_gravel"
 }

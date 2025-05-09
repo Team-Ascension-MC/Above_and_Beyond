@@ -22,7 +22,7 @@ public class AABBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
-    public static final DeferredBlock<Block> BLEACHED_GRAVEL = registerBlock("bleached_gravel",
+    public static final DeferredBlock<Block> ZEN_GRAVEL = registerBlock("zen_gravel",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
