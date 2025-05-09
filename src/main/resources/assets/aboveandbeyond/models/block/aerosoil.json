@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "all": "aboveandbeyond:block/aerosoil"
+  }
+}
