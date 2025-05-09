@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "aboveandbeyond:item/music_disc_vivid"
+  }
+}

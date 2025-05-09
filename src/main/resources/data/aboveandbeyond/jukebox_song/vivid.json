@@ -1,0 +1,8 @@
+{
+  "comparator_output": 9,
+  "description": {
+    "translate": "item.aboveandbeyond.music_disc_vivid.desc"
+  },
+  "length_in_seconds": 175.0,
+  "sound_event": "aboveandbeyond:vivid"
+}

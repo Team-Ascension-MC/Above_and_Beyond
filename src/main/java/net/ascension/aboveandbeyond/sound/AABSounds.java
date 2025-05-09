@@ -20,6 +20,9 @@ public class AABSounds {
     public static final Supplier<SoundEvent> GALE = registerSoundEvent("gale");
     public static final ResourceKey<JukeboxSong> GALE_KEY = createSong("gale");
 
+    public static final Supplier<SoundEvent> VIVID = registerSoundEvent("vivid");
+    public static final ResourceKey<JukeboxSong> VIVID_KEY = createSong("vivid");
+
     private static ResourceKey<JukeboxSong> createSong(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, name));
     }

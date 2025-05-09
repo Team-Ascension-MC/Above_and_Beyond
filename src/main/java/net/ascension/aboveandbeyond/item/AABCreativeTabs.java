@@ -22,8 +22,10 @@ public class AABCreativeTabs {
                         /* Cloud Islands */
                         output.accept(AABBlocks.PUFFGRASS_BLOCK);
                         output.accept(AABBlocks.AEROSOIL);
+                        output.accept(AABBlocks.BLEACHED_GRAVEL);
                         output.accept(AABItems.STARFLOWER);
                         output.accept(AABItems.MUSIC_DISC_GALE);
+                        output.accept(AABItems.MUSIC_DISC_VIVID);
                     }).build());
 
     public static void register(IEventBus eventBus) {
