@@ -3,6 +3,7 @@ package net.ascension.aboveandbeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
+import net.ascension.aboveandbeyond.sound.AABSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -43,6 +44,7 @@ public class AboveAndBeyond {
         AABCreativeTabs.register(modEventBus);
         AABBlocks.register(modEventBus);
         AABItems.register(modEventBus);
+        AABSounds.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

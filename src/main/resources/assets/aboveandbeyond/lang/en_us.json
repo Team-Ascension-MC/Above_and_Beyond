@@ -4,5 +4,8 @@
   //Cloud Islands
   "block.aboveandbeyond.aerosoil": "Aerosoil",
   "block.aboveandbeyond.puffgrass_block": "Puffgrass Block",
-  "item.aboveandbeyond.starflower": "Starflower"
+  "item.aboveandbeyond.starflower": "Starflower",
+
+  "item.aboveandbeyond.music_disc_gale": "Music Disc",
+  "item.aboveandbeyond.music_disc_gale.desc": "Efekt - Gale"
 }

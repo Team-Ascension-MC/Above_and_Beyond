@@ -1,0 +1,10 @@
+{
+  "gale": {
+    "sounds": [
+      {
+        "name": "aboveandbeyond:gale",
+        "stream": true
+      }
+    ]
+  }
+}

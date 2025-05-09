@@ -22,6 +22,7 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.AEROSOIL);
                         output.accept(AABBlocks.PUFFGRASS_BLOCK);
                         output.accept(AABItems.STARFLOWER);
+                        output.accept(AABItems.MUSIC_DISC_GALE);
                     }).build());
 
     public static void register(IEventBus eventBus) {
