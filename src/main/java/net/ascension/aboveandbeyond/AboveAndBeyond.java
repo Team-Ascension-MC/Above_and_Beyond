@@ -3,8 +3,6 @@ package net.ascension.aboveandbeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
