@@ -1,5 +1,8 @@
 {
-  "item.aboveandbeyond.starflower": "Starflower",
-  "block.aboveandbeyond.puffgrass_block": "Puffgrass",
-  "creativetab.aboveandbeyond.items": "Above And Beyond"
+  "creativetab.aboveandbeyond.items": "Above And Beyond",
+
+  //Cloud Islands
+  "block.aboveandbeyond.aerosoil": "Aerosoil",
+  "block.aboveandbeyond.puffgrass_block": "Puffgrass Block",
+  "item.aboveandbeyond.starflower": "Starflower"
 }
