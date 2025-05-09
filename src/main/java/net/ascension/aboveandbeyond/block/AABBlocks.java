@@ -14,7 +14,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class AABBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
+    public static final DeferredRegister.Blocks BLOCKS =
+            DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
 
     //Cloud Islands
     public static final DeferredBlock<Block> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",

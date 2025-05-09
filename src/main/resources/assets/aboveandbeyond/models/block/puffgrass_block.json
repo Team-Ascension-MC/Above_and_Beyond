@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "aboveandbeyond:block/puffgrass_block_top",
+    "side": "aboveandbeyond:block/puffgrass_block",
+    "bottom": "aboveandbeyond:block/aerosoil"
+  }
+}

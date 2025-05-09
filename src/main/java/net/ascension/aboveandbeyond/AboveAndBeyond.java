@@ -1,5 +1,7 @@
 package net.ascension.aboveandbeyond;
 
+import net.ascension.aboveandbeyond.block.AABBlocks;
+import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -51,9 +53,9 @@ public class AboveAndBeyond {
 
         NeoForge.EVENT_BUS.register(this);
 
+        AABCreativeTabs.register(modEventBus);
+        AABBlocks.register(modEventBus);
         AABItems.register(modEventBus);
-
-        modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -66,12 +68,6 @@ public class AboveAndBeyond {
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
-    }
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(AABItems.COMPACTED_WHITE_STUFF_BRICK);
-        }
     }
 
     @SubscribeEvent

@@ -10,7 +10,7 @@ public class AABItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AboveAndBeyond.MOD_ID);
 
     //Cloud Islands
-    public static final DeferredItem<Item> COMPACTED_WHITE_STUFF_BRICK = ITEMS.register("compacted_white_stuff_brick",
+    public static final DeferredItem<Item> STARFLOWER = ITEMS.register("starflower",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
