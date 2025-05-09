@@ -23,10 +23,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AboveAndBeyond.MOD_ID)
-public class AboveAndBeyond
-{
+public class AboveAndBeyond {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "aab";
+    public static final String MOD_ID = "aboveandbeyond";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
