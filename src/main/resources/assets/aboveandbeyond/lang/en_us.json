@@ -1,9 +1,9 @@
 {
   "creativetab.aboveandbeyond.items": "Above And Beyond",
 
-  //Cloud Islands
-  "block.aboveandbeyond.aerosoil": "Aerosoil",
+  /* Cloud Islands */
   "block.aboveandbeyond.puffgrass_block": "Puffgrass Block",
+  "block.aboveandbeyond.aerosoil": "Aerosoil",
   "item.aboveandbeyond.starflower": "Starflower",
 
   "item.aboveandbeyond.music_disc_gale": "Music Disc",

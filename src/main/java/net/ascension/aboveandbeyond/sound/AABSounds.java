@@ -16,7 +16,7 @@ public class AABSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, AboveAndBeyond.MOD_ID);
 
-    //Cloud Islands
+    /* Cloud Islands */
     public static final Supplier<SoundEvent> GALE = registerSoundEvent("gale");
     public static final ResourceKey<JukeboxSong> GALE_KEY = createSong("gale");
 

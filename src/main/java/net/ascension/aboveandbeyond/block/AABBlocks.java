@@ -17,11 +17,11 @@ public class AABBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
 
-    //Cloud Islands
-    public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+    /* Cloud Islands */
     public static final DeferredBlock<Block> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+    public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

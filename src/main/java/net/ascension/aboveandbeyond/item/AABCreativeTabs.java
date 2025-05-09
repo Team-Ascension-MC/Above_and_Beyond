@@ -19,8 +19,9 @@ public class AABCreativeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.PUFFGRASS_BLOCK.get()))
                     .title(Component.translatable("creativetab.aboveandbeyond.items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(AABBlocks.AEROSOIL);
+                        /* Cloud Islands */
                         output.accept(AABBlocks.PUFFGRASS_BLOCK);
+                        output.accept(AABBlocks.AEROSOIL);
                         output.accept(AABItems.STARFLOWER);
                         output.accept(AABItems.MUSIC_DISC_GALE);
                     }).build());

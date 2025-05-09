@@ -11,7 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class AABItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AboveAndBeyond.MOD_ID);
 
-    //Cloud Islands
+    /* Cloud Islands */
     public static final DeferredItem<Item> STARFLOWER = ITEMS.register("starflower",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MUSIC_DISC_GALE = ITEMS.register("music_disc_gale",
