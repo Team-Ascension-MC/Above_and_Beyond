@@ -23,7 +23,7 @@ public class AABCreativeTabs {
                         output.accept(AABItems.STARFLOWER);
                     }).build());
 
-    public static void register(IEventBus bus) {
-        CREATIVE_MODE_TAB.register(bus);
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TAB.register(eventBus);
     }
 }
