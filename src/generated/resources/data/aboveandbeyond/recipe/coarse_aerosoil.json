@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "aboveandbeyond:aerosoil"
+    },
+    "Z": {
+      "item": "aboveandbeyond:zen_gravel"
+    }
+  },
+  "pattern": [
+    "AZ",
+    "ZA"
+  ],
+  "result": {
+    "count": 4,
+    "id": "aboveandbeyond:coarse_aerosoil"
+  }
+}
