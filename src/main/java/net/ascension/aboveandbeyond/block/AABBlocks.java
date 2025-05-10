@@ -34,7 +34,9 @@ public class AABBlocks {
     public static final DeferredBlock<Block> ZEN_GRAVEL = registerBlock("zen_gravel",
             () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<Block> ZEN_GRAVEL_FARM = registerBlock("zen_gravel_farm",
-            () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.FARMLAND)));
+            () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
+    public static final DeferredBlock<Block> CLOUD_BLOCK = registerBlock("cloud_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK)));
 
     public static final DeferredBlock<Block> WELKIN_LOG = registerBlock("welkin_log",
             () -> new AABFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));
@@ -82,17 +84,17 @@ public class AABBlocks {
     public static final DeferredBlock<TrapDoorBlock> WELKIN_TRAPDOOR = registerBlock("welkin_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_TRAPDOOR).noOcclusion()));
 
-private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-    DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-    registerBlockItem(name, toReturn);
-    return toReturn;
-}
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
+    }
 
-private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-    AABItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-}
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+        AABItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
 
-public static void register(IEventBus eventBus) {
-    BLOCKS.register(eventBus);
-}
+    public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
+    }
 }

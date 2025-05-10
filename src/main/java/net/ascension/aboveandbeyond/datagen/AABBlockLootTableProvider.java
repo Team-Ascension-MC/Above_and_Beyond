@@ -32,6 +32,7 @@ protected void generate() {
     this.dropSelf(AABBlocks.COARSE_AEROSOIL.get());
     this.dropSelf(AABBlocks.ZEN_GRAVEL.get());
     this.dropSelf(AABBlocks.ZEN_GRAVEL_FARM.get());
+    this.dropSelf(AABBlocks.CLOUD_BLOCK.get());
     this.dropSelf(AABBlocks.WELKIN_LOG.get());
     this.dropSelf(AABBlocks.WELKIN_WOOD.get());
     this.dropSelf(AABBlocks.STRIPPED_WELKIN_LOG.get());
