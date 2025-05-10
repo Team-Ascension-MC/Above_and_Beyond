@@ -34,12 +34,6 @@ public class ZenGravel extends FallingBlock {
                 // Replace YourModBlocks.ZEN_GRAVEL_FARM with your actual ZenGravelFarm block reference
                 pLevel.setBlockAndUpdate(pPos, AABBlocks.ZEN_GRAVEL_FARM.get().defaultBlockState());
 
-                // Optionally, consume durability from the hoe
-                if (!pPlayer.getAbilities().instabuild) {
-                    heldItem.hurtAndBreak(1, pPlayer, (player) -> {
-                        player.broadcastBreakEvent(pPlayer.getUsedItemHand());
-                    });
-                }
             }
             // Return SUCCESS to indicate the interaction was successful
             return InteractionResult.SUCCESS;
