@@ -30,6 +30,14 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.STRIPPED_WELKIN_LOG);
                         output.accept(AABBlocks.STRIPPED_WELKIN_WOOD);
                         output.accept(AABBlocks.WELKIN_PLANKS);
+                        output.accept(AABBlocks.WELKIN_STAIRS);
+                        output.accept(AABBlocks.WELKIN_SLAB);
+                        output.accept(AABBlocks.WELKIN_PRESSURE_PLATE);
+                        output.accept(AABBlocks.WELKIN_BUTTON);
+                        output.accept(AABBlocks.WELKIN_FENCE);
+                        output.accept(AABBlocks.WELKIN_FENCE_GATE);
+                        output.accept(AABBlocks.WELKIN_DOOR);
+                        output.accept(AABBlocks.WELKIN_TRAPDOOR);
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
                     }).build());

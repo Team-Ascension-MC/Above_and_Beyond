@@ -3,9 +3,13 @@ package net.ascension.aboveandbeyond.datagen;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.item.AABItems;
+import net.ascension.aboveandbeyond.util.AABTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.nbt.Tag;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -26,15 +30,40 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', AABBlocks.AEROSOIL.get())
                 .define('Z', AABBlocks.ZEN_GRAVEL.get())
                 .unlockedBy("has_aerosoil", has(AABBlocks.AEROSOIL)).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AABBlocks.WELKIN_WOOD.get(), 3)
                 .pattern("LL")
                 .pattern("LL")
                 .define('L', AABBlocks.WELKIN_LOG.get())
                 .unlockedBy("has_welkin_log", has(AABBlocks.WELKIN_LOG)).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AABBlocks.STRIPPED_WELKIN_WOOD.get(), 3)
+                .pattern("LL")
+                .pattern("LL")
+                .define('L', AABBlocks.STRIPPED_WELKIN_LOG.get())
+                .unlockedBy("has_stripped_welkin_log", has(AABBlocks.STRIPPED_WELKIN_LOG)).save(recipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABBlocks.WELKIN_PLANKS.get(), 4)
-                .requires(AABBlocks.WELKIN_LOG)
+                .requires(AABTags.Items.WELKIN_LOGS)
                 .unlockedBy("has_welkin_log", has(AABBlocks.WELKIN_LOG))
-                .save(recipeOutput, "aboveandbeyond:welkin_planks_from_welkin_log");
+                .save(recipeOutput, "aboveandbeyond:welkin_planks_from_welkin_logs");
+
+        stairBuilder(AABBlocks.WELKIN_STAIRS.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS)).group("welkin")
+                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS)).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.WELKIN_SLAB.get(), AABBlocks.WELKIN_PLANKS.get());
+
+        buttonBuilder(AABBlocks.WELKIN_BUTTON.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
+                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        pressurePlate(recipeOutput, AABBlocks.WELKIN_PRESSURE_PLATE.get(), AABBlocks.WELKIN_PLANKS.get());
+
+        fenceBuilder(AABBlocks.WELKIN_FENCE.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
+                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        fenceGateBuilder(AABBlocks.WELKIN_FENCE_GATE.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
+                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+
+        doorBuilder(AABBlocks.WELKIN_DOOR.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
+                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        trapdoorBuilder(AABBlocks.WELKIN_TRAPDOOR.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
+                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
 //        List<ItemLike> COBALT_SMELTABLES = List.of(AABItems.COBALT_SCRAP,
 //                AABBlocks.COBALT_DEBRIS);
 //

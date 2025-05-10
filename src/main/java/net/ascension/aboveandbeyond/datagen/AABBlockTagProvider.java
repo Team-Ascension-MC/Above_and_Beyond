@@ -2,6 +2,7 @@ package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
+import net.ascension.aboveandbeyond.util.AABTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -30,6 +31,15 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.COARSE_AEROSOIL.get())
                 .add(AABBlocks.ZEN_GRAVEL.get());
 
+        tag(AABTags.Blocks.WELKIN_LOGS)
+                .addTag(BlockTags.LOGS)
+                .addTag(BlockTags.LOGS_THAT_BURN)
+                .addTag(BlockTags.OVERWORLD_NATURAL_LOGS)
+                .add(AABBlocks.WELKIN_LOG.get())
+                .add(AABBlocks.WELKIN_WOOD.get())
+                .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
+                .add(AABBlocks.STRIPPED_WELKIN_WOOD.get());
+
         tag(BlockTags.DIRT)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
@@ -39,5 +49,8 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
                 .add(AABBlocks.COARSE_AEROSOIL.get());
+
+        tag(BlockTags.FENCES).add(AABBlocks.WELKIN_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(AABBlocks.WELKIN_FENCE_GATE.get());
     }
 }

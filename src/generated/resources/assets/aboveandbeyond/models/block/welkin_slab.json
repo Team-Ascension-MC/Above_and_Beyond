@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "aboveandbeyond:block/welkin_planks",
+    "side": "aboveandbeyond:block/welkin_planks",
+    "top": "aboveandbeyond:block/welkin_planks"
+  }
+}

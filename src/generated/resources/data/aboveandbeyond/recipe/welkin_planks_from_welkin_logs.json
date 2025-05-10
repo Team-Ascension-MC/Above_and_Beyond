@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "aboveandbeyond:welkin_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "aboveandbeyond:welkin_planks"
+  }
+}

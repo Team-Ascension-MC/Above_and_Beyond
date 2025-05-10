@@ -9,10 +9,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -60,6 +61,26 @@ public class AABBlocks {
                     return 5;
                 }
             });
+    public static final DeferredBlock<StairBlock> WELKIN_STAIRS = registerBlock("welkin_stairs",
+            () -> new StairBlock(AABBlocks.WELKIN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_STAIRS)));
+    public static final DeferredBlock<SlabBlock> WELKIN_SLAB = registerBlock("welkin_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SLAB)));
+
+    public static final DeferredBlock<PressurePlateBlock> WELKIN_PRESSURE_PLATE = registerBlock("welkin_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PRESSURE_PLATE)));
+    public static final DeferredBlock<ButtonBlock> WELKIN_BUTTON = registerBlock("welkin_button",
+            () -> new ButtonBlock(BlockSetType.BIRCH, 30, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_BUTTON).noCollission()));
+
+    public static final DeferredBlock<FenceBlock> WELKIN_FENCE = registerBlock("welkin_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_FENCE)));
+    public static final DeferredBlock<FenceGateBlock> WELKIN_FENCE_GATE = registerBlock("welkin_fence_gate",
+            () -> new FenceGateBlock(WoodType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_FENCE_GATE)));
+
+    public static final DeferredBlock<DoorBlock> WELKIN_DOOR = registerBlock("welkin_door",
+            () -> new DoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_DOOR).noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> WELKIN_TRAPDOOR = registerBlock("welkin_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_TRAPDOOR).noOcclusion()));
 
 private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
     DeferredBlock<T> toReturn = BLOCKS.register(name, block);

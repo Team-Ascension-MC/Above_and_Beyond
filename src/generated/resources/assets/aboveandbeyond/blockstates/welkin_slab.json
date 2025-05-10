@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aboveandbeyond:block/welkin_slab"
+    },
+    "type=double": {
+      "model": "aboveandbeyond:block/welkin_planks"
+    },
+    "type=top": {
+      "model": "aboveandbeyond:block/welkin_slab_top"
+    }
+  }
+}

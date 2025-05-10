@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "aboveandbeyond:block/welkin_pressure_plate"
+    },
+    "powered=true": {
+      "model": "aboveandbeyond:block/welkin_pressure_plate_down"
+    }
+  }
+}

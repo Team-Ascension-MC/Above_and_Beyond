@@ -1,6 +1,7 @@
 package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -15,5 +16,7 @@ public class AABItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(AABItems.MUSIC_DISC_GALE.get());
         basicItem(AABItems.MUSIC_DISC_VIVID.get());
+
+        basicItem(AABBlocks.WELKIN_DOOR.asItem());
+        }
     }
-}

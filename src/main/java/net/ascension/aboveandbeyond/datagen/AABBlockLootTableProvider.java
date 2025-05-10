@@ -1,4 +1,3 @@
-/* THIS IS TEMPORARILY DISABLED UNTIL WE FIX IT
 package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.block.AABBlocks;
@@ -16,6 +15,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
@@ -25,30 +25,37 @@ protected AABBlockLootTableProvider(HolderLookup.Provider registries) {
     super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
 }
 
-
 @Override
 protected void generate() {
-    this.dropSelf(AABBlocks.PUFFGRASS_BLOCK.get());
+    this.dropWhenSilkTouch(AABBlocks.PUFFGRASS_BLOCK.get());
     this.dropSelf(AABBlocks.AEROSOIL.get());
     this.dropSelf(AABBlocks.COARSE_AEROSOIL.get());
     this.dropSelf(AABBlocks.ZEN_GRAVEL.get());
+    this.dropSelf(AABBlocks.ZEN_GRAVEL_FARM.get());
     this.dropSelf(AABBlocks.WELKIN_LOG.get());
     this.dropSelf(AABBlocks.WELKIN_WOOD.get());
     this.dropSelf(AABBlocks.STRIPPED_WELKIN_LOG.get());
     this.dropSelf(AABBlocks.STRIPPED_WELKIN_WOOD.get());
     this.dropSelf(AABBlocks.WELKIN_PLANKS.get());
+    this.dropSelf(AABBlocks.WELKIN_STAIRS.get());
+    this.dropSelf(AABBlocks.WELKIN_SLAB.get());
+    this.dropSelf(AABBlocks.WELKIN_PRESSURE_PLATE.get());
+    this.dropSelf(AABBlocks.WELKIN_BUTTON.get());
+    this.dropSelf(AABBlocks.WELKIN_FENCE.get());
+    this.dropSelf(AABBlocks.WELKIN_FENCE_GATE.get());
+    this.dropSelf(AABBlocks.WELKIN_DOOR.get());
+    this.dropSelf(AABBlocks.WELKIN_TRAPDOOR.get());
 }
 
-protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
+    protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
     HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
     return this.createSilkTouchDispatchTable(pBlock,
             this.applyExplosionDecay(pBlock, LootItem.lootTableItem(item)
                     .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
                     .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
-}
+   }
 @Override
 protected @NotNull Iterable<Block> getKnownBlocks() {
     return AABBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
 }
 }
- */

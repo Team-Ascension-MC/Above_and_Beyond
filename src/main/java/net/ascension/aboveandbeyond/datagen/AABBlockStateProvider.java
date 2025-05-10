@@ -30,8 +30,24 @@ public class AABBlockStateProvider extends BlockStateProvider {
         blockItem(AABBlocks.WELKIN_WOOD);
         blockItem(AABBlocks.STRIPPED_WELKIN_LOG);
         blockItem(AABBlocks.STRIPPED_WELKIN_WOOD);
-
         blockWithItem(AABBlocks.WELKIN_PLANKS);
+        stairsBlock(AABBlocks.WELKIN_STAIRS.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
+        slabBlock(AABBlocks.WELKIN_SLAB.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
+
+        buttonBlock(AABBlocks.WELKIN_BUTTON.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
+        pressurePlateBlock(AABBlocks.WELKIN_PRESSURE_PLATE.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
+
+        fenceBlock(AABBlocks.WELKIN_FENCE.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
+        fenceGateBlock(AABBlocks.WELKIN_FENCE_GATE.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
+
+        doorBlockWithRenderType(AABBlocks.WELKIN_DOOR.get(), modLoc("block/welkin_door_bottom"), modLoc("block/welkin_door_top"), "cutout");
+        trapdoorBlockWithRenderType(AABBlocks.WELKIN_TRAPDOOR.get(), modLoc("block/welkin_trapdoor"), true, "cutout");
+
+        blockItem(AABBlocks.WELKIN_STAIRS);
+        blockItem(AABBlocks.WELKIN_SLAB);
+        blockItem(AABBlocks.WELKIN_PRESSURE_PLATE);
+        blockItem(AABBlocks.WELKIN_FENCE_GATE);
+        blockItem(AABBlocks.WELKIN_TRAPDOOR, "_bottom");
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

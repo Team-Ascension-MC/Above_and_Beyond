@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "welkin",
+  "key": {
+    "#": {
+      "item": "aboveandbeyond:welkin_planks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "aboveandbeyond:welkin_stairs"
+  }
+}
