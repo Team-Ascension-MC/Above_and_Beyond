@@ -1,6 +1,7 @@
 package net.ascension.aboveandbeyond.block;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.block.custom.ZenGravel;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -25,7 +26,7 @@ public class AABBlocks {
     public static final DeferredBlock<Block> COARSE_AEROSOIL = registerBlock("coarse_aerosoil",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COARSE_DIRT)));
     public static final DeferredBlock<Block> ZEN_GRAVEL = registerBlock("zen_gravel",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
+            () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.GRAVEL)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
