@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
@@ -31,6 +32,8 @@ public class AABBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COARSE_DIRT)));
     public static final DeferredBlock<Block> ZEN_GRAVEL = registerBlock("zen_gravel",
             () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
+    public static final DeferredBlock<Block> ZEN_GRAVEL_FARM = registerBlock("zen_gravel_farm",
+            () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.FARMLAND)));
 
     public static final DeferredBlock<Block> WELKIN_LOG = registerBlock("welkin_log",
             () -> new AABFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));
@@ -43,17 +46,17 @@ public class AABBlocks {
     public static final DeferredBlock<Block> WELKIN_PLANKS = registerBlock("welkin_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)) {
                 @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                public boolean isFlammable(@NotNull BlockState state,@NotNull BlockGetter level,@NotNull BlockPos pos,@NotNull Direction direction) {
                     return true;
                 }
 
                 @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                public int getFlammability(@NotNull BlockState state,@NotNull BlockGetter level,@NotNull BlockPos pos,@NotNull Direction direction) {
                     return 20;
                 }
 
                 @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                public int getFireSpreadSpeed(@NotNull BlockState state,@NotNull BlockGetter level,@NotNull BlockPos pos,@NotNull Direction direction) {
                     return 5;
                 }
             });
