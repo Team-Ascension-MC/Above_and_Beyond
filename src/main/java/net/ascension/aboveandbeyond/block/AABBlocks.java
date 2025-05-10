@@ -3,6 +3,7 @@ package net.ascension.aboveandbeyond.block;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.custom.AABFlammableRotatedPillarBlock;
 import net.ascension.aboveandbeyond.block.custom.ZenGravel;
+import net.ascension.aboveandbeyond.block.custom.ZenGravelFarm;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -34,7 +35,7 @@ public class AABBlocks {
     public static final DeferredBlock<Block> ZEN_GRAVEL = registerBlock("zen_gravel",
             () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<Block> ZEN_GRAVEL_FARM = registerBlock("zen_gravel_farm",
-            () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
+            () -> new ZenGravelFarm(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<Block> CLOUD_BLOCK = registerBlock("cloud_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK)));
 
