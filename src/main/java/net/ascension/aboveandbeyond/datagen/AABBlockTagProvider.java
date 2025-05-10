@@ -18,6 +18,12 @@ public class AABBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(AABBlocks.WELKIN_LOG.get())
+                .add(AABBlocks.WELKIN_WOOD.get())
+                .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
+                .add(AABBlocks.STRIPPED_WELKIN_WOOD.get())
+                .add(AABBlocks.WELKIN_PLANKS.get());
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
