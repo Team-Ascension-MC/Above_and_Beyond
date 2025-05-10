@@ -19,6 +19,11 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(AABBlocks.AEROSOIL.get());
         dropSelf(AABBlocks.COARSE_AEROSOIL.get());
         dropSelf(AABBlocks.ZEN_GRAVEL.get());
+        this.dropSelf(AABBlocks.WELKIN_LOG.get());
+        this.dropSelf(AABBlocks.WELKIN_WOOD.get());
+        this.dropSelf(AABBlocks.STRIPPED_WELKIN_LOG.get());
+        this.dropSelf(AABBlocks.STRIPPED_WELKIN_WOOD.get());
+        this.dropSelf(AABBlocks.WELKIN_PLANKS.get());
     }
 
     @Override

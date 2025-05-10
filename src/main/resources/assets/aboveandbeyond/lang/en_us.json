@@ -8,6 +8,12 @@
   "block.aboveandbeyond.zen_gravel": "Zen Gravel",
   "item.aboveandbeyond.starflower": "Starflower",
 
+  "block.aboveandbeyond.welkin_log": "Welkin Log",
+  "block.aboveandbeyond.welkin_wood": "Welkin Wood",
+  "block.aboveandbeyond.stripped_welkin_log": "Stripped Welkin Log",
+  "block.aboveandbeyond.stripped_welkin_wood": "Stripped Welkin Wood",
+  "block.aboveandbeyond.welkin_planks": "Welkin Planks",
+
   "item.aboveandbeyond.music_disc_gale": "Music Disc",
   "item.aboveandbeyond.music_disc_gale.desc": "Efekt - Gale",
 

@@ -26,6 +26,15 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', AABBlocks.AEROSOIL.get())
                 .define('Z', AABBlocks.ZEN_GRAVEL.get())
                 .unlockedBy("has_aerosoil", has(AABBlocks.AEROSOIL)).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AABBlocks.WELKIN_WOOD.get(), 3)
+                .pattern("LL")
+                .pattern("LL")
+                .define('L', AABBlocks.WELKIN_LOG.get())
+                .unlockedBy("has_welkin_log", has(AABBlocks.WELKIN_LOG)).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABBlocks.WELKIN_PLANKS.get(), 4)
+                .requires(AABBlocks.WELKIN_LOG)
+                .unlockedBy("has_welkin_log", has(AABBlocks.WELKIN_LOG))
+                .save(recipeOutput, "aboveandbeyond:welkin_planks_from_welkin_log");
 //        List<ItemLike> COBALT_SMELTABLES = List.of(AABItems.COBALT_SCRAP,
 //                AABBlocks.COBALT_DEBRIS);
 //

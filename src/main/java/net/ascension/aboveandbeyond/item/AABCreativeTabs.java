@@ -25,6 +25,11 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.COARSE_AEROSOIL);
                         output.accept(AABBlocks.ZEN_GRAVEL);
                         output.accept(AABItems.STARFLOWER);
+                        output.accept(AABBlocks.WELKIN_LOG);
+                        output.accept(AABBlocks.WELKIN_WOOD);
+                        output.accept(AABBlocks.STRIPPED_WELKIN_LOG);
+                        output.accept(AABBlocks.STRIPPED_WELKIN_WOOD);
+                        output.accept(AABBlocks.WELKIN_PLANKS);
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
                     }).build());
