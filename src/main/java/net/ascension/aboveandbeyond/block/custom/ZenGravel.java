@@ -53,7 +53,6 @@ public class ZenGravel extends FallingBlock {
             if (pPlayer.isShiftKeyDown()) {
                 BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, 0).setValue(FACING, pDirection);
                 pLevel.setBlock(pPos, newState, 3);
-                pLevel.playSound(null, pPos, SoundEvents.ALLAY_DEATH, SoundSource.BLOCKS, 1.0F, 1.0F);
             } else {
                 int currentStyle = pState.getValue(ZEN_GRAVEL_STYLE);
                 int newStyle;
