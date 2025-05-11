@@ -34,7 +34,7 @@ public class AABBlocks {
     public static final DeferredBlock<Block> COARSE_AEROSOIL = registerBlock("coarse_aerosoil",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COARSE_DIRT)));
     public static final DeferredBlock<Block> ZENSTONE = registerBlock("zenstone",
-            () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
 
     public static final DeferredBlock<StairBlock> ZENSTONE_STAIRS = registerBlock("zenstone_stairs",
             () -> new StairBlock(AABBlocks.ZENSTONE.get().defaultBlockState(),
@@ -45,7 +45,7 @@ public class AABBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_WALL)));
 
     public static final DeferredBlock<Block> POLISHED_ZENSTONE_BRICKS = registerBlock("polished_zenstone_bricks",
-            () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
 
     public static final DeferredBlock<StairBlock> POLISHED_ZENSTONE_BRICK_STAIRS = registerBlock("polished_zenstone_brick_stairs",
             () -> new StairBlock(AABBlocks.POLISHED_ZENSTONE_BRICKS.get().defaultBlockState(),
