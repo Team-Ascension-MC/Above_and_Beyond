@@ -51,7 +51,8 @@ protected void generate() {
     this.dropSelf(AABBlocks.WELKIN_BUTTON.get());
     this.dropSelf(AABBlocks.WELKIN_FENCE.get());
     this.dropSelf(AABBlocks.WELKIN_FENCE_GATE.get());
-    this.dropSelf(AABBlocks.WELKIN_DOOR.get());
+    add(AABBlocks.WELKIN_DOOR.get(),
+            block -> createDoorTable(AABBlocks.WELKIN_DOOR.get()));
     this.dropSelf(AABBlocks.WELKIN_TRAPDOOR.get());
 }
 
