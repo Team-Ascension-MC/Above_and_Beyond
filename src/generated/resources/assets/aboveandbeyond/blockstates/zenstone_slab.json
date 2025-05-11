@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "aboveandbeyond:block/zenstone_slab"
+    },
+    "type=double": {
+      "model": "aboveandbeyond:block/zenstone"
+    },
+    "type=top": {
+      "model": "aboveandbeyond:block/zenstone_slab_top"
+    }
+  }
+}

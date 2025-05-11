@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -46,6 +47,7 @@ public class ZenGravel extends FallingBlock {
     @Override
     public @NotNull InteractionResult useWithoutItem(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, Player pPlayer, @NotNull BlockHitResult pHitResult) {
         ItemStack heldItem = pPlayer.getMainHandItem();
+        ItemStack offHeldItem = pPlayer.getOffhandItem();
 
         Direction pDirection = pPlayer.getDirection();
 
@@ -69,7 +71,31 @@ public class ZenGravel extends FallingBlock {
 
             pLevel.playSound(null, pPos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F);
 
-            // Return SUCCESS to indicate the interaction was successful
+            return InteractionResult.SUCCESS;
+        }
+
+
+        //same thing but for offhand
+        if (offHeldItem.getItem() instanceof net.minecraft.world.item.HoeItem) {
+            if (pPlayer.isShiftKeyDown()) {
+                BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, 0).setValue(FACING, pDirection);
+                pLevel.setBlock(pPos, newState, 3);
+            } else {
+                int currentStyle = pState.getValue(ZEN_GRAVEL_STYLE);
+                int newStyle;
+
+                if (currentStyle == 1) {
+                    newStyle = 2;
+                } else {
+                    newStyle = 1;
+                }
+
+                BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, newStyle).setValue(FACING, pDirection);
+                pLevel.setBlock(pPos, newState, 3);
+            }
+
+            pLevel.playSound(null, pPos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F);
+
             return InteractionResult.SUCCESS;
         }
 

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "aboveandbeyond:block/polished_zenstone_bricks",
+    "side": "aboveandbeyond:block/polished_zenstone_bricks",
+    "top": "aboveandbeyond:block/polished_zenstone_bricks"
+  }
+}
