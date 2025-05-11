@@ -36,7 +36,7 @@ public class AABBlocks {
     public static final DeferredBlock<Block> ZEN_GRAVEL = registerBlock("zen_gravel",
             () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<Block> CLOUD_BLOCK = registerBlock("cloud_block",
-            () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.WOOL).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
+            () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.POWDER_SNOW).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
 
     public static final DeferredBlock<Block> WELKIN_LOG = registerBlock("welkin_log",
             () -> new AABFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));
