@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "aboveandbeyond:block/zen_gravel",
+    "bottom": "aboveandbeyond:block/zen_gravel",
+    "top": "aboveandbeyond:block/zen_gravel_farm"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "aboveandbeyond:zen_gravel_style": 1
+      },
+      "model": "aboveandbeyond:block/zen_gravel_line"
+    },
+    {
+      "predicate": {
+        "aboveandbeyond:zen_gravel_style": 2
+      },
+      "model": "aboveandbeyond:block/zen_gravel_round"
+    }
+  ]
+}
