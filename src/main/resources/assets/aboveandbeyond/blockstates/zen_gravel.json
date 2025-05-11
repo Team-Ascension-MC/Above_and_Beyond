@@ -1,13 +1,49 @@
 {
   "variants": {
-    "zen_gravel_style=0": {
+    "zen_gravel_style=0,facing=north": {
       "model": "aboveandbeyond:block/zen_gravel"
     },
-    "zen_gravel_style=1": {
+    "zen_gravel_style=0,facing=east": {
+      "model": "aboveandbeyond:block/zen_gravel",
+      "y": 90
+    },
+    "zen_gravel_style=0,facing=south": {
+      "model": "aboveandbeyond:block/zen_gravel",
+      "y": 180
+    },
+    "zen_gravel_style=0,facing=west": {
+      "model": "aboveandbeyond:block/zen_gravel",
+      "y": 270
+    },
+    "zen_gravel_style=1,facing=north": {
       "model": "aboveandbeyond:block/zen_gravel_line"
     },
-    "zen_gravel_style=2": {
+    "zen_gravel_style=1,facing=east": {
+      "model": "aboveandbeyond:block/zen_gravel_line",
+      "y": 90
+    },
+    "zen_gravel_style=1,facing=south": {
+      "model": "aboveandbeyond:block/zen_gravel_line",
+      "y": 180
+    },
+    "zen_gravel_style=1,facing=west": {
+      "model": "aboveandbeyond:block/zen_gravel_line",
+      "y": 270
+    },
+    "zen_gravel_style=2,facing=north": {
       "model": "aboveandbeyond:block/zen_gravel_round"
+    },
+    "zen_gravel_style=2,facing=east": {
+      "model": "aboveandbeyond:block/zen_gravel_round",
+      "y": 90
+    },
+    "zen_gravel_style=2,facing=south": {
+      "model": "aboveandbeyond:block/zen_gravel_round",
+      "y": 180
+    },
+    "zen_gravel_style=2,facing=west": {
+      "model": "aboveandbeyond:block/zen_gravel_round",
+      "y": 270
     }
   }
 }
