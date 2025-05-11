@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_skyacinth": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aboveandbeyond:skyacinth"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aboveandbeyond:light_blue_dye_from_skyacinth"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_skyacinth"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aboveandbeyond:light_blue_dye_from_skyacinth"
+    ]
+  }
+}

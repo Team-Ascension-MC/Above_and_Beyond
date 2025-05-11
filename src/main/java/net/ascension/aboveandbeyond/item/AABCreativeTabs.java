@@ -33,7 +33,9 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL);
                         output.accept(AABBlocks.ZEN_GRAVEL);
                         output.accept(AABItems.CLOUD_BUCKET);
+                        output.accept(AABItems.PUFFGRASS);
                         output.accept(AABItems.STARFLOWER);
+                        output.accept(AABItems.SKYACINTH);
                         output.accept(AABBlocks.WELKIN_LOG);
                         output.accept(AABBlocks.WELKIN_WOOD);
                         output.accept(AABBlocks.STRIPPED_WELKIN_LOG);

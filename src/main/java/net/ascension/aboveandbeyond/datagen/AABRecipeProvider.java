@@ -10,6 +10,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.nbt.Tag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -64,6 +65,15 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
         trapdoorBuilder(AABBlocks.WELKIN_TRAPDOOR.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
                 .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE, 1)
+                .requires(AABItems.STARFLOWER)
+                .unlockedBy("has_starflower", has(AABBlocks.STARFLOWER))
+                .save(recipeOutput, "aboveandbeyond:yellow_dye_from_starflower");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE, 1)
+                .requires(AABItems.SKYACINTH)
+                .unlockedBy("has_skyacinth", has(AABBlocks.SKYACINTH))
+                .save(recipeOutput, "aboveandbeyond:light_blue_dye_from_skyacinth");
 //        List<ItemLike> COBALT_SMELTABLES = List.of(AABItems.COBALT_SCRAP,
 //                AABBlocks.COBALT_DEBRIS);
 //

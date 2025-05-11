@@ -28,12 +28,12 @@ public class AABBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
 
     /* Cloud Islands */
+    public static final DeferredBlock<FlowerBlock> PUFFGRASS = BLOCKS.register("puffgrass",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 1, BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<FlowerBlock> STARFLOWER = BLOCKS.register("starflower",
-            () -> new FlowerBlock(MobEffects.LUCK, 4, BlockBehaviour.Properties.of()
-                    .noCollission()
-                    .instabreak()
-                    .sound(SoundType.GRASS)
-                    .offsetType(BlockBehaviour.OffsetType.XZ)));
+            () -> new FlowerBlock(MobEffects.LUCK, 7, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final DeferredBlock<FlowerBlock> SKYACINTH = BLOCKS.register("skyacinth",
+            () -> new FlowerBlock(MobEffects.WATER_BREATHING, 15, BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ORCHID).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<Block> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",

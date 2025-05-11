@@ -15,7 +15,6 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
@@ -51,6 +50,9 @@ protected void generate() {
     this.dropSelf(AABBlocks.WELKIN_BUTTON.get());
     this.dropSelf(AABBlocks.WELKIN_FENCE.get());
     this.dropSelf(AABBlocks.WELKIN_FENCE_GATE.get());
+    this.dropWhenSilkTouch(AABBlocks.PUFFGRASS.get());
+    this.dropSelf(AABBlocks.STARFLOWER.get());
+    this.dropSelf(AABBlocks.SKYACINTH.get());
     add(AABBlocks.WELKIN_DOOR.get(),
             block -> createDoorTable(AABBlocks.WELKIN_DOOR.get()));
     this.dropSelf(AABBlocks.WELKIN_TRAPDOOR.get());

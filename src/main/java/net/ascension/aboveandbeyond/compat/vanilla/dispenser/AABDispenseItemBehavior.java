@@ -1,4 +1,4 @@
-package net.ascension.aboveandbeyond.compat.minecraft.dispenser;
+package net.ascension.aboveandbeyond.compat.vanilla.dispenser;
 
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.core.BlockPos;
