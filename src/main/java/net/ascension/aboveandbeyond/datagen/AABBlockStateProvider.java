@@ -20,7 +20,6 @@ public class AABBlockStateProvider extends BlockStateProvider {
         blockWithItem(AABBlocks.AEROSOIL);
         blockWithItem(AABBlocks.COARSE_AEROSOIL);
         blockWithItem(AABBlocks.ZEN_GRAVEL);
-        blockWithItem(AABBlocks.CLOUD_BLOCK);
 
         logBlock(((RotatedPillarBlock) AABBlocks.WELKIN_LOG.get()));
         axisBlock(((RotatedPillarBlock) AABBlocks.WELKIN_WOOD.get()), blockTexture(AABBlocks.WELKIN_LOG.get()), blockTexture(AABBlocks.WELKIN_LOG.get()));

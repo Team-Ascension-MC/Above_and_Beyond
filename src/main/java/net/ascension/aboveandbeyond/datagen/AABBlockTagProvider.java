@@ -24,7 +24,13 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.WELKIN_WOOD.get())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get())
-                .add(AABBlocks.WELKIN_PLANKS.get());
+                .add(AABBlocks.WELKIN_PLANKS.get())
+                .add(AABBlocks.WELKIN_STAIRS.get())
+                .add(AABBlocks.WELKIN_SLAB.get())
+                .add(AABBlocks.WELKIN_PRESSURE_PLATE.get())
+                .add(AABBlocks.WELKIN_BUTTON.get())
+                .add(AABBlocks.WELKIN_DOOR.get())
+                .add(AABBlocks.WELKIN_TRAPDOOR.get());
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())

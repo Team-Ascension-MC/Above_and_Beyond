@@ -1,6 +1,7 @@
 package net.ascension.aboveandbeyond.item;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.item.custom.CloudBucket;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -14,6 +15,8 @@ public class AABItems {
     /* Cloud Islands */
     public static final DeferredItem<Item> STARFLOWER = ITEMS.register("starflower",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CLOUD_BUCKET = ITEMS.register("cloud_bucket",
+            () -> new CloudBucket());
     public static final DeferredItem<Item> MUSIC_DISC_GALE = ITEMS.register("music_disc_gale",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE).jukeboxPlayable(AABSounds.GALE_KEY).stacksTo(1)));
     public static final DeferredItem<Item> MUSIC_DISC_VIVID = ITEMS.register("music_disc_vivid",

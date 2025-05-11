@@ -4,6 +4,12 @@
     "aboveandbeyond:welkin_wood",
     "aboveandbeyond:stripped_welkin_log",
     "aboveandbeyond:stripped_welkin_wood",
-    "aboveandbeyond:welkin_planks"
+    "aboveandbeyond:welkin_planks",
+    "aboveandbeyond:welkin_stairs",
+    "aboveandbeyond:welkin_slab",
+    "aboveandbeyond:welkin_pressure_plate",
+    "aboveandbeyond:welkin_button",
+    "aboveandbeyond:welkin_door",
+    "aboveandbeyond:welkin_trapdoor"
   ]
 }

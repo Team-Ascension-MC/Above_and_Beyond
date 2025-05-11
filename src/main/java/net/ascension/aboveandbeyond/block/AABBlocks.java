@@ -2,8 +2,10 @@ package net.ascension.aboveandbeyond.block;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.custom.AABFlammableRotatedPillarBlock;
+import net.ascension.aboveandbeyond.block.custom.CloudBlock;
 import net.ascension.aboveandbeyond.block.custom.ZenGravel;
 import net.ascension.aboveandbeyond.item.AABItems;
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
@@ -13,6 +15,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -36,7 +39,7 @@ public class AABBlocks {
     public static final DeferredBlock<Block> ZEN_GRAVEL_FARM = registerBlock("zen_gravel_farm",
             () -> new ZenGravel(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<Block> CLOUD_BLOCK = registerBlock("cloud_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SLIME_BLOCK)));
+            () -> new CloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.WOOL).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
 
     public static final DeferredBlock<Block> WELKIN_LOG = registerBlock("welkin_log",
             () -> new AABFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));

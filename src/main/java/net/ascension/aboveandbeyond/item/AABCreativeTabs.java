@@ -26,6 +26,7 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.ZEN_GRAVEL);
                         output.accept(AABBlocks.ZEN_GRAVEL_FARM);
                         output.accept(AABBlocks.CLOUD_BLOCK);
+                        output.accept(AABItems.CLOUD_BUCKET);
                         output.accept(AABItems.STARFLOWER);
                         output.accept(AABBlocks.WELKIN_LOG);
                         output.accept(AABBlocks.WELKIN_WOOD);
