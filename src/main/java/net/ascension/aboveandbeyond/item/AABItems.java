@@ -7,8 +7,10 @@ import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.vehicle.Minecart;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.block.FlowerBlock;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.sound.SoundEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -19,7 +21,7 @@ public class AABItems {
 
     /* Cloud Islands */
     public static final DeferredItem<Item> STARFLOWER = ITEMS.register("starflower",
-            () -> new Item(new Item.Properties()));
+            () -> new BlockItem(AABBlocks.STARFLOWER.get(), new Item.Properties()));
     public static final DeferredItem<Item> CLOUD_BUCKET = ITEMS.register("cloud_bucket",
             () -> new CloudBucket(AABBlocks.CLOUD_BLOCK.get(), SoundEvents.SNOW_PLACE, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> MUSIC_DISC_GALE = ITEMS.register("music_disc_gale",

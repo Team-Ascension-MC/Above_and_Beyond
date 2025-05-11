@@ -7,6 +7,7 @@ import net.ascension.aboveandbeyond.block.custom.ZenGravel;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -27,6 +28,12 @@ public class AABBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
 
     /* Cloud Islands */
+    public static final DeferredBlock<FlowerBlock> STARFLOWER = BLOCKS.register("starflower",
+            () -> new FlowerBlock(MobEffects.LUCK, 4, BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<Block> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",
