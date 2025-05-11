@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "aboveandbeyond:block/zen_gravel",
+    "bottom": "aboveandbeyond:block/zen_gravel",
+    "top": "aboveandbeyond:block/zen_gravel_line"
+  }
+}

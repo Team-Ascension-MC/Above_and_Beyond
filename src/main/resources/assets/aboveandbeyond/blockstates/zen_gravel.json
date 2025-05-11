@@ -1,7 +1,13 @@
 {
   "variants": {
-    "": {
+    "zen_gravel_style=0": {
       "model": "aboveandbeyond:block/zen_gravel"
+    },
+    "zen_gravel_style=1": {
+      "model": "aboveandbeyond:block/zen_gravel_line"
+    },
+    "zen_gravel_style=2": {
+      "model": "aboveandbeyond:block/zen_gravel_round"
     }
   }
 }

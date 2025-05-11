@@ -9,22 +9,22 @@ import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.SolidBucketItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
-import net.neoforged.neoforge.common.data.SoundDefinition;
-
 
 import javax.annotation.Nullable;
 
 public class CloudBucket extends SolidBucketItem {
     private final SoundEvent placeSound;
 
-    public CloudBucket() {
-        super(block, SoundEvent, placeSound);
+    public CloudBucket(Block blockToPlace, SoundEvent placeSound, Properties properties) {
+        super(blockToPlace, placeSound, properties);
         this.placeSound = placeSound;
     }
 
+    @Override
     public InteractionResult useOn(UseOnContext context) {
         InteractionResult interactionresult = super.useOn(context);
         Player player = context.getPlayer();
@@ -35,14 +35,17 @@ public class CloudBucket extends SolidBucketItem {
         return interactionresult;
     }
 
+    @Override
     public String getDescriptionId() {
         return this.getOrCreateDescriptionId();
     }
 
+    @Override
     protected SoundEvent getPlaceSound(BlockState state) {
         return this.placeSound;
     }
 
+    @Override
     public boolean emptyContents(@Nullable Player player, Level level, BlockPos pos, @Nullable BlockHitResult result) {
         if (level.isInWorldBounds(pos) && level.isEmptyBlock(pos)) {
             if (!level.isClientSide) {
