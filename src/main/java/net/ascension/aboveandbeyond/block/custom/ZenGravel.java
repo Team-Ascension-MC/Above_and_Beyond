@@ -20,19 +20,21 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
 public class ZenGravel extends FallingBlock {
-    private static final IntegerProperty STYLE = IntegerProperty.create("zen_gravel_style", 0, 2);
+    public static final IntegerProperty ZEN_GRAVEL_STYLE = IntegerProperty.create("zen_gravel_style", 0, 2);
 
     public ZenGravel(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(ZEN_GRAVEL_STYLE, 0));
     }
 
     @Override
     public @NotNull MapCodec<? extends FallingBlock> codec() {
         return null;
     }
+
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(STYLE);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(ZEN_GRAVEL_STYLE);
     }
 
     @Override
@@ -42,16 +44,21 @@ public class ZenGravel extends FallingBlock {
         // Check if the held item is a hoe (any type of hoe)
         if (heldItem.getItem() instanceof net.minecraft.world.item.HoeItem) {
             if (pPlayer.isCrouching()) {
-                BlockState newState = pState.setValue(STYLE, 0);
+                BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, 0);
                 pLevel.setBlock(pPos, newState, 3);
+                pLevel.playSound(null, pPos, SoundEvents.ALLAY_DEATH, SoundSource.BLOCKS, 1.0F, 1.0F);
             } else {
-                if (pState.getValue(STYLE) == 1) {
-                    BlockState newState = pState.setValue(STYLE, 2);
-                    pLevel.setBlock(pPos, newState, 3);
+                int currentStyle = pState.getValue(ZEN_GRAVEL_STYLE);
+                int newStyle;
+
+                if (currentStyle == 1) {
+                    newStyle = 2;
                 } else {
-                    BlockState newState = pState.setValue(STYLE, 1);
-                    pLevel.setBlock(pPos, newState, 3);
+                    newStyle = 1;
                 }
+
+                BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, newStyle);
+                pLevel.setBlock(pPos, newState, 3);
             }
 
             pLevel.playSound(null, pPos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F);
