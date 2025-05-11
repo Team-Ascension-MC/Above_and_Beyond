@@ -46,5 +46,7 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get().asItem());
         this.tag(ItemTags.PLANKS)
                 .add(AABBlocks.WELKIN_PLANKS.asItem());
+        this.tag(ItemTags.STONE_BRICKS)
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICKS.asItem());
     }
 }

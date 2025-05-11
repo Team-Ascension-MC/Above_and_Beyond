@@ -10,6 +10,8 @@
     "aboveandbeyond:welkin_pressure_plate",
     "aboveandbeyond:welkin_button",
     "aboveandbeyond:welkin_door",
-    "aboveandbeyond:welkin_trapdoor"
+    "aboveandbeyond:welkin_trapdoor",
+    "aboveandbeyond:welkin_fence",
+    "aboveandbeyond:welkin_fence_gate"
   ]
 }

@@ -30,6 +30,14 @@ protected void generate() {
     this.dropWhenSilkTouch(AABBlocks.PUFFGRASS_BLOCK.get());
     this.dropSelf(AABBlocks.AEROSOIL.get());
     this.dropSelf(AABBlocks.COARSE_AEROSOIL.get());
+    this.dropSelf(AABBlocks.ZENSTONE.get());
+    this.dropSelf(AABBlocks.ZENSTONE_STAIRS.get());
+    this.dropSelf(AABBlocks.ZENSTONE_SLAB.get());
+    this.dropSelf(AABBlocks.ZENSTONE_WALL.get());
+    this.dropSelf(AABBlocks.POLISHED_ZENSTONE_BRICKS.get());
+    this.dropSelf(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get());
+    this.dropSelf(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get());
+    this.dropSelf(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get());
     this.dropSelf(AABBlocks.ZEN_GRAVEL.get());
     this.dropSelf(AABBlocks.CLOUD_BLOCK.get());
     this.dropSelf(AABBlocks.WELKIN_LOG.get());

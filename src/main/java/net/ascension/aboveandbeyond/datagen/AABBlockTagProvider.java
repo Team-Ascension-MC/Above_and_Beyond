@@ -19,6 +19,15 @@ public class AABBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(AABBlocks.ZENSTONE.get())
+                .add(AABBlocks.ZENSTONE_STAIRS.get())
+                .add(AABBlocks.ZENSTONE_SLAB.get())
+                .add(AABBlocks.ZENSTONE_WALL.get())
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICKS.get())
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get())
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get())
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(AABBlocks.WELKIN_LOG.get())
                 .add(AABBlocks.WELKIN_WOOD.get())
@@ -30,7 +39,9 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.WELKIN_PRESSURE_PLATE.get())
                 .add(AABBlocks.WELKIN_BUTTON.get())
                 .add(AABBlocks.WELKIN_DOOR.get())
-                .add(AABBlocks.WELKIN_TRAPDOOR.get());
+                .add(AABBlocks.WELKIN_TRAPDOOR.get())
+                .add(AABBlocks.WELKIN_FENCE.get())
+                .add(AABBlocks.WELKIN_FENCE_GATE.get());
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
@@ -56,7 +67,22 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.AEROSOIL.get())
                 .add(AABBlocks.COARSE_AEROSOIL.get());
 
+        tag(BlockTags.STAIRS)
+                .add(AABBlocks.WELKIN_STAIRS.get())
+                .add(AABBlocks.ZENSTONE_STAIRS.get())
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get());
+        tag(BlockTags.WOODEN_STAIRS)
+                .add(AABBlocks.WELKIN_STAIRS.get());
+        tag(BlockTags.SLABS)
+                .add(AABBlocks.WELKIN_SLAB.get())
+                .add(AABBlocks.ZENSTONE_SLAB.get())
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get());
+        tag(BlockTags.WOODEN_SLABS)
+                .add(AABBlocks.WELKIN_SLAB.get());
         tag(BlockTags.FENCES).add(AABBlocks.WELKIN_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(AABBlocks.WELKIN_FENCE_GATE.get());
+        tag(BlockTags.WALLS)
+                .add(AABBlocks.ZENSTONE_WALL.get())
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get());
     }
 }
