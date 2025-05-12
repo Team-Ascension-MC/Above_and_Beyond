@@ -79,7 +79,7 @@ public class AABBoatItem extends Item {
         
         if (boat != null) {
             boat.setPos(hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z);
-            boat.setHasChest(this.hasChest);
+            boat.setAddChest(this.hasChest);
         }
         
         return boat;

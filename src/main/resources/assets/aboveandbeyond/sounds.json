@@ -14,5 +14,13 @@
         "stream": true
       }
     ]
+  },
+  "heist": {
+    "sounds": [
+      {
+        "name": "aboveandbeyond:heist",
+        "stream": true
+      }
+    ]
   }
 }

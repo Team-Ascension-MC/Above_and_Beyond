@@ -54,6 +54,7 @@ public class AABCreativeTabs {
                         output.accept(AABItems.WELKIN_CHEST_BOAT);
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
+                        output.accept(AABItems.MUSIC_DISC_HEIST);
                     }).build());
 
     public static void register(IEventBus eventBus) {

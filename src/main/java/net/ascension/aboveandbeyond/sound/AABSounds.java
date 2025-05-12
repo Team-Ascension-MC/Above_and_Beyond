@@ -23,6 +23,9 @@ public class AABSounds {
     public static final Supplier<SoundEvent> VIVID = registerSoundEvent("vivid");
     public static final ResourceKey<JukeboxSong> VIVID_KEY = createSong("vivid");
 
+    public static final Supplier<SoundEvent> HEIST = registerSoundEvent("heist");
+    public static final ResourceKey<JukeboxSong> HEIST_KEY = createSong("heist");
+
     private static ResourceKey<JukeboxSong> createSong(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, name));
     }

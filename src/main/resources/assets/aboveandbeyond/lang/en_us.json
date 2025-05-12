@@ -40,5 +40,8 @@
   "item.aboveandbeyond.music_disc_gale.desc": "Efekt - Gale",
 
   "item.aboveandbeyond.music_disc_vivid": "Music Disc",
-  "item.aboveandbeyond.music_disc_vivid.desc": "Efekt - Vivid"
+  "item.aboveandbeyond.music_disc_vivid.desc": "Efekt - Vivid",
+
+  "item.aboveandbeyond.music_disc_heist": "Music Disc",
+  "item.aboveandbeyond.music_disc_heist.desc": "Efekt - Heist"
 }
