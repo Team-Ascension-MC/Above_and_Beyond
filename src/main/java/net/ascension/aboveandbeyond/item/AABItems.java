@@ -2,7 +2,9 @@ package net.ascension.aboveandbeyond.item;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
+import net.ascension.aboveandbeyond.entity.AABEntityTypes;
 import net.ascension.aboveandbeyond.item.custom.CloudBucket;
+import net.ascension.aboveandbeyond.item.custom.AABBoatItem;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
@@ -32,6 +34,10 @@ public class AABItems {
                             .saturationModifier(0.6f)
                             .fast()
                             .build())));
+    public static final DeferredItem<Item> WELKIN_BOAT = ITEMS.register("welkin_boat",
+            () -> new AABBoatItem(false, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> WELKIN_CHEST_BOAT = ITEMS.register("welkin_chest_boat",
+            () -> new AABBoatItem(true, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> MUSIC_DISC_GALE = ITEMS.register("music_disc_gale",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE).jukeboxPlayable(AABSounds.GALE_KEY).stacksTo(1)));
     public static final DeferredItem<Item> MUSIC_DISC_VIVID = ITEMS.register("music_disc_vivid",
