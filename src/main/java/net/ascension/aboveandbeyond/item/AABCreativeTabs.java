@@ -36,6 +36,7 @@ public class AABCreativeTabs {
                         output.accept(AABItems.PUFFGRASS);
                         output.accept(AABItems.STARFLOWER);
                         output.accept(AABItems.SKYACINTH);
+                        output.accept(AABItems.CLOUD_BERRY);
                         output.accept(AABBlocks.WELKIN_LOG);
                         output.accept(AABBlocks.WELKIN_WOOD);
                         output.accept(AABBlocks.STRIPPED_WELKIN_LOG);
