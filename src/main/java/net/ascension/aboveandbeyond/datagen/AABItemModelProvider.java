@@ -26,6 +26,7 @@ public class AABItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(AABItems.MUSIC_DISC_GALE.get());
         basicItem(AABItems.MUSIC_DISC_VIVID.get());
+        basicItem(AABItems.MUSIC_DISC_HEIST.get());
 
         basicItem(AABBlocks.CLOUD_BLOCK.asItem());
         basicItem(AABItems.CLOUD_BUCKET.get());
