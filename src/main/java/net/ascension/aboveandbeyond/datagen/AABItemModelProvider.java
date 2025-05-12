@@ -30,5 +30,8 @@ public class AABItemModelProvider extends ItemModelProvider {
         basicItem(AABBlocks.CLOUD_BLOCK.asItem());
         basicItem(AABItems.CLOUD_BUCKET.get());
         basicItem(AABBlocks.WELKIN_DOOR.asItem());
+
+        basicItem(AABItems.WELKIN_BOAT.get());
+        basicItem(AABItems.WELKIN_CHEST_BOAT.get());
     }
 }
