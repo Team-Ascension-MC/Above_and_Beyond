@@ -51,33 +51,8 @@ public class ZenGravel extends FallingBlock {
 
         Direction pDirection = pPlayer.getDirection();
 
-        if (heldItem.getItem() instanceof net.minecraft.world.item.HoeItem) {
-            if (pPlayer.isShiftKeyDown()) {
-                BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, 0).setValue(FACING, pDirection);
-                pLevel.setBlock(pPos, newState, 3);
-            } else {
-                int currentStyle = pState.getValue(ZEN_GRAVEL_STYLE);
-                int newStyle;
-
-                if (currentStyle == 1) {
-                    newStyle = 2;
-                } else {
-                    newStyle = 1;
-                }
-
-                BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, newStyle).setValue(FACING, pDirection);
-                pLevel.setBlock(pPos, newState, 3);
-            }
-
-            pLevel.playSound(null, pPos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F);
-
-            return InteractionResult.SUCCESS;
-        }
-
-
-        //same thing but for offhand
-        if (offHeldItem.getItem() instanceof net.minecraft.world.item.HoeItem) {
-            if (pPlayer.isShiftKeyDown()) {
+        if (heldItem.getItem() instanceof net.minecraft.world.item.HoeItem || offHeldItem.getItem() instanceof net.minecraft.world.item.HoeItem) {
+            if (pPlayer.isShiftKeyDown() || pPlayer.isCrouching()) {
                 BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, 0).setValue(FACING, pDirection);
                 pLevel.setBlock(pPos, newState, 3);
             } else {
