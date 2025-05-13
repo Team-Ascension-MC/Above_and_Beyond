@@ -1,8 +1,17 @@
 package net.ascension.aboveandbeyond.entity.custom;
 
+import net.ascension.aboveandbeyond.entity.KoiVariant;
 import net.ascension.aboveandbeyond.item.AABItems;
+import net.minecraft.Util;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.SmoothSwimmingLookControl;
@@ -12,14 +21,18 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.TropicalFish;
-import net.minecraft.world.entity.animal.axolotl.Axolotl;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
+import org.jetbrains.annotations.Nullable;
 
 public class KoiEntity extends Cod {
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState flopAnimationState = new AnimationState(); // Add this line
     private int idleAnimationTimeout = 0;
+
+    private static final EntityDataAccessor<Integer> VARIANT =
+            SynchedEntityData.defineId(KoiEntity.class, EntityDataSerializers.INT);
 
     public KoiEntity(EntityType<? extends Cod> entityType, Level level) {
         super(entityType, level);
@@ -57,7 +70,7 @@ public class KoiEntity extends Cod {
         if (this.isInWater()) {
             // Reset flopping animation when in water
             this.flopAnimationState.stop();
-            
+
             // Handle idle animation in water
             if (this.idleAnimationTimeout <= 0) {
                 this.idleAnimationTimeout = this.getRandom().nextInt(40) + 80;
@@ -79,5 +92,44 @@ public class KoiEntity extends Cod {
         if (this.level().isClientSide()) {
             this.setupAnimationStates();
         }
+    }
+
+    /* VARIANTS */
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(VARIANT, 0);
+    }
+
+    private int getTypeVariant() {
+        return this.entityData.get(VARIANT);
+    }
+
+    public KoiVariant getVariant() {
+        return KoiVariant.byID(this.getTypeVariant() & 255);
+    }
+
+    private void setVariant(KoiVariant variant) {
+        this.entityData.set(VARIANT, variant.getId() & 255);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag compound) {
+        super.addAdditionalSaveData(compound);
+        compound.putInt("variant", this.getTypeVariant());
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag compound) {
+        super.readAdditionalSaveData(compound);
+        this.entityData.set(VARIANT, compound.getInt("variant"));
+    }
+
+    @Override
+    public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData spawnGroupData) {
+        KoiVariant variant = Util.getRandom(KoiVariant.values(), this.random);
+        this.setVariant(variant);
+        return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
     }
 }
