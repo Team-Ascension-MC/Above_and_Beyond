@@ -1,5 +1,6 @@
 package net.ascension.aboveandbeyond.entity.custom;
 
+import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -9,18 +10,26 @@ import net.minecraft.world.entity.ai.control.SmoothSwimmingMoveControl;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
+import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.TropicalFish;
+import net.minecraft.world.entity.animal.axolotl.Axolotl;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class KoiEntity extends TropicalFish {
+public class KoiEntity extends Cod {
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState flopAnimationState = new AnimationState(); // Add this line
     private int idleAnimationTimeout = 0;
 
-    public KoiEntity(EntityType<? extends TropicalFish> entityType, Level level) {
+    public KoiEntity(EntityType<? extends Cod> entityType, Level level) {
         super(entityType, level);
         this.moveControl = new SmoothSwimmingMoveControl(this, 85, 10, 0.02F, 0.1F, true);
         this.lookControl = new SmoothSwimmingLookControl(this, 10);
+    }
+
+    @Override
+    public ItemStack getBucketItemStack() {
+        return new ItemStack(AABItems.KOI_BUCKET.get());
     }
 
     @Override
