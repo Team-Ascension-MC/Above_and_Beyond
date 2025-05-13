@@ -44,5 +44,9 @@
   "item.aboveandbeyond.music_disc_vivid.desc": "Efekt - Vivid",
 
   "item.aboveandbeyond.music_disc_heist": "Music Disc",
-  "item.aboveandbeyond.music_disc_heist.desc": "Efekt - Heist"
+  "item.aboveandbeyond.music_disc_heist.desc": "Efekt - Heist",
+
+  "item.aboveandbeyond.koi_spawn_egg": "Koi Spawn Egg",
+  "item.aboveandbeyond.koi_bucket": "Koi Bucket",
+  "entity.aboveandbeyond.koi": "Koi"
 }
