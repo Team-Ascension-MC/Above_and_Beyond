@@ -23,15 +23,17 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.PUFFGRASS_BLOCK);
                         output.accept(AABBlocks.AEROSOIL);
                         output.accept(AABBlocks.COARSE_AEROSOIL);
+                        output.accept(AABBlocks.ZEN_GRAVEL);
                         output.accept(AABBlocks.ZENSTONE);
                         output.accept(AABBlocks.ZENSTONE_STAIRS);
                         output.accept(AABBlocks.ZENSTONE_SLAB);
                         output.accept(AABBlocks.ZENSTONE_WALL);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICKS);
+                        output.accept(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL);
-                        output.accept(AABBlocks.ZEN_GRAVEL);
+                        output.accept(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
                         output.accept(AABItems.CLOUD_BUCKET);
                         output.accept(AABItems.PUFFGRASS);
                         output.accept(AABItems.STARFLOWER);

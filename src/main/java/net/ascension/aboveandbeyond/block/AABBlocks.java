@@ -55,6 +55,10 @@ public class AABBlocks {
 
     public static final DeferredBlock<Block> POLISHED_ZENSTONE_BRICKS = registerBlock("polished_zenstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
+    public static final DeferredBlock<Block> CRACKED_POLISHED_ZENSTONE_BRICKS = registerBlock("cracked_polished_zenstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
+    public static final DeferredBlock<Block> CHISELED_POLISHED_ZENSTONE_BRICKS = registerBlock("chiseled_polished_zenstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CHISELED_TUFF_BRICKS)));
 
     public static final DeferredBlock<StairBlock> POLISHED_ZENSTONE_BRICK_STAIRS = registerBlock("polished_zenstone_brick_stairs",
             () -> new StairBlock(AABBlocks.POLISHED_ZENSTONE_BRICKS.get().defaultBlockState(),

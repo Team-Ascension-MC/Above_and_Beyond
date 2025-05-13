@@ -1,7 +1,9 @@
-// 1.21.1	2025-05-11T16:46:52.2757225	Loot Tables
+// 1.21.1	2025-05-12T19:47:05.7385341	Loot Tables
 28b1f646152028a3d269b25bfcdaf176730c5178 data/aboveandbeyond/loot_table/blocks/aerosoil.json
+290f4f3926e12724674cb901a9b6499b18317440 data/aboveandbeyond/loot_table/blocks/chiseled_polished_zenstone_bricks.json
 bb90c928de73f36bb36a65270c0a5cbac3d5ccad data/aboveandbeyond/loot_table/blocks/cloud_block.json
 7c37d89f22b75dc05c2bf4411c8f5637c1d5b4ff data/aboveandbeyond/loot_table/blocks/coarse_aerosoil.json
+582aab7e038ecb578f31a8b0d37a18d54f89a190 data/aboveandbeyond/loot_table/blocks/cracked_polished_zenstone_bricks.json
 11549400802a4c492eb365af883680dc2e1b10dd data/aboveandbeyond/loot_table/blocks/polished_zenstone_bricks.json
 e62e361db22767c2c48d0590fb342390ff01f5a8 data/aboveandbeyond/loot_table/blocks/polished_zenstone_brick_slab.json
 1bfb9823182c8ab774708f86aa5c812003aa22c1 data/aboveandbeyond/loot_table/blocks/polished_zenstone_brick_stairs.json
