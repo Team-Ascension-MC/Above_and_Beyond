@@ -1,9 +1,12 @@
 package net.ascension.aboveandbeyond;
 
 import net.ascension.aboveandbeyond.block.AABBlocks;
+import net.ascension.aboveandbeyond.entity.AABEntities;
+import net.ascension.aboveandbeyond.entity.client.KoiRenderer;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.ascension.aboveandbeyond.sound.AABSounds;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -42,6 +45,7 @@ public class AboveAndBeyond {
         AABBlocks.register(modEventBus);
         AABItems.register(modEventBus);
         AABSounds.register(modEventBus);
+        AABEntities.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -69,7 +73,7 @@ public class AboveAndBeyond {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(AABEntities.KOI.get(), KoiRenderer::new);
         }
     }
 }

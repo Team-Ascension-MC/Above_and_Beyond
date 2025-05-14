@@ -55,6 +55,8 @@ public class AABCreativeTabs {
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
                         output.accept(AABItems.MUSIC_DISC_HEIST);
+                        output.accept(AABItems.KOI_SPAWN_EGG);
+                        output.accept(AABItems.KOI_BUCKET);
                     }).build());
 
     public static void register(IEventBus eventBus) {

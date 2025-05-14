@@ -30,6 +30,9 @@ public class AABItemModelProvider extends ItemModelProvider {
 
         basicItem(AABBlocks.CLOUD_BLOCK.asItem());
         basicItem(AABItems.CLOUD_BUCKET.get());
+        basicItem(AABItems.KOI_BUCKET.get());
         basicItem(AABBlocks.WELKIN_DOOR.asItem());
+
+        withExistingParent(AABItems.KOI_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 }
