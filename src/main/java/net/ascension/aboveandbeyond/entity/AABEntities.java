@@ -14,6 +14,9 @@ public class AABEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, AboveAndBeyond.MOD_ID);
 
+    public static final Supplier<EntityType<KoiEntity>> FLOOFER =
+            ENTITY_TYPES.register("floofer", () -> EntityType.Builder.of(FlooferEntity::new, MobCategory.CREATURE)
+                    .sized(0.75f, 0.65f).build("floofer"));
     public static final Supplier<EntityType<KoiEntity>> KOI =
             ENTITY_TYPES.register("koi", () -> EntityType.Builder.of(KoiEntity::new, MobCategory.CREATURE)
                     .sized(0.75f, 0.65f).build("koi"));

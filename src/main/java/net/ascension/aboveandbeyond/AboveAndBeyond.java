@@ -44,8 +44,8 @@ public class AboveAndBeyond {
         AABCreativeTabs.register(modEventBus);
         AABBlocks.register(modEventBus);
         AABItems.register(modEventBus);
-        AABSounds.register(modEventBus);
         AABEntities.register(modEventBus);
+        AABSounds.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

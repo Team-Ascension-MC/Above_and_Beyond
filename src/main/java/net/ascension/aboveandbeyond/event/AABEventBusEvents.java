@@ -14,9 +14,17 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 public class AABEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(KoiModel.LAYER_LOCATION, KoiModel::createBodyLayer);
+        event.registerLayerDefinition(FlooferModel.LAYER_LOCATION, FlooferModel::createBodyLayer);
+    }
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(AABEntities.FLOOFER.get(), FlooferModel.createAttributes().build());
     }
 
+    @SubscribeEvent
+    public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(KoiModel.LAYER_LOCATION, KoiModel::createBodyLayer);
+    }
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(AABEntities.KOI.get(), KoiEntity.createAttributes().build());

@@ -48,5 +48,8 @@
 
   "item.aboveandbeyond.koi_spawn_egg": "Koi Spawn Egg",
   "item.aboveandbeyond.koi_bucket": "Koi Bucket",
-  "entity.aboveandbeyond.koi": "Koi"
+  "entity.aboveandbeyond.koi": "Koi",
+
+  "item.aboveandbeyond.floofer_spawn_egg": "Floofer Spawn Egg",
+  "entity.aboveandbeyond.floofer": "Floofer"
 }
