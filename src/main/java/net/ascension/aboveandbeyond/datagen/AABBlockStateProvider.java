@@ -20,6 +20,7 @@ public class AABBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(AABBlocks.AEROSOIL);
+        blockItem(AABBlocks.AEROSOIL_PATH);
         blockWithItem(AABBlocks.COARSE_AEROSOIL);
         blockWithItem(AABBlocks.ZENSTONE);
         stairsBlock(AABBlocks.ZENSTONE_STAIRS.get(), blockTexture(AABBlocks.ZENSTONE.get()));

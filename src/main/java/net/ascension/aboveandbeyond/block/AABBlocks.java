@@ -1,11 +1,8 @@
 package net.ascension.aboveandbeyond.block;
 
-import com.mojang.serialization.MapCodec;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.block.custom.AABFlammableRotatedPillarBlock;
-import net.ascension.aboveandbeyond.block.custom.AABWoodTypes;
-import net.ascension.aboveandbeyond.block.custom.CloudBlock;
-import net.ascension.aboveandbeyond.block.custom.ZenGravel;
+import net.ascension.aboveandbeyond.block.custom.*;
+import net.ascension.aboveandbeyond.block.custom.AerosoilPathBlock;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -38,6 +35,8 @@ public class AABBlocks {
             () -> new FlowerBlock(MobEffects.WATER_BREATHING, 15, BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ORCHID).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<Block> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+    public static final DeferredBlock<Block> AEROSOIL_PATH = registerBlock("aerosoil_path",
+            () -> new AerosoilPathBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT_PATH)));
     public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> COARSE_AEROSOIL = registerBlock("coarse_aerosoil",

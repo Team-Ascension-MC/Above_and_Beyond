@@ -21,6 +21,7 @@ public class AABCreativeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         /* Cloud Islands */
                         output.accept(AABBlocks.PUFFGRASS_BLOCK);
+                        output.accept(AABBlocks.AEROSOIL_PATH);
                         output.accept(AABBlocks.AEROSOIL);
                         output.accept(AABBlocks.COARSE_AEROSOIL);
                         output.accept(AABBlocks.ZEN_GRAVEL);

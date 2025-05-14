@@ -28,6 +28,7 @@ protected AABBlockLootTableProvider(HolderLookup.Provider registries) {
 protected void generate() {
     this.dropWhenSilkTouch(AABBlocks.PUFFGRASS_BLOCK.get());
     this.dropSelf(AABBlocks.AEROSOIL.get());
+    this.dropWhenSilkTouch(AABBlocks.AEROSOIL_PATH.get());
     this.dropSelf(AABBlocks.COARSE_AEROSOIL.get());
     this.dropSelf(AABBlocks.ZENSTONE.get());
     this.dropSelf(AABBlocks.ZENSTONE_STAIRS.get());
