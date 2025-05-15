@@ -2,10 +2,12 @@ package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
-import net.ascension.aboveandbeyond.block.custom.AABWoodTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -60,6 +62,20 @@ public class AABBlockStateProvider extends BlockStateProvider {
         blockItem(AABBlocks.WELKIN_PRESSURE_PLATE);
         blockItem(AABBlocks.WELKIN_FENCE_GATE);
         blockItem(AABBlocks.WELKIN_TRAPDOOR, "_bottom");
+
+        leavesBlock(AABBlocks.WELKIN_LEAVES);
+        saplingBlock(AABBlocks.WELKIN_SAPLING);
+    }
+
+    private void saplingBlock(DeferredBlock<SaplingBlock> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(DeferredBlock<LeavesBlock> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

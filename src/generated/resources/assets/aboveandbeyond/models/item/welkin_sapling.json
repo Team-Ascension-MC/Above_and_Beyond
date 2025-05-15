@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "aboveandbeyond:item/koi_bucket"
+    "layer0": "aboveandbeyond:block/welkin_sapling"
   }
 }
