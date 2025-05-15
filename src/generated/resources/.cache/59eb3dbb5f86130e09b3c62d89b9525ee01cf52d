@@ -1,5 +1,6 @@
-// 1.21.1	2025-05-12T19:47:05.7385341	Loot Tables
+// 1.21.1	2025-05-14T21:20:07.9824218	Loot Tables
 28b1f646152028a3d269b25bfcdaf176730c5178 data/aboveandbeyond/loot_table/blocks/aerosoil.json
+865dd36e1b1a1146b1dce45e3ebf42b5bb26798e data/aboveandbeyond/loot_table/blocks/aerosoil_path.json
 290f4f3926e12724674cb901a9b6499b18317440 data/aboveandbeyond/loot_table/blocks/chiseled_polished_zenstone_bricks.json
 bb90c928de73f36bb36a65270c0a5cbac3d5ccad data/aboveandbeyond/loot_table/blocks/cloud_block.json
 7c37d89f22b75dc05c2bf4411c8f5637c1d5b4ff data/aboveandbeyond/loot_table/blocks/coarse_aerosoil.json
@@ -18,9 +19,11 @@ e62e361db22767c2c48d0590fb342390ff01f5a8 data/aboveandbeyond/loot_table/blocks/p
 85b381ab7b8019404af5a7b0caf8c197eadaac9f data/aboveandbeyond/loot_table/blocks/welkin_door.json
 ba10283d266efd0441230e62b1f29f62b5ae27fe data/aboveandbeyond/loot_table/blocks/welkin_fence.json
 4be8314a344d8fff578097ca95a81efcaf762cb6 data/aboveandbeyond/loot_table/blocks/welkin_fence_gate.json
+7632f55285a02d8a6e00be3bcdac019dabe2d8a1 data/aboveandbeyond/loot_table/blocks/welkin_leaves.json
 d4b5d90adeb0e7b0b92bdedc5cb684ecc5267df6 data/aboveandbeyond/loot_table/blocks/welkin_log.json
 c61ecce68a56ce4bf251d22290732f4189f18f56 data/aboveandbeyond/loot_table/blocks/welkin_planks.json
 0d3b06c18e93828c93032b604614552ec136baf4 data/aboveandbeyond/loot_table/blocks/welkin_pressure_plate.json
+c1639d3ab1daec562f20892526107b88707973fb data/aboveandbeyond/loot_table/blocks/welkin_sapling.json
 316c249d2433519e416853ae078f25e8300fa34f data/aboveandbeyond/loot_table/blocks/welkin_slab.json
 f108499581a589cdf4a742d9bc04e9ed58f88a29 data/aboveandbeyond/loot_table/blocks/welkin_stairs.json
 3ba443070f0f5c772b6a6dfa5df3fe9ffdb6d2ae data/aboveandbeyond/loot_table/blocks/welkin_trapdoor.json

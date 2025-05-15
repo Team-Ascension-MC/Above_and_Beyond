@@ -3,6 +3,7 @@ package net.ascension.aboveandbeyond.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -48,7 +49,8 @@ public class ZenGravel extends FallingBlock {
         Direction pDirection = pPlayer.getDirection();
 
         if (heldItem.getItem() instanceof net.minecraft.world.item.HoeItem || offHeldItem.getItem() instanceof net.minecraft.world.item.HoeItem) {
-            if (pPlayer.isShiftKeyDown() || pPlayer.isCrouching()) {
+            if (pPlayer.isCrouching() || pPlayer.isShiftKeyDown() || pPlayer.isInLiquid()) {
+                pLevel.playSound(null, pPos, SoundEvents.ENDERMAN_DEATH, SoundSource.BLOCKS, 1.0F, 1.0F);
                 BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, 0).setValue(FACING, pDirection);
                 pLevel.setBlock(pPos, newState, 3);
             } else {
