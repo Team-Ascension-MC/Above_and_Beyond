@@ -1,5 +1,7 @@
 package net.ascension.aboveandbeyond.entity;
 
+import com.mojang.serialization.Codec;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -16,6 +18,7 @@ public enum KoiVariant {
     THUNDER(9),
     WARDEN(10);
 
+    public static final Codec<KoiVariant> CODEC = Codec.INT.xmap(KoiVariant::byID, KoiVariant::getId);
     private static final KoiVariant[] BY_ID = Arrays.stream(values())
         .sorted(Comparator.comparingInt(KoiVariant::getId))
         .toArray(KoiVariant[]::new);

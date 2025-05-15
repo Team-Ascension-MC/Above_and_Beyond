@@ -43,9 +43,6 @@ public class AABItems {
     public static final DeferredItem<Item> MUSIC_DISC_HEIST = ITEMS.register("music_disc_heist",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE).jukeboxPlayable(AABSounds.HEIST_KEY).stacksTo(1)));
 
-    public static final DeferredItem<Item> FLOOFER_SPAWN_EGG = ITEMS.register("floofer_spawn_egg",
-            () -> new DeferredSpawnEggItem(AABEntities.FLOOFER, 0x31afaf, 0xddac00,
-                    new Item.Properties()));
     public static final DeferredItem<Item> KOI_SPAWN_EGG = ITEMS.register("koi_spawn_egg",
             () -> new DeferredSpawnEggItem(AABEntities.KOI, 0x31afaf, 0xddac00,
                     new Item.Properties()));

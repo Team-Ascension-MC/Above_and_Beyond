@@ -1,8 +1,11 @@
 package net.ascension.aboveandbeyond.entity.custom;
 
+import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.KoiVariant;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.Util;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -22,9 +25,14 @@ import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.TropicalFish;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import org.jetbrains.annotations.Nullable;
+
+import java.text.NumberFormat;
+
+import static net.ascension.aboveandbeyond.component.AABDataComponent.KOI_VARIANT;
 
 public class KoiEntity extends Cod {
     public final AnimationState idleAnimationState = new AnimationState();
@@ -43,6 +51,14 @@ public class KoiEntity extends Cod {
     @Override
     public ItemStack getBucketItemStack() {
         return new ItemStack(AABItems.KOI_BUCKET.get());
+    }
+
+    @Override
+    public void saveToBucketTag(ItemStack stack) {
+        super.saveToBucketTag(stack);
+
+        KoiVariant variant = this.getVariant();
+        stack.set(KOI_VARIANT.get(), variant);
     }
 
     @Override
