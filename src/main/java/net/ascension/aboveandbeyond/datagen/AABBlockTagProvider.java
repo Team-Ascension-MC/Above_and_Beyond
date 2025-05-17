@@ -6,6 +6,7 @@ import net.ascension.aboveandbeyond.util.AABTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -49,9 +50,21 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.ZEN_GRAVEL.get());
 
         tag(AABTags.Blocks.WELKIN_LOGS)
-                .addTag(BlockTags.LOGS)
-                .addTag(BlockTags.LOGS_THAT_BURN)
-                .addTag(BlockTags.OVERWORLD_NATURAL_LOGS)
+                .add(AABBlocks.WELKIN_LOG.get())
+                .add(AABBlocks.WELKIN_WOOD.get())
+                .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
+                .add(AABBlocks.STRIPPED_WELKIN_WOOD.get());
+        tag(BlockTags.LOGS)
+                .add(AABBlocks.WELKIN_LOG.get())
+                .add(AABBlocks.WELKIN_WOOD.get())
+                .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
+                .add(AABBlocks.STRIPPED_WELKIN_WOOD.get());
+        tag(BlockTags.LOGS_THAT_BURN)
+                .add(AABBlocks.WELKIN_LOG.get())
+                .add(AABBlocks.WELKIN_WOOD.get())
+                .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
+                .add(AABBlocks.STRIPPED_WELKIN_WOOD.get());
+        tag(BlockTags.OVERWORLD_NATURAL_LOGS)
                 .add(AABBlocks.WELKIN_LOG.get())
                 .add(AABBlocks.WELKIN_WOOD.get())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
@@ -81,6 +94,10 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.WELKIN_SLAB.get());
         tag(BlockTags.FENCES).add(AABBlocks.WELKIN_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(AABBlocks.WELKIN_FENCE_GATE.get());
+        tag(BlockTags.LEAVES)
+                .add(AABBlocks.WELKIN_LEAVES.get());
+        tag(BlockTags.SAPLINGS)
+                .add(AABBlocks.WELKIN_SAPLING.get());
         tag(BlockTags.WALLS)
                 .add(AABBlocks.ZENSTONE_WALL.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get());

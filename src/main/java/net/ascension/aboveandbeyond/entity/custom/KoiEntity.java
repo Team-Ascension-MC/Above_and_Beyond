@@ -59,7 +59,7 @@ public class KoiEntity extends Cod {
         stack.set(KOI_VARIANT, this.getVariant());
     }
 
-    @Override
+    /*@Override
     public void loadFromBucketTag(CompoundTag tag, ItemStack stack) {
         super.loadFromBucketTag(tag);
 
@@ -68,7 +68,7 @@ public class KoiEntity extends Cod {
             KoiVariant variant = stack.get(KOI_VARIANT);
             this.entityData.set(VARIANT, variant);
         }
-    }
+    }*/
 
     @Override
     protected void registerGoals() {
