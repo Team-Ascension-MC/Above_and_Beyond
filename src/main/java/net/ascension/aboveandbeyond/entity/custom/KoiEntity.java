@@ -3,10 +3,12 @@ package net.ascension.aboveandbeyond.entity.custom;
 import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.KoiVariant;
 import net.ascension.aboveandbeyond.item.AABItems;
+import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -59,16 +61,14 @@ public class KoiEntity extends Cod {
         stack.set(KOI_VARIANT, this.getVariant());
     }
 
-    /*@Override
-    public void loadFromBucketTag(CompoundTag tag, ItemStack stack) {
+    @Override
+    public void loadFromBucketTag(CompoundTag tag) {
         super.loadFromBucketTag(tag);
 
-        // If the bucket has a koi variant stored, use it
-        if (stack.has(KOI_VARIANT)) {
-            KoiVariant variant = stack.get(KOI_VARIANT);
-            this.entityData.set(VARIANT, variant);
+        if (tag.contains("KOI_VARIANT")) {
+            this.setVariant(KoiVariant.byID(tag.getInt("koi_variant")));
         }
-    }*/
+    }
 
     @Override
     protected void registerGoals() {

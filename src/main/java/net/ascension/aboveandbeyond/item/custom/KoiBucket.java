@@ -2,6 +2,7 @@ package net.ascension.aboveandbeyond.item.custom;
 
 import java.util.List;
 
+import net.ascension.aboveandbeyond.entity.KoiVariant;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -25,7 +26,7 @@ public class KoiBucket extends MobBucketItem {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if(stack.has(KOI_VARIANT)) {
-            @Nullable String variantName = stack.get(KOI_VARIANT).name();
+            KoiVariant variantName = stack.get(KOI_VARIANT);
             tooltipComponents.add(Component.literal("Variant: " + variantName).withStyle(ChatFormatting.GRAY));
         }
 
