@@ -56,9 +56,18 @@ public class KoiEntity extends Cod {
     @Override
     public void saveToBucketTag(ItemStack stack) {
         super.saveToBucketTag(stack);
+        stack.set(KOI_VARIANT, this.getVariant());
+    }
 
-        KoiVariant variant = this.getVariant();
-        stack.set(KOI_VARIANT.get(), variant);
+    @Override
+    public void loadFromBucketTag(CompoundTag tag, ItemStack stack) {
+        super.loadFromBucketTag(tag);
+
+        // If the bucket has a koi variant stored, use it
+        if (stack.has(KOI_VARIANT)) {
+            KoiVariant variant = stack.get(KOI_VARIANT);
+            this.entityData.set(VARIANT, variant);
+        }
     }
 
     @Override

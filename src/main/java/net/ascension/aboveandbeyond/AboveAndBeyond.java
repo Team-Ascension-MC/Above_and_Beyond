@@ -1,6 +1,7 @@
 package net.ascension.aboveandbeyond;
 
 import net.ascension.aboveandbeyond.block.AABBlocks;
+import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.AABEntities;
 import net.ascension.aboveandbeyond.entity.client.KoiRenderer;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
@@ -46,6 +47,7 @@ public class AboveAndBeyond {
         AABItems.register(modEventBus);
         AABEntities.register(modEventBus);
         AABSounds.register(modEventBus);
+        AABDataComponent.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

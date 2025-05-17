@@ -4,6 +4,7 @@ import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.entity.AABEntities;
 import net.ascension.aboveandbeyond.item.custom.CloudBucket;
+import net.ascension.aboveandbeyond.item.custom.KoiBucket;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
@@ -28,7 +29,7 @@ public class AABItems {
     public static final DeferredItem<Item> CLOUD_BUCKET = ITEMS.register("cloud_bucket",
             () -> new CloudBucket(AABBlocks.CLOUD_BLOCK.get(), SoundEvents.SNOW_PLACE, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> KOI_BUCKET = ITEMS.register("koi_bucket",
-            () -> new MobBucketItem(AABEntities.KOI.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH,
+            () -> new KoiBucket(AABEntities.KOI.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH,
                 new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> CLOUD_BERRY = ITEMS.register("cloud_berry",
             () -> new Item(new Item.Properties()
