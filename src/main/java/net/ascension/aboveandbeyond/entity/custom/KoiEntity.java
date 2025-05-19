@@ -65,7 +65,7 @@ public class KoiEntity extends Cod {
     public void loadFromBucketTag(CompoundTag tag) {
         super.loadFromBucketTag(tag);
 
-        if (tag.contains("KOI_VARIANT")) {
+        if (tag.contains("koi_variant")) {
             this.setVariant(KoiVariant.byID(tag.getInt("koi_variant")));
         }
     }
