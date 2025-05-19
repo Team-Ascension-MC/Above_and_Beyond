@@ -1,14 +1,10 @@
 package net.ascension.aboveandbeyond.entity.custom;
 
-import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.KoiVariant;
 import net.ascension.aboveandbeyond.item.AABItems;
-import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
-import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -24,6 +20,7 @@ import net.minecraft.world.entity.ai.control.SmoothSwimmingMoveControl;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
+import net.minecraft.world.entity.animal.Bucketable;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.TropicalFish;
 import net.minecraft.world.item.ItemStack;
@@ -32,13 +29,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import org.jetbrains.annotations.Nullable;
 
-import java.text.NumberFormat;
-
-import static net.ascension.aboveandbeyond.component.AABDataComponent.KOI_VARIANT;
-
 public class KoiEntity extends Cod {
     public final AnimationState idleAnimationState = new AnimationState();
-    public final AnimationState flopAnimationState = new AnimationState(); // Add this line
+    public final AnimationState flopAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
     private static final EntityDataAccessor<Integer> VARIANT =
@@ -57,17 +50,16 @@ public class KoiEntity extends Cod {
 
     @Override
     public void saveToBucketTag(ItemStack stack) {
-        super.saveToBucketTag(stack);
-        stack.set(KOI_VARIANT, this.getVariant());
+        Bucketable.saveDefaultDataToBucketTag(this, stack);
+        CustomData.update(DataComponents.BUCKET_ENTITY_DATA, stack, (p_330644_) -> {
+            p_330644_.putInt("Variant", this.getTypeVariant());
+        });
     }
 
     @Override
     public void loadFromBucketTag(CompoundTag tag) {
-        super.loadFromBucketTag(tag);
-
-        if (tag.contains("koi_variant")) {
-            this.setVariant(KoiVariant.byID(tag.getInt("koi_variant")));
-        }
+        Bucketable.loadDefaultDataFromBucketTag(this, tag);
+        this.setVariant(KoiVariant.byID(tag.getInt("Variant")));
     }
 
     @Override
@@ -93,10 +85,8 @@ public class KoiEntity extends Cod {
 
     private void setupAnimationStates() {
         if (this.isInWater()) {
-            // Reset flopping animation when in water
             this.flopAnimationState.stop();
 
-            // Handle idle animation in water
             if (this.idleAnimationTimeout <= 0) {
                 this.idleAnimationTimeout = this.getRandom().nextInt(40) + 80;
                 this.idleAnimationState.start(this.tickCount);
@@ -104,7 +94,6 @@ public class KoiEntity extends Cod {
                 --this.idleAnimationTimeout;
             }
         } else {
-            // When out of water, stop idle animation and start flopping
             this.idleAnimationState.stop();
             this.flopAnimationState.startIfStopped(this.tickCount);
         }
@@ -142,13 +131,13 @@ public class KoiEntity extends Cod {
     @Override
     public void addAdditionalSaveData(CompoundTag compound) {
         super.addAdditionalSaveData(compound);
-        compound.putInt("variant", this.getTypeVariant());
+        compound.putInt("Variant", this.getTypeVariant());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag compound) {
         super.readAdditionalSaveData(compound);
-        this.entityData.set(VARIANT, compound.getInt("variant"));
+        this.setVariant(KoiVariant.byID(compound.getInt("Variant")));
     }
 
     @Override
