@@ -55,12 +55,12 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.WELKIN_BUTTON);
                         output.accept(AABBlocks.WELKIN_LEAVES);
                         output.accept(AABBlocks.WELKIN_SAPLING);
+                        output.accept(AABItems.KATANA);
+                        output.accept(AABItems.KOI_BUCKET);
+                        output.accept(AABItems.KOI_SPAWN_EGG);
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
                         output.accept(AABItems.MUSIC_DISC_HEIST);
-                        output.accept(AABItems.KOI_SPAWN_EGG);
-                        output.accept(AABItems.KOI_BUCKET);
-                        output.accept(AABItems.KATANA);
                     }).build());
 
     public static void register(IEventBus eventBus) {

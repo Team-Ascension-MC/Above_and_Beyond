@@ -12,7 +12,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -35,8 +34,8 @@ public class AABBlocks {
             () -> new FlowerBlock(MobEffects.LUCK, 7, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<FlowerBlock> SKYACINTH = BLOCKS.register("skyacinth",
             () -> new FlowerBlock(MobEffects.WATER_BREATHING, 15, BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ORCHID).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
-    public static final DeferredBlock<Block> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+    public static final DeferredBlock<PuffgrassBlock> PUFFGRASS_BLOCK = registerBlock("puffgrass_block",
+            () -> new PuffgrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> AEROSOIL_PATH = registerBlock("aerosoil_path",
             () -> new AerosoilPathBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT_PATH)));
     public static final DeferredBlock<Block> AEROSOIL = registerBlock("aerosoil",

@@ -44,20 +44,17 @@ public class AABItems {
     public static final DeferredItem<Item> MUSIC_DISC_HEIST = ITEMS.register("music_disc_heist",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE).jukeboxPlayable(AABSounds.HEIST_KEY).stacksTo(1)));
 
+    public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
+            () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(Tiers.DIAMOND, 6, -2.2f))
+                    .durability(1562)
+                    .stacksTo(1)
+                    .rarity(Rarity.UNCOMMON)
+            ));
+
     public static final DeferredItem<Item> KOI_SPAWN_EGG = ITEMS.register("koi_spawn_egg",
             () -> new DeferredSpawnEggItem(AABEntities.KOI, 0x31afaf, 0xddac00,
                     new Item.Properties()));
-
-    public static final DeferredItem<Item> KATANA = ITEMS.register("katana",
-            () -> new SwordItem(
-                    Tiers.NETHERITE,
-                    new Item.Properties()
-                            .durability(1562)
-                            .stacksTo(1)
-                            .fireResistant()
-                            .rarity(Rarity.UNCOMMON)
-            )
-    );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
