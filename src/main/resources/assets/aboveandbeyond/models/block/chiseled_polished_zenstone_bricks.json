@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "aboveandbeyond:block:block/cracked_polished_zenstone_bricks"
+    "end": "aboveandbeyond:block/chiseled_polished_zenstone_bricks_top",
+    "side": "aboveandbeyond:block/chiseled_polished_zenstone_bricks"
   }
 }
