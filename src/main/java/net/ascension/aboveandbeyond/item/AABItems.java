@@ -46,7 +46,7 @@ public class AABItems {
 
     public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(Tiers.DIAMOND, 6, -2.2f))
+                    .attributes(SwordItem.createAttributes(Tiers.DIAMOND, 2.5f, -2.2f))
                     .durability(1562)
                     .stacksTo(1)
                     .rarity(Rarity.UNCOMMON)
