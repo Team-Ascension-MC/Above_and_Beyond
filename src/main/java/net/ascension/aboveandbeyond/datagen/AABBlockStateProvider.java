@@ -22,7 +22,6 @@ public class AABBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(AABBlocks.AEROSOIL);
-        blockItem(AABBlocks.AEROSOIL_PATH);
         blockWithItem(AABBlocks.COARSE_AEROSOIL);
         blockWithItem(AABBlocks.ZENSTONE);
         stairsBlock(AABBlocks.ZENSTONE_STAIRS.get(), blockTexture(AABBlocks.ZENSTONE.get()));
@@ -33,7 +32,6 @@ public class AABBlockStateProvider extends BlockStateProvider {
         stairsBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
         slabBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
         wallBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
-        blockWithItem(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
 
         logBlock(((RotatedPillarBlock) AABBlocks.WELKIN_LOG.get()));
         axisBlock(((RotatedPillarBlock) AABBlocks.WELKIN_WOOD.get()), blockTexture(AABBlocks.WELKIN_LOG.get()), blockTexture(AABBlocks.WELKIN_LOG.get()));
