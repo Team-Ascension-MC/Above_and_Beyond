@@ -17,9 +17,6 @@ public class AABDataComponent {
 
     /* DATA */
 
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<KoiVariant>> KOI_VARIANT = register("koi_variant",
-            builder -> builder.persistent(KoiVariant.CODEC));
-
     /*      */
 
     private static <T>DeferredHolder<DataComponentType<?>, DataComponentType<T>> register(String name,
