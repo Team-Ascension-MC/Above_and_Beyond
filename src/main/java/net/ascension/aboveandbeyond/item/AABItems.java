@@ -48,6 +48,17 @@ public class AABItems {
             () -> new DeferredSpawnEggItem(AABEntities.KOI, 0x31afaf, 0xddac00,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> KATANA = ITEMS.register("katana",
+            () -> new SwordItem(
+                    Tiers.NETHERITE,
+                    new Item.Properties()
+                            .durability(1562)
+                            .stacksTo(1)
+                            .fireResistant()
+                            .rarity(Rarity.UNCOMMON)
+            )
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

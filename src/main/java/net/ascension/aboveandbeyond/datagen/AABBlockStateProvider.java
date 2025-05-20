@@ -33,7 +33,7 @@ public class AABBlockStateProvider extends BlockStateProvider {
         stairsBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
         slabBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
         wallBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
-        blockItem(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
+        blockWithItem(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
 
         logBlock(((RotatedPillarBlock) AABBlocks.WELKIN_LOG.get()));
         axisBlock(((RotatedPillarBlock) AABBlocks.WELKIN_WOOD.get()), blockTexture(AABBlocks.WELKIN_LOG.get()), blockTexture(AABBlocks.WELKIN_LOG.get()));
