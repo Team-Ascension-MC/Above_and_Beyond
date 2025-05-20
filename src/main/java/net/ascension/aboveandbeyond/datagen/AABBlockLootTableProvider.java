@@ -65,6 +65,10 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
         this.add(AABBlocks.WELKIN_LEAVES.get(), block ->
                 createLeavesDrops(block, AABBlocks.WELKIN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.dropSelf(AABBlocks.WELKIN_SAPLING.get());
+
+        this.dropWhenSilkTouch(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
+        this.dropSelf(AABBlocks.STORMY_CLOUD_BLOCK.get());
+        this.dropSelf(AABBlocks.COBALT_BLOCK.get());
     }
 
         @Override

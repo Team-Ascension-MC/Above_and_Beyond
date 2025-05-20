@@ -1,0 +1,16 @@
+// 1.21.1	2025-05-20T19:23:59.6187001	Tags for minecraft:item mod id aboveandbeyond
+0c274465215ee87e25768eeba26e03eb8f85cb75 data/aboveandbeyond/tags/item/welkin_logs.json
+7380098670ccee8c3cbf23fd7db1db4dc856b2fe data/minecraft/tags/item/axes.json
+3c940385410659bb996c047a3f11123ddae2e3c8 data/minecraft/tags/item/enchantable/sword.json
+dc862a2508d1bcad5fc811b212f7461eacdf98ea data/minecraft/tags/item/hoes.json
+9f10bb97938a5a0c426e598cb1e24310a1e85350 data/minecraft/tags/item/leaves.json
+0c274465215ee87e25768eeba26e03eb8f85cb75 data/minecraft/tags/item/logs.json
+e8f03adb7f46ab7b6ec98fdbb51fd8a5bf7b5e89 data/minecraft/tags/item/logs_that_burn.json
+5a3f48b4966ea3a58e2462e3124b3d2ce62f51ae data/minecraft/tags/item/pickaxes.json
+29d2a02d47f5a18c93e6fdf7f302f1b859a5d2fa data/minecraft/tags/item/planks.json
+2236a9df97fb694ccb3f7b16dd6b7eb54464a286 data/minecraft/tags/item/saplings.json
+406632699d2c7fb7d27ff35e2852c7b39e612e66 data/minecraft/tags/item/shovels.json
+737513c3f34257ba700e1cef79492aa7cd1fb574 data/minecraft/tags/item/stone_bricks.json
+8af76a4793dd3c12bd196b6fed2b41771f9fb28a data/minecraft/tags/item/stone_tool_materials.json
+3c940385410659bb996c047a3f11123ddae2e3c8 data/minecraft/tags/item/swords.json
+b83789ece65d811875b7879766f5e89308a5f363 data/minecraft/tags/item/trimmable_armor.json

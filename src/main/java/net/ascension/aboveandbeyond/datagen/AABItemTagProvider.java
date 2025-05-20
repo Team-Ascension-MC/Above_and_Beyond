@@ -29,28 +29,55 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get().asItem());
 
-        this.tag(ItemTags.LOGS)
+        tag(ItemTags.LOGS)
                 .add(AABBlocks.WELKIN_LOG.get().asItem())
                 .add(AABBlocks.WELKIN_WOOD.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get().asItem());
-        this.tag(ItemTags.LOGS_THAT_BURN)
+        tag(ItemTags.LOGS_THAT_BURN)
                 .add(AABBlocks.WELKIN_LOG.get().asItem())
                 .add(AABBlocks.WELKIN_WOOD.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get().asItem());
-        this.tag(ItemTags.LOGS_THAT_BURN)
+        tag(ItemTags.LOGS_THAT_BURN)
                 .add(AABBlocks.WELKIN_LOG.get().asItem())
                 .add(AABBlocks.WELKIN_WOOD.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get().asItem());
-        this.tag(ItemTags.PLANKS)
+        tag(ItemTags.PLANKS)
                 .add(AABBlocks.WELKIN_PLANKS.asItem());
-        this.tag(ItemTags.LEAVES)
+        tag(ItemTags.LEAVES)
                 .add(AABBlocks.WELKIN_LEAVES.asItem());
-        this.tag(ItemTags.SAPLINGS)
+        tag(ItemTags.SAPLINGS)
                 .add(AABBlocks.WELKIN_SAPLING.asItem());
-        this.tag(ItemTags.STONE_BRICKS)
+        tag(ItemTags.STONE_BRICKS)
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICKS.asItem());
+        tag(ItemTags.STONE_TOOL_MATERIALS)
+                .add(AABBlocks.ZENSTONE.asItem());
+
+        tag(ItemTags.SWORDS)
+                .add(AABItems.KATANA.get())
+                .add(AABItems.COBALT_SWORD.get());
+        tag(ItemTags.SWORD_ENCHANTABLE)
+                .add(AABItems.KATANA.get())
+                .add(AABItems.COBALT_SWORD.get());
+
+        tag(ItemTags.PICKAXES)
+                .add(AABItems.COBALT_PICKAXE.get());
+
+        tag(ItemTags.AXES)
+                .add(AABItems.COBALT_AXE.get());
+
+        tag(ItemTags.SHOVELS)
+                .add(AABItems.COBALT_SHOVEL.get());
+
+        tag(ItemTags.HOES)
+                .add(AABItems.COBALT_HOE.get());
+
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(AABItems.COBALT_HELMET.get())
+                .add(AABItems.COBALT_CHESTPLATE.get())
+                .add(AABItems.COBALT_LEGGINGS.get())
+                .add(AABItems.COBALT_BOOTS.get());
     }
 }

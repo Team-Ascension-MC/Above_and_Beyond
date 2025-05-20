@@ -47,7 +47,8 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
                 .add(AABBlocks.COARSE_AEROSOIL.get())
-                .add(AABBlocks.ZEN_GRAVEL.get());
+                .add(AABBlocks.ZEN_GRAVEL.get())
+                .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
 
         tag(AABTags.Blocks.WELKIN_LOGS)
                 .add(AABBlocks.WELKIN_LOG.get())
@@ -73,7 +74,8 @@ public class AABBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.DIRT)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
-                .add(AABBlocks.COARSE_AEROSOIL.get());
+                .add(AABBlocks.COARSE_AEROSOIL.get())
+                .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
 
         tag(BlockTags.ANIMALS_SPAWNABLE_ON)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())

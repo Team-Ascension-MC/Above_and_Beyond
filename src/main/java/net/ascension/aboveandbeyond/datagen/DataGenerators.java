@@ -31,6 +31,7 @@ public class DataGenerators {
 
         BlockTagsProvider blockTagsProvider = new AABBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
+        generator.addProvider(event.includeServer(), new AABItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
 
         generator.addProvider(event.includeClient(), new AABItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new AABBlockStateProvider(packOutput, existingFileHelper));

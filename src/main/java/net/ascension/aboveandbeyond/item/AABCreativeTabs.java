@@ -15,11 +15,12 @@ public class AABCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AboveAndBeyond.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> ABOVE_AND_BEYOND_TAB = CREATIVE_MODE_TAB.register("above_and_beyond_tab",
+    public static final Supplier<CreativeModeTab> AAB_SKY_ISLANDS_TAB = CREATIVE_MODE_TAB.register("aab_sky_islands_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.PUFFGRASS_BLOCK.get()))
-                    .title(Component.translatable("creativetab.aboveandbeyond.items"))
+                    .title(Component.translatable("creativetab.aboveandbeyond.skyisland.items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        /* Cloud Islands */
+                        /* SKY ISLANDS */
+                        /*Cloud Islands*/
                         output.accept(AABBlocks.PUFFGRASS_BLOCK);
                         output.accept(AABBlocks.AEROSOIL_PATH);
                         output.accept(AABBlocks.AEROSOIL);
@@ -61,6 +62,20 @@ public class AABCreativeTabs {
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
                         output.accept(AABItems.MUSIC_DISC_HEIST);
+
+                        /*Nimbus Islands*/
+                        output.accept(AABBlocks.NIMBUS_PUFFGRASS_BLOCK);
+                        output.accept(AABBlocks.STORMY_CLOUD_BLOCK);
+                        output.accept(AABBlocks.COBALT_BLOCK);
+                        output.accept(AABItems.COBALT_SHOVEL);
+                        output.accept(AABItems.COBALT_PICKAXE);
+                        output.accept(AABItems.COBALT_AXE);
+                        output.accept(AABItems.COBALT_HOE);
+                        output.accept(AABItems.COBALT_SWORD);
+                        output.accept(AABItems.COBALT_HELMET);
+                        output.accept(AABItems.COBALT_CHESTPLATE);
+                        output.accept(AABItems.COBALT_LEGGINGS);
+                        output.accept(AABItems.COBALT_BOOTS);
                     }).build());
 
     public static void register(IEventBus eventBus) {

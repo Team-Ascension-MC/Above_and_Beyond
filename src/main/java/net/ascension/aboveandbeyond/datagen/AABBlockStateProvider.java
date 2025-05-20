@@ -64,6 +64,8 @@ public class AABBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(AABBlocks.WELKIN_LEAVES);
         saplingBlock(AABBlocks.WELKIN_SAPLING);
+
+        blockWithItem(AABBlocks.COBALT_BLOCK);
     }
 
     private void saplingBlock(DeferredBlock<SaplingBlock> blockRegistryObject) {

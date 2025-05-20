@@ -1,7 +1,8 @@
 {
-  "creativetab.aboveandbeyond.items": "Above And Beyond",
+  "creativetab.aboveandbeyond.skyisland.items": "Above & Beyond: Sky Islands",
 
-  /* Cloud Islands */
+  /* SKY ISLANDS */
+  /*Cloud Islands*/
   "block.aboveandbeyond.puffgrass_block": "Puffgrass Block",
   "block.aboveandbeyond.aerosoil_path": "Aerosoil Path",
   "block.aboveandbeyond.aerosoil": "Aerosoil",
@@ -56,5 +57,22 @@
   "item.aboveandbeyond.katana": "Katana",
 
   "item.aboveandbeyond.floofer_spawn_egg": "Floofer Spawn Egg",
-  "entity.aboveandbeyond.floofer": "Floofer"
+  "entity.aboveandbeyond.floofer": "Floofer",
+
+  /*Nimbus Islands*/
+  "block.aboveandbeyond.nimbus_puffgrass_block": "Nimbus Puffgrass Block",
+
+  "block.aboveandbeyond.stormy_cloud_block": "Stormy Cloud Block",
+  "item.aboveandbeyond.stormy_cloud_bucket": "Stormy Cloud Bucket",
+
+  "block.aboveandbeyond.cobalt_block": "Block of Cobalt",
+  "item.aboveandbeyond.cobalt_sword": "Cobalt Sword",
+  "item.aboveandbeyond.cobalt_pickaxe": "Cobalt Pickaxe",
+  "item.aboveandbeyond.cobalt_axe": "Cobalt Axe",
+  "item.aboveandbeyond.cobalt_shovel": "Cobalt Shovel",
+  "item.aboveandbeyond.cobalt_hoe": "Cobalt Hoe",
+  "item.aboveandbeyond.cobalt_helmet": "Cobalt Helmet",
+  "item.aboveandbeyond.cobalt_chestplate": "Cobalt Chestplate",
+  "item.aboveandbeyond.cobalt_leggings": "Cobalt Leggings",
+  "item.aboveandbeyond.cobalt_boots": "Cobalt Boots"
 }

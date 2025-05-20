@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "aboveandbeyond:block/nimbus_puffgrass_block"
+      },
+      {
+        "model": "aboveandbeyond:block/nimbus_puffgrass_block",
+        "y": 90
+      },
+      {
+        "model": "aboveandbeyond:block/nimbus_puffgrass_block",
+        "y": 180
+      },
+      {
+        "model": "aboveandbeyond:block/nimbus_puffgrass_block",
+        "y": 270
+      }
+    ]
+  }
+}

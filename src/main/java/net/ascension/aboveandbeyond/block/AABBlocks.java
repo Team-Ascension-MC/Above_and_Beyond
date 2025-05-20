@@ -27,7 +27,8 @@ import java.util.function.Supplier;
 public class AABBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
 
-    /* Cloud Islands */
+    /* SKY ISLANDS */
+    //Cloud Islands
     public static final DeferredBlock<FlowerBlock> PUFFGRASS = BLOCKS.register("puffgrass",
             () -> new FlowerBlock(MobEffects.LEVITATION, 1, BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<FlowerBlock> STARFLOWER = BLOCKS.register("starflower",
@@ -123,6 +124,15 @@ public class AABBlocks {
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
     public static final DeferredBlock<SaplingBlock> WELKIN_SAPLING = registerBlock("welkin_sapling",
             () -> new SaplingBlock(AABTreeGrowers.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+
+    //Nimbus Islands
+    public static final DeferredBlock<PuffgrassBlock> NIMBUS_PUFFGRASS_BLOCK = registerBlock("nimbus_puffgrass_block",
+            () -> new PuffgrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+    public static final DeferredBlock<Block> STORMY_CLOUD_BLOCK = registerBlock("stormy_cloud_block",
+            () -> new StormyCloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.POWDER_SNOW).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
+
+    public static final DeferredBlock<Block> COBALT_BLOCK = registerBlock("cobalt_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
