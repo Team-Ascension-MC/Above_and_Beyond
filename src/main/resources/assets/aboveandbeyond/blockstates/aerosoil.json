@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "aboveandbeyond:block/aerosoil"
+      },
+      {
+        "model": "aboveandbeyond:block/aerosoil",
+        "y": 90
+      },
+      {
+        "model": "aboveandbeyond:block/aerosoil",
+        "y": 180
+      },
+      {
+        "model": "aboveandbeyond:block/aerosoil",
+        "y": 270
+      }
+    ]
+  }
+}

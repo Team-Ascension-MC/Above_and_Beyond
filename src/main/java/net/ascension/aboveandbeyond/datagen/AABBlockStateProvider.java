@@ -5,6 +5,7 @@ import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.GrassBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
@@ -21,7 +22,7 @@ public class AABBlockStateProvider extends BlockStateProvider {
     /*Cloud Islands*/
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(AABBlocks.AEROSOIL);
+        blockItem(AABBlocks.AEROSOIL);
         blockWithItem(AABBlocks.COARSE_AEROSOIL);
         blockWithItem(AABBlocks.ZENSTONE);
         stairsBlock(AABBlocks.ZENSTONE_STAIRS.get(), blockTexture(AABBlocks.ZENSTONE.get()));
