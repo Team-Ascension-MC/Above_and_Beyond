@@ -25,8 +25,6 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import static net.minecraft.world.level.block.state.BlockBehaviour.simpleCodec;
-
 public class AerosoilPathBlock extends DirtPathBlock {
     public AerosoilPathBlock(Properties p_153129_) {
         super(p_153129_);
