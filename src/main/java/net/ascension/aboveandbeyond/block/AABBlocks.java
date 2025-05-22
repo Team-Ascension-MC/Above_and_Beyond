@@ -1,5 +1,6 @@
 package net.ascension.aboveandbeyond.block;
 
+import com.mojang.serialization.MapCodec;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.custom.*;
 import net.ascension.aboveandbeyond.block.custom.AerosoilPathBlock;
@@ -125,6 +126,9 @@ public class AABBlocks {
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
     public static final DeferredBlock<SaplingBlock> WELKIN_SAPLING = registerBlock("welkin_sapling",
             () -> new SaplingBlock(AABTreeGrowers.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+
+    public static final DeferredBlock<Block> CLOUD_BERRY_BUSH = registerBlock("cloud_berry_bush",
+            () -> new CloudBerryBush(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     //Nimbus Islands
     public static final DeferredBlock<PuffgrassBlock> NIMBUS_PUFFGRASS_BLOCK = registerBlock("nimbus_puffgrass_block",
