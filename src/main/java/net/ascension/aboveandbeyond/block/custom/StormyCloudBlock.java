@@ -44,6 +44,6 @@ public class StormyCloudBlock extends PowderSnowBlock {
             level.levelEvent(2001, pos, Block.getId(state));
         }
 
-        return new ItemStack(AABItems.CLOUD_BUCKET.get());
+        return new ItemStack(AABItems.STORMY_CLOUD_BUCKET.get());
     }
 }

@@ -1,4 +1,5 @@
-// 1.21.1	2025-05-20T18:23:24.2019327	Block States: aboveandbeyond
+// 1.21.1	2025-05-22T21:34:42.4579295	Block States: aboveandbeyond
+c235731c5506f598195deca9d38e045b10f83bee assets/aboveandbeyond/blockstates/cloud_berry_bush.json
 31925ac48041be8ab9ad951d9df4d5882fd2019c assets/aboveandbeyond/blockstates/coarse_aerosoil.json
 d0116a8a9e0e30cf4b660173c8d6719cddde3e62 assets/aboveandbeyond/blockstates/cobalt_block.json
 a30f639e2c17865dc2d0e2a163b0a012d1536c4f assets/aboveandbeyond/blockstates/cracked_polished_zenstone_bricks.json
@@ -25,6 +26,10 @@ f022f2f715d553a65c48a337ced7186e066e5b1f assets/aboveandbeyond/blockstates/welki
 c63049b7e36aff8d02fcadda32d5afea1a885008 assets/aboveandbeyond/blockstates/zenstone_slab.json
 82a8cc841d6e1239d8c5581ed9a9cfb8705591b2 assets/aboveandbeyond/blockstates/zenstone_stairs.json
 75faa703a2356a5f65c9cd8b34d080b4a6517625 assets/aboveandbeyond/blockstates/zenstone_wall.json
+d8da26bf9fa09ad6f29ef5024a10938c04454927 assets/aboveandbeyond/models/block/cloud_berry_bush_stage0.json
+26cc390022cf8eb3a0bd3eedd0070ce71199aef4 assets/aboveandbeyond/models/block/cloud_berry_bush_stage1.json
+9bd11a4543a9447de3918fd3d1330df8a7419823 assets/aboveandbeyond/models/block/cloud_berry_bush_stage2.json
+89ee25ecb329adf9997f79fd719312b3de35503b assets/aboveandbeyond/models/block/cloud_berry_bush_stage3.json
 033e978095a95d87bf8275600f73f9fb9567e95e assets/aboveandbeyond/models/block/coarse_aerosoil.json
 f7e6e633fb47e4af819fbb604c07db78b82178f4 assets/aboveandbeyond/models/block/cobalt_block.json
 94748423a92827283526e00bfc7297aec9895742 assets/aboveandbeyond/models/block/cracked_polished_zenstone_bricks.json

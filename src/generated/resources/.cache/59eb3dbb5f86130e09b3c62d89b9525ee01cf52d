@@ -1,7 +1,8 @@
-// 1.21.1	2025-05-20T18:42:31.8865254	Loot Tables
+// 1.21.1	2025-05-22T21:37:47.4652415	Loot Tables
 28b1f646152028a3d269b25bfcdaf176730c5178 data/aboveandbeyond/loot_table/blocks/aerosoil.json
 865dd36e1b1a1146b1dce45e3ebf42b5bb26798e data/aboveandbeyond/loot_table/blocks/aerosoil_path.json
 290f4f3926e12724674cb901a9b6499b18317440 data/aboveandbeyond/loot_table/blocks/chiseled_polished_zenstone_bricks.json
+819adccd132dbbfdc37d6495bc7ecc260191c018 data/aboveandbeyond/loot_table/blocks/cloud_berry_bush.json
 bb90c928de73f36bb36a65270c0a5cbac3d5ccad data/aboveandbeyond/loot_table/blocks/cloud_block.json
 7c37d89f22b75dc05c2bf4411c8f5637c1d5b4ff data/aboveandbeyond/loot_table/blocks/coarse_aerosoil.json
 f3e16ad041af53465582724d9e627e719f340338 data/aboveandbeyond/loot_table/blocks/cobalt_block.json

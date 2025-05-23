@@ -5,8 +5,11 @@
     "aboveandbeyond:zenstone_slab",
     "aboveandbeyond:zenstone_wall",
     "aboveandbeyond:polished_zenstone_bricks",
+    "aboveandbeyond:cracked_polished_zenstone_bricks",
     "aboveandbeyond:polished_zenstone_brick_stairs",
     "aboveandbeyond:polished_zenstone_brick_slab",
-    "aboveandbeyond:polished_zenstone_brick_wall"
+    "aboveandbeyond:polished_zenstone_brick_wall",
+    "aboveandbeyond:chiseled_polished_zenstone_bricks",
+    "aboveandbeyond:cobalt_block"
   ]
 }

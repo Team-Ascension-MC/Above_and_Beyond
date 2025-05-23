@@ -128,7 +128,7 @@ public class AABBlocks {
             () -> new SaplingBlock(AABTreeGrowers.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final DeferredBlock<Block> CLOUD_BERRY_BUSH = registerBlock("cloud_berry_bush",
-            () -> new CloudBerryBush(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+            () -> new CloudBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     //Nimbus Islands
     public static final DeferredBlock<PuffgrassBlock> NIMBUS_PUFFGRASS_BLOCK = registerBlock("nimbus_puffgrass_block",

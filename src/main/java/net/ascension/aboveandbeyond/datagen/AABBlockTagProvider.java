@@ -26,9 +26,12 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.ZENSTONE_SLAB.get())
                 .add(AABBlocks.ZENSTONE_WALL.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICKS.get())
+                .add(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get());
+                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get())
+                .add(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS.get())
+                .add(AABBlocks.COBALT_BLOCK.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(AABBlocks.WELKIN_LOG.get())
                 .add(AABBlocks.WELKIN_WOOD.get())
@@ -49,12 +52,18 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.COARSE_AEROSOIL.get())
                 .add(AABBlocks.ZEN_GRAVEL.get())
                 .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(AABBlocks.WELKIN_LEAVES.get());
 
+        tag(AABTags.Blocks.CLOUD_BLOCKS)
+                .add(AABBlocks.CLOUD_BLOCK.get())
+                .add(AABBlocks.STORMY_CLOUD_BLOCK.get());
         tag(AABTags.Blocks.WELKIN_LOGS)
                 .add(AABBlocks.WELKIN_LOG.get())
                 .add(AABBlocks.WELKIN_WOOD.get())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get());
+
         tag(BlockTags.LOGS)
                 .add(AABBlocks.WELKIN_LOG.get())
                 .add(AABBlocks.WELKIN_WOOD.get())

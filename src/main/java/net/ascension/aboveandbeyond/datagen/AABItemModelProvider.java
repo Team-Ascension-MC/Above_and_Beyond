@@ -48,6 +48,7 @@ public class AABItemModelProvider extends ItemModelProvider {
         basicItem(AABItems.KOI_BUCKET.get());
         basicItem(AABBlocks.WELKIN_DOOR.asItem());
         saplingItem(AABBlocks.WELKIN_SAPLING);
+        basicItem(AABItems.CLOUD_BERRIES.get());
         withExistingParent(AABItems.KOI_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
       //  basicItem(AABItems.STORMY_CLOUD_BUCKET.get());
@@ -61,6 +62,9 @@ public class AABItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(AABItems.COBALT_CHESTPLATE);
         trimmedArmorItem(AABItems.COBALT_LEGGINGS);
         trimmedArmorItem(AABItems.COBALT_BOOTS);
+
+        //Nimbus Islands
+        basicItem(AABItems.STORMY_CLOUD_BUCKET.get());
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

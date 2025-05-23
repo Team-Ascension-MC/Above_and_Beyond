@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 
 public class AABTags {
     public static class Blocks {
+        public static final TagKey<Block> CLOUD_BLOCKS = createTag("cloud_blocks");
         public static final TagKey<Block> WELKIN_LOGS = createTag("welkin_logs");
 
         private static TagKey<Block> createTag(String name) {
@@ -18,6 +19,7 @@ public class AABTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> CLOUD_BUCKETS = createTag("cloud_buckets");
         public static final TagKey<Item> WELKIN_LOGS = createTag("welkin_logs");
 
         private static TagKey<Item> createTag(String name) {

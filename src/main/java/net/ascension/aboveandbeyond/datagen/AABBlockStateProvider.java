@@ -6,10 +6,14 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+
+import java.util.function.Function;
 
 public class AABBlockStateProvider extends BlockStateProvider {
     public AABBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -63,6 +67,20 @@ public class AABBlockStateProvider extends BlockStateProvider {
         saplingBlock(AABBlocks.WELKIN_SAPLING);
 
         blockWithItem(AABBlocks.COBALT_BLOCK);
+        makeBush(((SweetBerryBushBlock) AABBlocks.CLOUD_BERRY_BUSH.get()), "cloud_berry_bush_stage", "cloud_berry_bush_stage");
+    }
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(SweetBerryBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "block/" + textureName + state.getValue(SweetBerryBushBlock.AGE))).renderType("cutout"));
+
+        return models;
     }
 
     private void saplingBlock(DeferredBlock<SaplingBlock> blockRegistryObject) {

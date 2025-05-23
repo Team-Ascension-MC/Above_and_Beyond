@@ -7,7 +7,6 @@ import net.ascension.aboveandbeyond.item.custom.CloudBucket;
 import net.ascension.aboveandbeyond.item.custom.KoiBucket;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.Fluids;
@@ -33,8 +32,8 @@ public class AABItems {
     public static final DeferredItem<Item> KOI_BUCKET = ITEMS.register("koi_bucket",
             () -> new KoiBucket(AABEntities.KOI.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH,
                 new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> CLOUD_BERRY = ITEMS.register("cloud_berry",
-            () -> new Item(new Item.Properties()
+    public static final DeferredItem<Item> CLOUD_BERRIES = ITEMS.register("cloud_berries",
+            () -> new ItemNameBlockItem(AABBlocks.CLOUD_BERRY_BUSH.get(), new Item.Properties()
                     .food(new FoodProperties.Builder()
                             .nutrition(3)
                             .saturationModifier(0.2f)
@@ -59,6 +58,9 @@ public class AABItems {
                     new Item.Properties()));
 
     //Nimbus Islands
+    public static final DeferredItem<Item> STORMY_CLOUD_BUCKET = ITEMS.register("stormy_cloud_bucket",
+            () -> new CloudBucket(AABBlocks.STORMY_CLOUD_BLOCK.get(), SoundEvents.WOOL_PLACE, new Item.Properties().stacksTo(1)));
+
     public static final DeferredItem<SwordItem> COBALT_SWORD = ITEMS.register("cobalt_sword",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
                     .attributes(SwordItem.createAttributes(Tiers.DIAMOND, 3, -2.35f))

@@ -23,6 +23,9 @@ public class AABItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(AABTags.Items.CLOUD_BUCKETS)
+                .add(AABItems.CLOUD_BUCKET.get())
+                .add(AABItems.STORMY_CLOUD_BUCKET.get());
         tag(AABTags.Items.WELKIN_LOGS)
                 .add(AABBlocks.WELKIN_LOG.get().asItem())
                 .add(AABBlocks.WELKIN_WOOD.get().asItem())
