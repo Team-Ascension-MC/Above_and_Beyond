@@ -74,22 +74,26 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(AABItems.SKYACINTH)
                 .unlockedBy("has_skyacinth", has(AABBlocks.SKYACINTH))
                 .save(recipeOutput, "aboveandbeyond:light_blue_dye_from_skyacinth");
-//        List<ItemLike> COBALT_SMELTABLES = List.of(AABItems.COBALT_SCRAP,
-//                AABBlocks.COBALT_DEBRIS);
-//
-//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABBlocks.COBALT_SCRAP_BLOCK.get())
-//                .pattern("CCC")
-//                .pattern("CCC")
-//                .pattern("CCC")
-//                .define('C', AABItems.COBALT_SCRAP.get())
-//                .unlockedBy("has_bismuth", has(AABItems.BISMUTH)).save(recipeOutput);
-//
-//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABItems.BISMUTH.get(), 9)
-//                .requires(AABBlocks.COBALT_BLOCK)
-//                .unlockedBy("has_bismuth_block", has(AABBlocks.BISMUTH_BLOCK)).save(recipeOutput);
-//
-//        oreSmelting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 0.25f, 200, "bismuth");
-//        oreBlasting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 0.25f, 100, "bismuth");
+
+        List<ItemLike> COBALT_SMELTABLES = List.of(AABItems.COBALT_SCRAP,
+                AABBlocks.STATIC_DEBRIS);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABItems.COBALT_INGOT, 1)
+                .requires(AABItems.COBALT_SCRAP, 2)
+                .unlockedBy("has_cobalt_scrap", has(AABItems.COBALT_SCRAP));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABBlocks.COBALT_BLOCK.get())
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', AABItems.COBALT_INGOT.get())
+                .unlockedBy("has_cobalt_ingot", has(AABItems.COBALT_INGOT)).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABItems.COBALT_INGOT.get(), 9)
+                .requires(AABBlocks.COBALT_BLOCK)
+                .unlockedBy("has_cobalt_block", has(AABBlocks.COBALT_BLOCK)).save(recipeOutput);
+
+        oreSmelting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 2.0f, 200, "cobalt");
+        oreBlasting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 2.0f, 100, "cobalt");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

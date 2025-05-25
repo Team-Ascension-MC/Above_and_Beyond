@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 2.0,
+  "group": "cobalt",
+  "ingredient": {
+    "item": "aboveandbeyond:static_debris"
+  },
+  "result": {
+    "count": 1,
+    "id": "aboveandbeyond:cobalt_scrap"
+  }
+}

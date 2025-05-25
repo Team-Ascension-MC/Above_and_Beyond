@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobalt_scrap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aboveandbeyond:cobalt_scrap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aboveandbeyond:cobalt_scrap_from_blasting_cobalt_scrap"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cobalt_scrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aboveandbeyond:cobalt_scrap_from_blasting_cobalt_scrap"
+    ]
+  }
+}
