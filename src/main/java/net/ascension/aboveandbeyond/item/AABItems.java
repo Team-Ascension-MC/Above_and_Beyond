@@ -116,6 +116,8 @@ public class AABItems {
     public static final DeferredItem<ArmorItem> COBALT_BOOTS = ITEMS.register("cobalt_boots",
             () -> new ArmorItem(AABArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+    public static final DeferredItem<Item> COBALT_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("cobalt_upgrade_smithing_template",
+            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> BUZZ_POWDER = ITEMS.register("buzz_powder",
             () -> new Item(new Item.Properties()));

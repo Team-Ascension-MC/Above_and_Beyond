@@ -26,8 +26,7 @@ public class AABArmorMaterials {
                 attribute.put(ArmorItem.Type.CHESTPLATE, 8);
                 attribute.put(ArmorItem.Type.HELMET, 3);
                 attribute.put(ArmorItem.Type.BODY, 10);
-            }), 17, 1.0f, 0.0f, () -> AABItems.MUSIC_DISC_VIVID.get());
-//CHANGE IT TO COBALT LATER
+            }), 17, 1.0f, 0.0f, () -> AABItems.COBALT_SCRAP.get());
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,

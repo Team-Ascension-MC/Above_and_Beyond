@@ -68,6 +68,8 @@ public class AABItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(AABItems.COBALT_LEGGINGS);
         trimmedArmorItem(AABItems.COBALT_BOOTS);
 
+        basicItem(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE.get());
+
         basicItem(AABItems.BUZZ_POWDER.get());
         handheldItem(AABItems.STORMBRINGER_STAFF.get());
     }

@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-24T21:31:59.5129422	Item Models: aboveandbeyond
+// 1.21.1	2025-05-24T23:10:27.1571703	Item Models: aboveandbeyond
 171009effadf3d61a45e12880e91bf326d0840ca assets/aboveandbeyond/models/item/buzz_powder.json
 589af699bc184258f9bc4e2fd2f0f76702229ff1 assets/aboveandbeyond/models/item/cloud_berries.json
 1819ded44ea322c40f12351b48c002793b471dbe assets/aboveandbeyond/models/item/cloud_block.json
@@ -55,6 +55,7 @@ bcf4729a1f5588ac4f97649332907f38b9fa747d assets/aboveandbeyond/models/item/cobal
 a2b328cf57ab7f7cd2889ed9ba4001d104d5e282 assets/aboveandbeyond/models/item/cobalt_scrap.json
 336576cb43308d605abd0d86050b480ce2b3162a assets/aboveandbeyond/models/item/cobalt_shovel.json
 81e51314f04cd20b3691cbaaed70ec499095ab3d assets/aboveandbeyond/models/item/cobalt_sword.json
+a29cc43b4b0be4074b72ccc251b7e254d0dd26cc assets/aboveandbeyond/models/item/cobalt_upgrade_smithing_template.json
 b2f24353b45c0e24fd4107653553691089ea6248 assets/aboveandbeyond/models/item/floof.json
 2024c87a9cde57ea1965f1392db1f7c7b0528540 assets/aboveandbeyond/models/item/koi_bucket.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/aboveandbeyond/models/item/koi_spawn_egg.json

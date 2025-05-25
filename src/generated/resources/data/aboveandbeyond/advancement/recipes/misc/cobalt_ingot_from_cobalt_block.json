@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cobalt_scrap": {
+    "has_cobalt_block": {
       "conditions": {
         "items": [
           {
-            "items": "aboveandbeyond:cobalt_scrap"
+            "items": "aboveandbeyond:cobalt_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aboveandbeyond:cobalt_scrap_from_smelting_cobalt_scrap"
+        "recipe": "aboveandbeyond:cobalt_ingot_from_cobalt_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cobalt_scrap"
+      "has_cobalt_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aboveandbeyond:cobalt_scrap_from_smelting_cobalt_scrap"
+      "aboveandbeyond:cobalt_ingot_from_cobalt_block"
     ]
   }
 }

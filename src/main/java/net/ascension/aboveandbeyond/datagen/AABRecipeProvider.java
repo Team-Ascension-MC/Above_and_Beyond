@@ -8,9 +8,11 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.nbt.Tag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -75,12 +77,12 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_skyacinth", has(AABBlocks.SKYACINTH))
                 .save(recipeOutput, "aboveandbeyond:light_blue_dye_from_skyacinth");
 
-        List<ItemLike> COBALT_SMELTABLES = List.of(AABItems.COBALT_SCRAP,
-                AABBlocks.STATIC_DEBRIS);
+        List<ItemLike> COBALT_SMELTABLES = List.of(AABBlocks.STATIC_DEBRIS);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABItems.COBALT_INGOT, 1)
-                .requires(AABItems.COBALT_SCRAP, 2)
-                .unlockedBy("has_cobalt_scrap", has(AABItems.COBALT_SCRAP));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABItems.COBALT_INGOT.get())
+                .pattern("CC")
+                .define('C', AABItems.COBALT_SCRAP.get())
+                .unlockedBy("has_cobalt_scrap", has(AABItems.COBALT_SCRAP)).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABBlocks.COBALT_BLOCK.get())
                 .pattern("CCC")
@@ -88,9 +90,50 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', AABItems.COBALT_INGOT.get())
                 .unlockedBy("has_cobalt_ingot", has(AABItems.COBALT_INGOT)).save(recipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABItems.COBALT_INGOT.get(), 9)
                 .requires(AABBlocks.COBALT_BLOCK)
-                .unlockedBy("has_cobalt_block", has(AABBlocks.COBALT_BLOCK)).save(recipeOutput);
+                .unlockedBy("has_cobalt_block", has(AABBlocks.COBALT_BLOCK)).save(recipeOutput, "aboveandbeyond:cobalt_ingot_from_cobalt_block");
+
+
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_SWORD),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_SWORD.get());
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_PICKAXE),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_PICKAXE.get());
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_AXE),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_AXE.get());
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_SHOVEL),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_SHOVEL.get());
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_HOE),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_HOE.get());
+
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_HELMET),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_HELMET.get());
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_CHESTPLATE),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_CHESTPLATE.get());
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_LEGGINGS),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_LEGGINGS.get());
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_BOOTS),
+                Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
+                AABItems.COBALT_BOOTS.get());
 
         oreSmelting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 2.0f, 200, "cobalt");
         oreBlasting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 2.0f, 100, "cobalt");
