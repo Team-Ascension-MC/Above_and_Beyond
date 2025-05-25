@@ -10,6 +10,10 @@
     "aboveandbeyond:polished_zenstone_brick_slab",
     "aboveandbeyond:polished_zenstone_brick_wall",
     "aboveandbeyond:chiseled_polished_zenstone_bricks",
+    "aboveandbeyond:shockrock",
+    "aboveandbeyond:static_shockrock",
+    "aboveandbeyond:shockrock_copper_ore",
+    "aboveandbeyond:static_debris",
     "aboveandbeyond:cobalt_block"
   ]
 }

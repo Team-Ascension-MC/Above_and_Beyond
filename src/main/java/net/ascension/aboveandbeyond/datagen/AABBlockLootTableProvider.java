@@ -8,12 +8,9 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -22,7 +19,6 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
@@ -89,8 +85,15 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
 
         //Nimbus Islands
         this.dropWhenSilkTouch(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
+        this.dropSelf(AABBlocks.SHOCKROCK.get());
+        this.dropSelf(AABBlocks.STATIC_SHOCKROCK.get());
+        this.dropSelf(AABBlocks.SHOCKROCK_COPPER_ORE.get());
+        this.dropSelf(AABBlocks.STATIC_DEBRIS.get());
         this.dropSelf(AABBlocks.STORMY_CLOUD_BLOCK.get());
         this.dropSelf(AABBlocks.COBALT_BLOCK.get());
+
+        //Ridge Temples
+        this.dropWhenSilkTouch(AABBlocks.EXPLOSIVE_BARREL.get());
     }
 
         @Override

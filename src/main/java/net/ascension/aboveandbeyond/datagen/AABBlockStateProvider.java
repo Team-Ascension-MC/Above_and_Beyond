@@ -62,12 +62,14 @@ public class AABBlockStateProvider extends BlockStateProvider {
         blockItem(AABBlocks.WELKIN_PRESSURE_PLATE);
         blockItem(AABBlocks.WELKIN_FENCE_GATE);
         blockItem(AABBlocks.WELKIN_TRAPDOOR, "_bottom");
-
         leavesBlock(AABBlocks.WELKIN_LEAVES);
         saplingBlock(AABBlocks.WELKIN_SAPLING);
-
-        blockWithItem(AABBlocks.COBALT_BLOCK);
         makeBush(((SweetBerryBushBlock) AABBlocks.CLOUD_BERRY_BUSH.get()), "cloud_berry_bush_stage", "cloud_berry_bush_stage");
+
+        blockWithItem(AABBlocks.SHOCKROCK);
+        blockWithItem(AABBlocks.STATIC_SHOCKROCK);
+        blockWithItem(AABBlocks.SHOCKROCK_COPPER_ORE);
+        blockWithItem(AABBlocks.COBALT_BLOCK);
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {

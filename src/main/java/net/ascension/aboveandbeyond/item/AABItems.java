@@ -53,11 +53,17 @@ public class AABItems {
                     .rarity(Rarity.UNCOMMON)
             ));
 
+    public static final DeferredItem<Item> FLOOF = ITEMS.register("floof",
+            () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> KOI_SPAWN_EGG = ITEMS.register("koi_spawn_egg",
             () -> new DeferredSpawnEggItem(AABEntities.KOI, 0x31afaf, 0xddac00,
                     new Item.Properties()));
 
     //Nimbus Islands
+    public static final DeferredItem<Item> COBALT_SCRAP = ITEMS.register("cobalt_scrap",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot",
+            () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> STORMY_CLOUD_BUCKET = ITEMS.register("stormy_cloud_bucket",
             () -> new CloudBucket(AABBlocks.STORMY_CLOUD_BLOCK.get(), SoundEvents.WOOL_PLACE, new Item.Properties().stacksTo(1)));
 
@@ -96,6 +102,8 @@ public class AABItems {
                     .stacksTo(1)
                     .rarity(Rarity.COMMON)
             ));
+    public static final DeferredItem<Item> COBALT_CROSSBOW = ITEMS.register("cobalt_crossbow",
+            () -> new Item(new Item.Properties()));
     public static final DeferredItem<ArmorItem> COBALT_HELMET = ITEMS.register("cobalt_helmet",
             () -> new ArmorItem(AABArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
@@ -108,6 +116,12 @@ public class AABItems {
     public static final DeferredItem<ArmorItem> COBALT_BOOTS = ITEMS.register("cobalt_boots",
             () -> new ArmorItem(AABArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    public static final DeferredItem<Item> BUZZ_POWDER = ITEMS.register("buzz_powder",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> STORMBRINGER_STAFF = ITEMS.register("stormbringer_staff",
+            () -> new Item(new Item.Properties().durability(8)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

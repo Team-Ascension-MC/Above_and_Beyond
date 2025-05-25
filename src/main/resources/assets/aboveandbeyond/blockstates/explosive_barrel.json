@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "aboveandbeyond:block/explosive_barrel",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "aboveandbeyond:block/explosive_barrel"
+    },
+    "axis=z": {
+      "model": "aboveandbeyond:block/explosive_barrel",
+      "x": 90
+    }
+  }
+}

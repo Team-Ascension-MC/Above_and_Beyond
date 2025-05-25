@@ -1,6 +1,5 @@
 package net.ascension.aboveandbeyond.block;
 
-import com.mojang.serialization.MapCodec;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.custom.*;
 import net.ascension.aboveandbeyond.block.custom.AerosoilPathBlock;
@@ -13,7 +12,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -135,20 +133,30 @@ public class AABBlocks {
             () -> new PuffgrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> STORMY_CLOUD_BLOCK = registerBlock("stormy_cloud_block",
             () -> new StormyCloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.POWDER_SNOW).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
+    public static final DeferredBlock<Block> SHOCKROCK = registerBlock("shockrock",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<Block> STATIC_SHOCKROCK = registerBlock("static_shockrock",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<Block> SHOCKROCK_COPPER_ORE = registerBlock("shockrock_copper_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_COPPER_ORE)));
+    public static final DeferredBlock<Block> STATIC_DEBRIS = registerBlock("static_debris",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
 
     public static final DeferredBlock<Block> COBALT_BLOCK = registerBlock("cobalt_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
+
+    //Ridge Temples
+    public static final DeferredBlock<Block> EXPLOSIVE_BARREL = registerBlock("explosive_barrel",
+            () -> new ExplosiveBarrel(BlockBehaviour.Properties.ofFullCopy(Blocks.TNT)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         AABItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
-
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

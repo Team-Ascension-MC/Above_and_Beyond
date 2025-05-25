@@ -49,22 +49,27 @@ public class AABItemModelProvider extends ItemModelProvider {
         basicItem(AABBlocks.WELKIN_DOOR.asItem());
         saplingItem(AABBlocks.WELKIN_SAPLING);
         basicItem(AABItems.CLOUD_BERRIES.get());
+        basicItem(AABItems.FLOOF.get());
         withExistingParent(AABItems.KOI_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
-      //  basicItem(AABItems.STORMY_CLOUD_BUCKET.get());
+        //Nimbus Islands
+        basicItem(AABItems.STORMY_CLOUD_BUCKET.get());
+        basicItem(AABItems.COBALT_SCRAP.get());
+        basicItem(AABItems.COBALT_INGOT.get());
         handheldItem(AABItems.COBALT_SWORD.get());
         handheldItem(AABItems.COBALT_PICKAXE.get());
         handheldItem(AABItems.COBALT_AXE.get());
         handheldItem(AABItems.COBALT_SHOVEL.get());
         handheldItem(AABItems.COBALT_HOE.get());
+        handheldItem(AABItems.COBALT_CROSSBOW.get());
 
         trimmedArmorItem(AABItems.COBALT_HELMET);
         trimmedArmorItem(AABItems.COBALT_CHESTPLATE);
         trimmedArmorItem(AABItems.COBALT_LEGGINGS);
         trimmedArmorItem(AABItems.COBALT_BOOTS);
 
-        //Nimbus Islands
-        basicItem(AABItems.STORMY_CLOUD_BUCKET.get());
+        basicItem(AABItems.BUZZ_POWDER.get());
+        handheldItem(AABItems.STORMBRINGER_STAFF.get());
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

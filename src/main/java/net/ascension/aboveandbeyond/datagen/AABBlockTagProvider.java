@@ -31,6 +31,10 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get())
                 .add(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS.get())
+                .add(AABBlocks.SHOCKROCK.get())
+                .add(AABBlocks.STATIC_SHOCKROCK.get())
+                .add(AABBlocks.SHOCKROCK_COPPER_ORE.get())
+                .add(AABBlocks.STATIC_DEBRIS.get())
                 .add(AABBlocks.COBALT_BLOCK.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(AABBlocks.WELKIN_LOG.get())

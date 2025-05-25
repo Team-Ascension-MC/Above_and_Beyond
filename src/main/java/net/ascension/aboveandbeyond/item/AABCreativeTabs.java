@@ -57,25 +57,55 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.WELKIN_LEAVES);
                         output.accept(AABBlocks.WELKIN_SAPLING);
                         output.accept(AABItems.KATANA);
+                        output.accept(AABItems.FLOOF);
                         output.accept(AABItems.KOI_BUCKET);
                         output.accept(AABItems.KOI_SPAWN_EGG);
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
                         output.accept(AABItems.MUSIC_DISC_HEIST);
 
-                        /*Nimbus Islands*/
+                        //Nimbus Islands
                         output.accept(AABBlocks.NIMBUS_PUFFGRASS_BLOCK);
+                        output.accept(AABBlocks.SHOCKROCK);
+                        output.accept(AABBlocks.STATIC_SHOCKROCK);
+                        output.accept(AABBlocks.SHOCKROCK_COPPER_ORE);
+                        output.accept(AABBlocks.STATIC_DEBRIS);
                         output.accept(AABItems.STORMY_CLOUD_BUCKET);
+                        output.accept(AABItems.COBALT_SCRAP);
+                        output.accept(AABItems.COBALT_INGOT);
                         output.accept(AABBlocks.COBALT_BLOCK);
                         output.accept(AABItems.COBALT_SHOVEL);
                         output.accept(AABItems.COBALT_PICKAXE);
                         output.accept(AABItems.COBALT_AXE);
                         output.accept(AABItems.COBALT_HOE);
                         output.accept(AABItems.COBALT_SWORD);
+                        output.accept(AABItems.COBALT_CROSSBOW);
                         output.accept(AABItems.COBALT_HELMET);
                         output.accept(AABItems.COBALT_CHESTPLATE);
                         output.accept(AABItems.COBALT_LEGGINGS);
                         output.accept(AABItems.COBALT_BOOTS);
+                        output.accept(AABItems.BUZZ_POWDER);
+                        output.accept(AABItems.STORMBRINGER_STAFF);
+
+                        //Ridge Temples
+                        output.accept(AABBlocks.EXPLOSIVE_BARREL);
+                    }).build());
+    public static final Supplier<CreativeModeTab> AAB_RIDGE_TEMPLE_TAB = CREATIVE_MODE_TAB.register("aab_ridge_temple_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.ZENSTONE.get()))
+                    .title(Component.translatable("creativetab.aboveandbeyond.ridgetemple.items"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(AABBlocks.ZEN_GRAVEL);
+                        output.accept(AABBlocks.ZENSTONE);
+                        output.accept(AABBlocks.ZENSTONE_STAIRS);
+                        output.accept(AABBlocks.ZENSTONE_SLAB);
+                        output.accept(AABBlocks.ZENSTONE_WALL);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICKS);
+                        output.accept(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL);
+                        output.accept(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
+                        output.accept(AABBlocks.EXPLOSIVE_BARREL);
                     }).build());
 
     public static void register(IEventBus eventBus) {

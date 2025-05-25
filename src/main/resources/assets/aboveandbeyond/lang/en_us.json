@@ -1,8 +1,9 @@
 {
   "creativetab.aboveandbeyond.skyisland.items": "Above & Beyond: Sky Islands",
+  "creativetab.aboveandbeyond.ridgetemple.items": "Above & Beyond: Ridge Temple",
 
   /* SKY ISLANDS */
-  /*Cloud Islands*/
+  //Cloud Islands
   "block.aboveandbeyond.puffgrass_block": "Puffgrass Block",
   "block.aboveandbeyond.aerosoil_path": "Aerosoil Path",
   "block.aboveandbeyond.aerosoil": "Aerosoil",
@@ -58,21 +59,36 @@
 
   "item.aboveandbeyond.floofer_spawn_egg": "Floofer Spawn Egg",
   "entity.aboveandbeyond.floofer": "Floofer",
+  "item.aboveandbeyond.floof": "Floof",
 
-  /*Nimbus Islands*/
+  //Nimbus Islands
   "block.aboveandbeyond.nimbus_puffgrass_block": "Nimbus Puffgrass Block",
+
+  "block.aboveandbeyond.shockrock": "Shockrock",
+  "block.aboveandbeyond.static_shockrock": "Static Shockrock",
+  "block.aboveandbeyond.shockrock_copper_ore": "Shockrock Copper Ore",
+  "block.aboveandbeyond.static_debris": "Static Debris",
 
   "block.aboveandbeyond.stormy_cloud_block": "Stormy Cloud Block",
   "item.aboveandbeyond.stormy_cloud_bucket": "Stormy Cloud Bucket",
 
   "block.aboveandbeyond.cobalt_block": "Block of Cobalt",
+  "item.aboveandbeyond.cobalt_scrap": "Cobalt Scrap",
+  "item.aboveandbeyond.cobalt_ingot": "Cobalt Ingot",
   "item.aboveandbeyond.cobalt_sword": "Cobalt Sword",
   "item.aboveandbeyond.cobalt_pickaxe": "Cobalt Pickaxe",
   "item.aboveandbeyond.cobalt_axe": "Cobalt Axe",
   "item.aboveandbeyond.cobalt_shovel": "Cobalt Shovel",
   "item.aboveandbeyond.cobalt_hoe": "Cobalt Hoe",
+  "item.aboveandbeyond.cobalt_crossbow": "Cobalt Crossbow",
   "item.aboveandbeyond.cobalt_helmet": "Cobalt Helmet",
   "item.aboveandbeyond.cobalt_chestplate": "Cobalt Chestplate",
   "item.aboveandbeyond.cobalt_leggings": "Cobalt Leggings",
-  "item.aboveandbeyond.cobalt_boots": "Cobalt Boots"
+  "item.aboveandbeyond.cobalt_boots": "Cobalt Boots",
+  "item.aboveandbeyond.buzz_powder": "Buzz Powder",
+  "item.aboveandbeyond.stormbringer_staff": "Stormbringer Staff",
+
+  /*OTHER*/
+  //Ridge Temple
+  "block.aboveandbeyond.explosive_barrel": "Explosive Barrel"
 }
