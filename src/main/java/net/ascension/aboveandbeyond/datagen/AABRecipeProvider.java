@@ -96,7 +96,7 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .pattern("CCC")
                 .define('C', AABItems.COBALT_NUGGET.get())
-                .unlockedBy("has_cobalt_nugget", has(AABItems.COBALT_NUGGET)).save(recipeOutput, "aboveandbeyond:cobalt_ingot_from_cobalt_nuggets");
+                .unlockedBy("has_cobalt_nugget", has(AABItems.COBALT_NUGGET)).save(recipeOutput, "aboveandbeyond:cobalt_ingot_from_nuggets");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABBlocks.COBALT_BLOCK.get())
                 .pattern("CCC")

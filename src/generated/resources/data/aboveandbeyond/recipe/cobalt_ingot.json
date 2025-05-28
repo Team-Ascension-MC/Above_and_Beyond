@@ -1,13 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "C": {
+  "ingredients": [
+    {
       "item": "aboveandbeyond:cobalt_chunk"
+    },
+    {
+      "item": "aboveandbeyond:cobalt_chunk"
+    },
+    {
+      "item": "aboveandbeyond:buzz_powder"
+    },
+    {
+      "item": "aboveandbeyond:buzz_powder"
     }
-  },
-  "pattern": [
-    "CC"
   ],
   "result": {
     "count": 1,

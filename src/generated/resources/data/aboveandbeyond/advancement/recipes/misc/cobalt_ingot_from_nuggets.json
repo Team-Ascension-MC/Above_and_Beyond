@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aboveandbeyond:cobalt_ingot_from_cobalt_nuggets"
+        "recipe": "aboveandbeyond:cobalt_ingot_from_nuggets"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "aboveandbeyond:cobalt_ingot_from_cobalt_nuggets"
+      "aboveandbeyond:cobalt_ingot_from_nuggets"
     ]
   }
 }

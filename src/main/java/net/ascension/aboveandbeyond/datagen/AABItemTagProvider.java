@@ -77,10 +77,23 @@ public class AABItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.HOES)
                 .add(AABItems.COBALT_HOE.get());
 
+        this.tag(ItemTags.ARMOR_ENCHANTABLE)
+                .add(AABItems.COBALT_HELMET.get())
+                .add(AABItems.COBALT_CHESTPLATE.get())
+                .add(AABItems.COBALT_LEGGINGS.get())
+                .add(AABItems.COBALT_BOOTS.get());
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(AABItems.COBALT_HELMET.get())
                 .add(AABItems.COBALT_CHESTPLATE.get())
                 .add(AABItems.COBALT_LEGGINGS.get())
+                .add(AABItems.COBALT_BOOTS.get());
+        this.tag(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+                .add(AABItems.COBALT_HELMET.get());
+        this.tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .add(AABItems.COBALT_CHESTPLATE.get());
+        this.tag(ItemTags.LEG_ARMOR_ENCHANTABLE)
+                .add(AABItems.COBALT_LEGGINGS.get());
+        this.tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
                 .add(AABItems.COBALT_BOOTS.get());
     }
 }

@@ -73,8 +73,8 @@ public class AABCreativeTabs {
                         output.accept(AABItems.STORMY_CLOUD_BUCKET);
                         output.accept(AABBlocks.COBALT_BLOCK);
                         output.accept(AABItems.COBALT_CHUNK);
-                        output.accept(AABItems.COBALT_INGOT);
                         output.accept(AABItems.COBALT_NUGGET);
+                        output.accept(AABItems.COBALT_INGOT);
                         output.accept(AABItems.COBALT_SHOVEL);
                         output.accept(AABItems.COBALT_PICKAXE);
                         output.accept(AABItems.COBALT_AXE);
@@ -87,9 +87,6 @@ public class AABCreativeTabs {
                         output.accept(AABItems.COBALT_BOOTS);
                         output.accept(AABItems.BUZZ_POWDER);
                         output.accept(AABItems.STORMBRINGER_STAFF);
-
-                        //Ridge Temples
-                        output.accept(AABBlocks.EXPLOSIVE_BARREL);
                     }).build());
     public static final Supplier<CreativeModeTab> AAB_RIDGE_TEMPLE_TAB = CREATIVE_MODE_TAB.register("aab_ridge_temple_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.ZENSTONE.get()))
