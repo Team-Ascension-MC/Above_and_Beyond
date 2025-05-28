@@ -79,9 +79,11 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
 
         List<ItemLike> COBALT_SMELTABLES = List.of(AABBlocks.STATIC_DEBRIS);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABItems.COBALT_INGOT.get())
-                .pattern("CC")
-                .define('C', AABItems.COBALT_CHUNK.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AABItems.COBALT_INGOT.get(), 1)
+                .requires(AABItems.COBALT_CHUNK)
+                .requires(AABItems.COBALT_CHUNK)
+                .requires(AABItems.BUZZ_POWDER)
+                .requires(AABItems.BUZZ_POWDER)
                 .unlockedBy("has_cobalt_chunk", has(AABItems.COBALT_CHUNK)).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABItems.COBALT_NUGGET.get(), 9)
