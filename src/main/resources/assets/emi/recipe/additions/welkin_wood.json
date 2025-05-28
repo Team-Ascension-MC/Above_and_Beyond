@@ -1,0 +1,6 @@
+{
+  "type": "emi:world_interaction",
+  "left": "item:aboveandbeyond:welkin_wood",
+  "right": "#item:minecraft:axes",
+  "output": "item:aboveandbeyond:stripped_welkin_wood"
+}

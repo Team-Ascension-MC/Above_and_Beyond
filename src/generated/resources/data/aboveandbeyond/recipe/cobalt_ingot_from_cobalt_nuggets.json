@@ -3,11 +3,13 @@
   "category": "misc",
   "key": {
     "C": {
-      "item": "aboveandbeyond:cobalt_chunk"
+      "item": "aboveandbeyond:cobalt_nugget"
     }
   },
   "pattern": [
-    "CC"
+    "CCC",
+    "CCC",
+    "CCC"
   ],
   "result": {
     "count": 1,

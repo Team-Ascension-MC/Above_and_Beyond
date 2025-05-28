@@ -3,14 +3,14 @@
   "category": "misc",
   "key": {
     "C": {
-      "item": "aboveandbeyond:cobalt_chunk"
+      "item": "aboveandbeyond:cobalt_ingot"
     }
   },
   "pattern": [
-    "CC"
+    "C"
   ],
   "result": {
-    "count": 1,
-    "id": "aboveandbeyond:cobalt_ingot"
+    "count": 9,
+    "id": "aboveandbeyond:cobalt_nugget"
   }
 }

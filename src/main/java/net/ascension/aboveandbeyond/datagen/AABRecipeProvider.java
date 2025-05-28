@@ -81,8 +81,20 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABItems.COBALT_INGOT.get())
                 .pattern("CC")
-                .define('C', AABItems.COBALT_SCRAP.get())
-                .unlockedBy("has_cobalt_scrap", has(AABItems.COBALT_SCRAP)).save(recipeOutput);
+                .define('C', AABItems.COBALT_CHUNK.get())
+                .unlockedBy("has_cobalt_chunk", has(AABItems.COBALT_CHUNK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABItems.COBALT_NUGGET.get(), 9)
+                .pattern("C")
+                .define('C', AABItems.COBALT_INGOT.get())
+                .unlockedBy("has_cobalt_ingot", has(AABItems.COBALT_INGOT)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABItems.COBALT_INGOT.get())
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', AABItems.COBALT_NUGGET.get())
+                .unlockedBy("has_cobalt_nugget", has(AABItems.COBALT_NUGGET)).save(recipeOutput, "aboveandbeyond:cobalt_ingot_from_cobalt_nuggets");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABBlocks.COBALT_BLOCK.get())
                 .pattern("CCC")
@@ -135,8 +147,8 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 Ingredient.of(AABItems.COBALT_INGOT), RecipeCategory.MISC,
                 AABItems.COBALT_BOOTS.get());
 
-        oreSmelting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 2.0f, 200, "cobalt");
-        oreBlasting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_SCRAP.get(), 2.0f, 100, "cobalt");
+        oreSmelting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_CHUNK.get(), 2.0f, 200, "cobalt");
+        oreBlasting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, AABItems.COBALT_CHUNK.get(), 2.0f, 100, "cobalt");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

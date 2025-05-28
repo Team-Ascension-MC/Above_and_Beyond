@@ -54,8 +54,9 @@ public class AABItemModelProvider extends ItemModelProvider {
 
         //Nimbus Islands
         basicItem(AABItems.STORMY_CLOUD_BUCKET.get());
-        basicItem(AABItems.COBALT_SCRAP.get());
+        basicItem(AABItems.COBALT_CHUNK.get());
         basicItem(AABItems.COBALT_INGOT.get());
+        basicItem(AABItems.COBALT_NUGGET.get());
         handheldItem(AABItems.COBALT_SWORD.get());
         handheldItem(AABItems.COBALT_PICKAXE.get());
         handheldItem(AABItems.COBALT_AXE.get());

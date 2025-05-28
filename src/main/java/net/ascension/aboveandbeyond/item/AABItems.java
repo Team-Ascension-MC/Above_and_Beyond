@@ -60,9 +60,11 @@ public class AABItems {
                     new Item.Properties()));
 
     //Nimbus Islands
-    public static final DeferredItem<Item> COBALT_SCRAP = ITEMS.register("cobalt_scrap",
+    public static final DeferredItem<Item> COBALT_CHUNK = ITEMS.register("cobalt_chunk",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> COBALT_NUGGET = ITEMS.register("cobalt_nugget",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> STORMY_CLOUD_BUCKET = ITEMS.register("stormy_cloud_bucket",
             () -> new CloudBucket(AABBlocks.STORMY_CLOUD_BLOCK.get(), SoundEvents.WOOL_PLACE, new Item.Properties().stacksTo(1)));
@@ -123,7 +125,7 @@ public class AABItems {
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> STORMBRINGER_STAFF = ITEMS.register("stormbringer_staff",
-            () -> new Item(new Item.Properties().durability(8)));
+            () -> new Item(new Item.Properties().durability(8).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

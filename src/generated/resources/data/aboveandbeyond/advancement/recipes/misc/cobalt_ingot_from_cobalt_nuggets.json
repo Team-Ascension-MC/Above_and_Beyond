@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cobalt_chunk": {
+    "has_cobalt_nugget": {
       "conditions": {
         "items": [
           {
-            "items": "aboveandbeyond:cobalt_chunk"
+            "items": "aboveandbeyond:cobalt_nugget"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aboveandbeyond:cobalt_ingot"
+        "recipe": "aboveandbeyond:cobalt_ingot_from_cobalt_nuggets"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cobalt_chunk"
+      "has_cobalt_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aboveandbeyond:cobalt_ingot"
+      "aboveandbeyond:cobalt_ingot_from_cobalt_nuggets"
     ]
   }
 }

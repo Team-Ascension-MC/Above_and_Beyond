@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cobalt_chunk": {
+    "has_static_debris": {
       "conditions": {
         "items": [
           {
-            "items": "aboveandbeyond:cobalt_chunk"
+            "items": "aboveandbeyond:static_debris"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aboveandbeyond:cobalt_ingot"
+        "recipe": "aboveandbeyond:cobalt_chunk_from_smelting_static_debris"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cobalt_chunk"
+      "has_static_debris"
     ]
   ],
   "rewards": {
     "recipes": [
-      "aboveandbeyond:cobalt_ingot"
+      "aboveandbeyond:cobalt_chunk_from_smelting_static_debris"
     ]
   }
 }

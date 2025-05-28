@@ -2,6 +2,9 @@
   "creativetab.aboveandbeyond.skyisland.items": "Above & Beyond: Sky Islands",
   "creativetab.aboveandbeyond.ridgetemple.items": "Above & Beyond: Ridge Temple",
 
+  "tag.item.aboveandbeyond.cloud_buckets": "Cloud Buckets",
+  "tag.item.aboveandbeyond.welkin_logs": "Welkin Logs",
+
   /* SKY ISLANDS */
   //Cloud Islands
   "block.aboveandbeyond.puffgrass_block": "Puffgrass Block",
@@ -73,8 +76,9 @@
   "item.aboveandbeyond.stormy_cloud_bucket": "Stormy Cloud Bucket",
 
   "block.aboveandbeyond.cobalt_block": "Block of Cobalt",
-  "item.aboveandbeyond.cobalt_scrap": "Cobalt Scrap",
+  "item.aboveandbeyond.cobalt_chunk": "Cobalt Chunk",
   "item.aboveandbeyond.cobalt_ingot": "Cobalt Ingot",
+  "item.aboveandbeyond.cobalt_nugget": "Cobalt Nugget",
   "item.aboveandbeyond.cobalt_sword": "Cobalt Sword",
   "item.aboveandbeyond.cobalt_pickaxe": "Cobalt Pickaxe",
   "item.aboveandbeyond.cobalt_axe": "Cobalt Axe",

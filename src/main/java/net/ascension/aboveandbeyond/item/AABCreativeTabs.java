@@ -71,9 +71,10 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.SHOCKROCK_COPPER_ORE);
                         output.accept(AABBlocks.STATIC_DEBRIS);
                         output.accept(AABItems.STORMY_CLOUD_BUCKET);
-                        output.accept(AABItems.COBALT_SCRAP);
-                        output.accept(AABItems.COBALT_INGOT);
                         output.accept(AABBlocks.COBALT_BLOCK);
+                        output.accept(AABItems.COBALT_CHUNK);
+                        output.accept(AABItems.COBALT_INGOT);
+                        output.accept(AABItems.COBALT_NUGGET);
                         output.accept(AABItems.COBALT_SHOVEL);
                         output.accept(AABItems.COBALT_PICKAXE);
                         output.accept(AABItems.COBALT_AXE);

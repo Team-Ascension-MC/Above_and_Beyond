@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "aboveandbeyond:cobalt_scrap_from_blasting_static_debris"
+        "recipe": "aboveandbeyond:cobalt_chunk_from_blasting_static_debris"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "aboveandbeyond:cobalt_scrap_from_blasting_static_debris"
+      "aboveandbeyond:cobalt_chunk_from_blasting_static_debris"
     ]
   }
 }
