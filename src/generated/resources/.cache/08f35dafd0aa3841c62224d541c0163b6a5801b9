@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-28T17:53:16.8529026	Tags for minecraft:item mod id aboveandbeyond
+// 1.21.1	2025-05-28T20:02:16.4752994	Tags for minecraft:item mod id aboveandbeyond
 3c0a22d47c5a45ced0e0fc0dfaad6d8568c50604 data/aboveandbeyond/tags/item/cloud_buckets.json
 0c274465215ee87e25768eeba26e03eb8f85cb75 data/aboveandbeyond/tags/item/welkin_logs.json
 7380098670ccee8c3cbf23fd7db1db4dc856b2fe data/minecraft/tags/item/axes.json
@@ -8,6 +8,7 @@ ddcacbdaafa8098eb7c10044bbbfd4b2dfda98e5 data/minecraft/tags/item/enchantable/ch
 32431d6c53add8d8bd1aec984f2c226826682027 data/minecraft/tags/item/enchantable/head_armor.json
 f98c2380120f8778807f16204a948d7d23c14d11 data/minecraft/tags/item/enchantable/leg_armor.json
 3c940385410659bb996c047a3f11123ddae2e3c8 data/minecraft/tags/item/enchantable/sword.json
+f12c7a6ac792b1351f7c5a1bcbf0d914c5a5a4fc data/minecraft/tags/item/fox_food.json
 dc862a2508d1bcad5fc811b212f7461eacdf98ea data/minecraft/tags/item/hoes.json
 9f10bb97938a5a0c426e598cb1e24310a1e85350 data/minecraft/tags/item/leaves.json
 0c274465215ee87e25768eeba26e03eb8f85cb75 data/minecraft/tags/item/logs.json
