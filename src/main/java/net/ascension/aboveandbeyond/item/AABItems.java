@@ -35,8 +35,8 @@ public class AABItems {
     public static final DeferredItem<Item> CLOUD_BERRIES = ITEMS.register("cloud_berries",
             () -> new ItemNameBlockItem(AABBlocks.CLOUD_BERRY_BUSH.get(), new Item.Properties()
                     .food(new FoodProperties.Builder()
-                            .nutrition(3)
-                            .saturationModifier(0.2f)
+                            .nutrition(2)
+                            .saturationModifier(0.25f)
                             .build())));
     public static final DeferredItem<Item> MUSIC_DISC_GALE = ITEMS.register("music_disc_gale",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE).jukeboxPlayable(AABSounds.GALE_KEY).stacksTo(1)));

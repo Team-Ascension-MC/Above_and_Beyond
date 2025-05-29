@@ -57,6 +57,8 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABBlocks.POLISHED_ZENSTONE_BRICKS.asItem());
         tag(ItemTags.STONE_TOOL_MATERIALS)
                 .add(AABBlocks.ZENSTONE.asItem());
+        tag(ItemTags.FOX_FOOD)
+                .add(AABItems.CLOUD_BERRIES.get());
 
         tag(ItemTags.SWORDS)
                 .add(AABItems.KATANA.get())
