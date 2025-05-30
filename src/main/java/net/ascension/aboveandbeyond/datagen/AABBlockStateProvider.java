@@ -12,7 +12,9 @@ import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
+import javax.naming.Name;
 import java.util.function.Function;
 
 public class AABBlockStateProvider extends BlockStateProvider {
@@ -62,6 +64,8 @@ public class AABBlockStateProvider extends BlockStateProvider {
         blockItem(AABBlocks.WELKIN_PRESSURE_PLATE);
         blockItem(AABBlocks.WELKIN_FENCE_GATE);
         blockItem(AABBlocks.WELKIN_TRAPDOOR, "_bottom");
+        signBlock(((StandingSignBlock) AABBlocks.WELKIN_SIGN.get()), ((WallSignBlock) AABBlocks.WELKIN_WALL_SIGN.get()), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
+        hangingSignBlock(AABBlocks.WELKIN_HANGING_SIGN.get(), AABBlocks.WELKIN_WALL_HANGING_SIGN.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
         leavesBlock(AABBlocks.WELKIN_LEAVES);
         saplingBlock(AABBlocks.WELKIN_SAPLING);
         makeBush(((SweetBerryBushBlock) AABBlocks.CLOUD_BERRY_BUSH.get()), "cloud_berry_bush_stage", "cloud_berry_bush_stage");
@@ -72,6 +76,20 @@ public class AABBlockStateProvider extends BlockStateProvider {
         blockWithItem(AABBlocks.COBALT_BLOCK);
     }
 
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+    private ResourceLocation key(Block block) {
+        return BuiltInRegistries.BLOCK.getKey(block);
+    }
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
 

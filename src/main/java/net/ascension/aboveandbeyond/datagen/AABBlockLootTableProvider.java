@@ -63,6 +63,14 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
         add(AABBlocks.WELKIN_DOOR.get(),
                 block -> createDoorTable(AABBlocks.WELKIN_DOOR.get()));
         this.dropSelf(AABBlocks.WELKIN_TRAPDOOR.get());
+        this.add(AABBlocks.WELKIN_SIGN.get(), block ->
+                createSingleItemTable(AABItems.WELKIN_SIGN.get()));
+        this.add(AABBlocks.WELKIN_WALL_SIGN.get(), block ->
+                createSingleItemTable(AABItems.WELKIN_SIGN.get()));
+        this.add(AABBlocks.WELKIN_HANGING_SIGN.get(), block ->
+                createSingleItemTable(AABItems.WELKIN_HANGING_SIGN.get()));
+        this.add(AABBlocks.WELKIN_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(AABItems.WELKIN_HANGING_SIGN.get()));
         this.add(AABBlocks.WELKIN_LEAVES.get(), block ->
                 createLeavesDrops(block, AABBlocks.WELKIN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.dropSelf(AABBlocks.WELKIN_SAPLING.get());

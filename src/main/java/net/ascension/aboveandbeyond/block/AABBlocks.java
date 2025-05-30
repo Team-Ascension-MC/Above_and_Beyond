@@ -12,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -119,6 +120,16 @@ public class AABBlocks {
             () -> new DoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_DOOR).noOcclusion()));
     public static final DeferredBlock<TrapDoorBlock> WELKIN_TRAPDOOR = registerBlock("welkin_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_TRAPDOOR).noOcclusion()));
+
+    public static final DeferredBlock<Block> WELKIN_SIGN = BLOCKS.register("welkin_sign",
+            () -> new AABStandingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SIGN), AABWoodTypes.WELKIN));
+    public static final DeferredBlock<Block> WELKIN_WALL_SIGN = BLOCKS.register("welkin_wall_sign",
+            () -> new AABWallSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WALL_SIGN), AABWoodTypes.WELKIN));
+
+    public static final DeferredBlock<Block> WELKIN_HANGING_SIGN = BLOCKS.register("welkin_hanging_sign",
+            () -> new AABHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_HANGING_SIGN), AABWoodTypes.WELKIN));
+    public static final DeferredBlock<Block> WELKIN_WALL_HANGING_SIGN = BLOCKS.register("welkin_wall_hanging_sign",
+            () -> new AABWallHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WALL_HANGING_SIGN), AABWoodTypes.WELKIN));
 
     public static final DeferredBlock<LeavesBlock> WELKIN_LEAVES = registerBlock("welkin_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));

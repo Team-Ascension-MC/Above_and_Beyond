@@ -45,6 +45,12 @@ public class AABItems {
     public static final DeferredItem<Item> MUSIC_DISC_HEIST = ITEMS.register("music_disc_heist",
             () -> new Item(new Item.Properties().rarity(Rarity.RARE).jukeboxPlayable(AABSounds.HEIST_KEY).stacksTo(1)));
 
+    public static final DeferredItem<Item> WELKIN_SIGN = ITEMS.register("welkin_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), AABBlocks.WELKIN_SIGN.get(), AABBlocks.WELKIN_WALL_SIGN.get()));
+    public static final DeferredItem<Item> WELKIN_HANGING_SIGN = ITEMS.register("welkin_hanging_sign",
+            () -> new HangingSignItem(AABBlocks.WELKIN_HANGING_SIGN.get(), AABBlocks.WELKIN_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
+
     public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
                     .attributes(SwordItem.createAttributes(Tiers.DIAMOND, 3.5f, -2.2f))

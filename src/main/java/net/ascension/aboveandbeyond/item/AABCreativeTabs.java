@@ -54,6 +54,8 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.WELKIN_TRAPDOOR);
                         output.accept(AABBlocks.WELKIN_PRESSURE_PLATE);
                         output.accept(AABBlocks.WELKIN_BUTTON);
+                        output.accept(AABItems.WELKIN_SIGN);
+                        output.accept(AABItems.WELKIN_HANGING_SIGN);
                         output.accept(AABBlocks.WELKIN_LEAVES);
                         output.accept(AABBlocks.WELKIN_SAPLING);
                         output.accept(AABItems.KATANA);

@@ -47,6 +47,8 @@ public class AABItemModelProvider extends ItemModelProvider {
         basicItem(AABItems.CLOUD_BUCKET.get());
         basicItem(AABItems.KOI_BUCKET.get());
         basicItem(AABBlocks.WELKIN_DOOR.asItem());
+        basicItem(AABItems.WELKIN_SIGN.asItem());
+        basicItem(AABItems.WELKIN_HANGING_SIGN.asItem());
         saplingItem(AABBlocks.WELKIN_SAPLING);
         basicItem(AABItems.CLOUD_BERRIES.get());
         basicItem(AABItems.FLOOF.get());
