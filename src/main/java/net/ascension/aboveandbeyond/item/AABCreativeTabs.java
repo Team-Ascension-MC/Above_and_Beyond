@@ -30,6 +30,10 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.ZENSTONE_STAIRS);
                         output.accept(AABBlocks.ZENSTONE_SLAB);
                         output.accept(AABBlocks.ZENSTONE_WALL);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE_STAIRS);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE_SLAB);
+                        output.accept(AABBlocks.POLISHED_ZENSTONE_WALL);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICKS);
                         output.accept(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS);
@@ -37,7 +41,8 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL);
                         output.accept(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
                         output.accept(AABItems.CLOUD_BUCKET);
-                        output.accept(AABItems.PUFFGRASS);
+                        output.accept(AABItems.SHORT_PUFFGRASS);
+                        output.accept(AABItems.TALL_PUFFGRASS);
                         output.accept(AABItems.STARFLOWER);
                         output.accept(AABItems.SKYACINTH);
                         output.accept(AABItems.CLOUD_BERRIES);

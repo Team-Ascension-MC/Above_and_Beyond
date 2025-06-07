@@ -36,6 +36,10 @@ public class AABBlockStateProvider extends BlockStateProvider {
         stairsBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
         slabBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
         wallBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
+        blockWithItem(AABBlocks.POLISHED_ZENSTONE);
+        stairsBlock(AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE.get()));
+        slabBlock(AABBlocks.POLISHED_ZENSTONE_SLAB.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE.get()), blockTexture(AABBlocks.POLISHED_ZENSTONE.get()));
+        wallBlock(AABBlocks.POLISHED_ZENSTONE_WALL.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE.get()));
 
         logBlock(((RotatedPillarBlock) AABBlocks.WELKIN_LOG.get()));
         axisBlock(((RotatedPillarBlock) AABBlocks.WELKIN_WOOD.get()), blockTexture(AABBlocks.WELKIN_LOG.get()), blockTexture(AABBlocks.WELKIN_LOG.get()));
@@ -70,7 +74,7 @@ public class AABBlockStateProvider extends BlockStateProvider {
         saplingBlock(AABBlocks.WELKIN_SAPLING);
         makeBush(((SweetBerryBushBlock) AABBlocks.CLOUD_BERRY_BUSH.get()), "cloud_berry_bush_stage", "cloud_berry_bush_stage");
 
-        blockWithItem(AABBlocks.SHOCKROCK);
+        logBlock(((RotatedPillarBlock) AABBlocks.SHOCKROCK.get()));
         blockWithItem(AABBlocks.STATIC_SHOCKROCK);
         blockWithItem(AABBlocks.SHOCKROCK_COPPER_ORE);
         blockWithItem(AABBlocks.COBALT_BLOCK);

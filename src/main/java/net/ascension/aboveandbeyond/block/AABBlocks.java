@@ -30,8 +30,10 @@ public class AABBlocks {
 
     /* SKY ISLANDS */
     //Cloud Islands
-    public static final DeferredBlock<FlowerBlock> PUFFGRASS = BLOCKS.register("puffgrass",
-            () -> new FlowerBlock(MobEffects.LEVITATION, 1, BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final DeferredBlock<GrassBlock> SHORT_PUFFGRASS = BLOCKS.register("short_puffgrass",
+            () -> new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final DeferredBlock<GrassBlock> TALL_PUFFGRASS = BLOCKS.register("tall_puffgrass",
+            () -> new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<FlowerBlock> STARFLOWER = BLOCKS.register("starflower",
             () -> new FlowerBlock(MobEffects.LUCK, 7, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<FlowerBlock> SKYACINTH = BLOCKS.register("skyacinth",
@@ -46,7 +48,6 @@ public class AABBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COARSE_DIRT)));
     public static final DeferredBlock<Block> ZENSTONE = registerBlock("zenstone",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-
     public static final DeferredBlock<StairBlock> ZENSTONE_STAIRS = registerBlock("zenstone_stairs",
             () -> new StairBlock(AABBlocks.ZENSTONE.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_STAIRS)));
@@ -55,13 +56,22 @@ public class AABBlocks {
     public static final DeferredBlock<WallBlock> ZENSTONE_WALL = registerBlock("zenstone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_WALL)));
 
+    public static final DeferredBlock<Block> POLISHED_ZENSTONE = registerBlock("polished_zenstone",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF)));
+    public static final DeferredBlock<StairBlock> POLISHED_ZENSTONE_STAIRS = registerBlock("polished_zenstone_stairs",
+            () -> new StairBlock(AABBlocks.POLISHED_ZENSTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF_STAIRS)));
+    public static final DeferredBlock<SlabBlock> POLISHED_ZENSTONE_SLAB = registerBlock("polished_zenstone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF_SLAB)));
+    public static final DeferredBlock<WallBlock> POLISHED_ZENSTONE_WALL = registerBlock("polished_zenstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF_WALL)));
+
     public static final DeferredBlock<Block> POLISHED_ZENSTONE_BRICKS = registerBlock("polished_zenstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
     public static final DeferredBlock<Block> CRACKED_POLISHED_ZENSTONE_BRICKS = registerBlock("cracked_polished_zenstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
     public static final DeferredBlock<Block> CHISELED_POLISHED_ZENSTONE_BRICKS = registerBlock("chiseled_polished_zenstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CHISELED_TUFF_BRICKS)));
-
     public static final DeferredBlock<StairBlock> POLISHED_ZENSTONE_BRICK_STAIRS = registerBlock("polished_zenstone_brick_stairs",
             () -> new StairBlock(AABBlocks.POLISHED_ZENSTONE_BRICKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICK_STAIRS)));
@@ -144,8 +154,8 @@ public class AABBlocks {
             () -> new PuffgrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> STORMY_CLOUD_BLOCK = registerBlock("stormy_cloud_block",
             () -> new StormyCloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.POWDER_SNOW).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
-    public static final DeferredBlock<Block> SHOCKROCK = registerBlock("shockrock",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<RotatedPillarBlock> SHOCKROCK = registerBlock("shockrock",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> STATIC_SHOCKROCK = registerBlock("static_shockrock",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> SHOCKROCK_COPPER_ORE = registerBlock("shockrock_copper_ore",

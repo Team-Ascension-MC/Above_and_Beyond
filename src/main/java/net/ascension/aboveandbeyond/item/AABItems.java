@@ -21,8 +21,10 @@ public class AABItems {
     /* SKY ISLANDS */
 
     //Cloud Islands
-    public static final DeferredItem<Item> PUFFGRASS = ITEMS.register("puffgrass",
-            () -> new BlockItem(AABBlocks.PUFFGRASS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SHORT_PUFFGRASS = ITEMS.register("short_puffgrass",
+            () -> new BlockItem(AABBlocks.SHORT_PUFFGRASS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TALL_PUFFGRASS = ITEMS.register("tall_puffgrass",
+            () -> new BlockItem(AABBlocks.TALL_PUFFGRASS.get(), new Item.Properties()));
     public static final DeferredItem<Item> STARFLOWER = ITEMS.register("starflower",
             () -> new BlockItem(AABBlocks.STARFLOWER.get(), new Item.Properties()));
     public static final DeferredItem<Item> SKYACINTH = ITEMS.register("skyacinth",

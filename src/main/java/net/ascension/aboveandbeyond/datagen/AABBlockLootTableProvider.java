@@ -38,6 +38,10 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(AABBlocks.ZENSTONE_STAIRS.get());
         this.dropSelf(AABBlocks.ZENSTONE_SLAB.get());
         this.dropSelf(AABBlocks.ZENSTONE_WALL.get());
+        this.dropSelf(AABBlocks.POLISHED_ZENSTONE.get());
+        this.dropSelf(AABBlocks.POLISHED_ZENSTONE_STAIRS.get());
+        this.dropSelf(AABBlocks.POLISHED_ZENSTONE_SLAB.get());
+        this.dropSelf(AABBlocks.POLISHED_ZENSTONE_WALL.get());
         this.dropSelf(AABBlocks.POLISHED_ZENSTONE_BRICKS.get());
         this.dropSelf(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS.get());
         this.dropSelf(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get());
@@ -57,7 +61,8 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(AABBlocks.WELKIN_BUTTON.get());
         this.dropSelf(AABBlocks.WELKIN_FENCE.get());
         this.dropSelf(AABBlocks.WELKIN_FENCE_GATE.get());
-        this.dropWhenSilkTouch(AABBlocks.PUFFGRASS.get());
+        this.dropWhenSilkTouch(AABBlocks.SHORT_PUFFGRASS.get());
+        this.dropWhenSilkTouch(AABBlocks.TALL_PUFFGRASS.get());
         this.dropSelf(AABBlocks.STARFLOWER.get());
         this.dropSelf(AABBlocks.SKYACINTH.get());
         add(AABBlocks.WELKIN_DOOR.get(),

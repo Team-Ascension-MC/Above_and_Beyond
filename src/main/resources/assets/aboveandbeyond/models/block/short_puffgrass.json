@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "aboveandbeyond:block/puffgrass"
+    "cross": "aboveandbeyond:block/short_puffgrass"
   }
 }

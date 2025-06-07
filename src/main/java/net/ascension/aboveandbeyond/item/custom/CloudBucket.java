@@ -51,7 +51,6 @@ public class CloudBucket extends SolidBucketItem {
             if (!level.isClientSide) {
                 level.setBlock(pos, this.getBlock().defaultBlockState(), 3);
             }
-
             level.gameEvent(player, GameEvent.FLUID_PLACE, pos);
             level.playSound(player, pos, this.placeSound, SoundSource.BLOCKS, 1.0F, 1.0F);
             return true;
