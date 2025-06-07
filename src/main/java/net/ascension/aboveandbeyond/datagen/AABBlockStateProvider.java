@@ -78,6 +78,9 @@ public class AABBlockStateProvider extends BlockStateProvider {
         blockWithItem(AABBlocks.STATIC_SHOCKROCK);
         blockWithItem(AABBlocks.SHOCKROCK_COPPER_ORE);
         blockWithItem(AABBlocks.COBALT_BLOCK);
+
+      //  logBlock(((RotatedPillarBlock) AABBlocks.MYGALITH.get()));
+      //  logBlock(((RotatedPillarBlock) AABBlocks.POLISHED_MYGALITH.get()));
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {

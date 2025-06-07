@@ -170,6 +170,12 @@ public class AABBlocks {
     public static final DeferredBlock<Block> EXPLOSIVE_BARREL = registerBlock("explosive_barrel",
             () -> new ExplosiveBarrel(BlockBehaviour.Properties.ofFullCopy(Blocks.TNT)));
 
+    //Spider Caves
+    public static final DeferredBlock<Block> MYGALITH = registerBlock("mygalith",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
+    public static final DeferredBlock<Block> POLISHED_MYGALITH = registerBlock("polished_mygalith",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

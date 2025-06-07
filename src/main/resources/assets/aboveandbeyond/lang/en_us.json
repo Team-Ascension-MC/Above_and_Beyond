@@ -1,6 +1,6 @@
 {
   "creativetab.aboveandbeyond.skyisland.items": "Above & Beyond: Sky Islands",
-  "creativetab.aboveandbeyond.ridgetemple.items": "Above & Beyond: Ridge Temple",
+  "creativetab.aboveandbeyond.other.items": "Above & Beyond: Miscellaneous",
 
   "tag.item.aboveandbeyond.cloud_buckets": "Cloud Buckets",
   "tag.item.aboveandbeyond.welkin_logs": "Welkin Logs",
@@ -99,5 +99,9 @@
 
   /*OTHER*/
   //Ridge Temple
-  "block.aboveandbeyond.explosive_barrel": "Explosive Barrel"
+  "block.aboveandbeyond.explosive_barrel": "Explosive Barrel",
+
+  //Spider Caves
+  "block.aboveandbeyond.mygalith": "Mygalith",
+  "block.aboveandbeyond.polished_mygalith": "Polished Mygalith"
 }

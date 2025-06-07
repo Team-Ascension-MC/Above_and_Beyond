@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "aboveandbeyond:block/polished_mygalith_horizontal",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "aboveandbeyond:block/polished_mygalith_horizontal",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "aboveandbeyond:block/polished_mygalith_horizontal"
+    },
+    "facing=west": {
+      "model": "aboveandbeyond:block/polished_mygalith_horizontal",
+      "y": 90
+    }
+  }
+}

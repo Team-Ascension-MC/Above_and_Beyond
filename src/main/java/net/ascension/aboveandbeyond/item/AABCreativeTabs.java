@@ -95,22 +95,13 @@ public class AABCreativeTabs {
                         output.accept(AABItems.BUZZ_POWDER);
                         output.accept(AABItems.STORMBRINGER_STAFF);
                     }).build());
-    public static final Supplier<CreativeModeTab> AAB_RIDGE_TEMPLE_TAB = CREATIVE_MODE_TAB.register("aab_ridge_temple_tab",
+    public static final Supplier<CreativeModeTab> AAB_OTHER_TAB = CREATIVE_MODE_TAB.register("aab_other_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.ZENSTONE.get()))
-                    .title(Component.translatable("creativetab.aboveandbeyond.ridgetemple.items"))
+                    .title(Component.translatable("creativetab.aboveandbeyond.other.items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(AABBlocks.ZEN_GRAVEL);
-                        output.accept(AABBlocks.ZENSTONE);
-                        output.accept(AABBlocks.ZENSTONE_STAIRS);
-                        output.accept(AABBlocks.ZENSTONE_SLAB);
-                        output.accept(AABBlocks.ZENSTONE_WALL);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICKS);
-                        output.accept(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL);
-                        output.accept(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
                         output.accept(AABBlocks.EXPLOSIVE_BARREL);
+                        output.accept(AABBlocks.MYGALITH);
+                        output.accept(AABBlocks.POLISHED_MYGALITH);
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -39,7 +39,9 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.STATIC_SHOCKROCK.get())
                 .add(AABBlocks.SHOCKROCK_COPPER_ORE.get())
                 .add(AABBlocks.STATIC_DEBRIS.get())
-                .add(AABBlocks.COBALT_BLOCK.get());
+                .add(AABBlocks.COBALT_BLOCK.get())
+                .add(AABBlocks.MYGALITH.get())
+                .add(AABBlocks.POLISHED_MYGALITH.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(AABBlocks.WELKIN_LOG.get())
                 .add(AABBlocks.WELKIN_WOOD.get())
@@ -93,7 +95,6 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.AEROSOIL.get())
                 .add(AABBlocks.COARSE_AEROSOIL.get())
                 .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
-
         tag(BlockTags.ANIMALS_SPAWNABLE_ON)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())

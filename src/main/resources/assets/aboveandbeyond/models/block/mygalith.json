@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "aboveandbeyond:block/mygalith_top",
+    "side": "aboveandbeyond:block/mygalith"
+  }
+}

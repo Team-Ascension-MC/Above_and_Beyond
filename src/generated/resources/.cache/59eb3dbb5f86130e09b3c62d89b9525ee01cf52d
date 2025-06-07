@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-07T17:25:15.9418337	Loot Tables
+// 1.21.1	2025-06-07T18:53:50.121745	Loot Tables
 28b1f646152028a3d269b25bfcdaf176730c5178 data/aboveandbeyond/loot_table/blocks/aerosoil.json
 865dd36e1b1a1146b1dce45e3ebf42b5bb26798e data/aboveandbeyond/loot_table/blocks/aerosoil_path.json
 290f4f3926e12724674cb901a9b6499b18317440 data/aboveandbeyond/loot_table/blocks/chiseled_polished_zenstone_bricks.json
@@ -8,7 +8,9 @@ bb90c928de73f36bb36a65270c0a5cbac3d5ccad data/aboveandbeyond/loot_table/blocks/c
 f3e16ad041af53465582724d9e627e719f340338 data/aboveandbeyond/loot_table/blocks/cobalt_block.json
 582aab7e038ecb578f31a8b0d37a18d54f89a190 data/aboveandbeyond/loot_table/blocks/cracked_polished_zenstone_bricks.json
 afd3203f11d199d8bc733ec4eea69a848ab1801a data/aboveandbeyond/loot_table/blocks/explosive_barrel.json
+d07d370bc63c1a152c792ee9ee0c7ca2782618f7 data/aboveandbeyond/loot_table/blocks/mygalith.json
 984bbf41c7080a746a16b9c134dc36797114714f data/aboveandbeyond/loot_table/blocks/nimbus_puffgrass_block.json
+54690b8dbb58d4515d83c33d4b30600116a4c599 data/aboveandbeyond/loot_table/blocks/polished_mygalith.json
 43ddbc32152b4a086b4a2a0bb7d5ec674dfd092c data/aboveandbeyond/loot_table/blocks/polished_zenstone.json
 11549400802a4c492eb365af883680dc2e1b10dd data/aboveandbeyond/loot_table/blocks/polished_zenstone_bricks.json
 e62e361db22767c2c48d0590fb342390ff01f5a8 data/aboveandbeyond/loot_table/blocks/polished_zenstone_brick_slab.json
