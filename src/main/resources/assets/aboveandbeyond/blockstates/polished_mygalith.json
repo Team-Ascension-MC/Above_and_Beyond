@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "aboveandbeyond:block/polished_mygalith_horizontal",
+      "model": "aboveandbeyond:block/polished_mygalith",
       "y": 270
     },
     "facing=north": {
-      "model": "aboveandbeyond:block/polished_mygalith_horizontal",
+      "model": "aboveandbeyond:block/polished_mygalith",
       "y": 180
     },
     "facing=south": {
-      "model": "aboveandbeyond:block/polished_mygalith_horizontal"
+      "model": "aboveandbeyond:block/polished_mygalith"
     },
     "facing=west": {
-      "model": "aboveandbeyond:block/polished_mygalith_horizontal",
+      "model": "aboveandbeyond:block/polished_mygalith",
       "y": 90
     }
   }
