@@ -55,6 +55,10 @@
   "block.aboveandbeyond.welkin_trapdoor": "Welkin Trapdoor",
   "block.aboveandbeyond.welkin_leaves": "Welkin Leaves",
   "block.aboveandbeyond.welkin_sapling": "Welkin Sapling",
+  "block.aboveandbeyond.welkin_sign": "Welkin Sign",
+  "block.aboveandbeyond.welkin_hanging_sign": "Welkin Hanging Sign",
+//  "item.aboveandbeyond.welkin_boat": "Welkin Boat",
+//  "item.aboveandbeyond.welkin_chest_boat": "Welkin Chest Boat",
 
   "item.aboveandbeyond.music_disc_gale": "Music Disc",
   "item.aboveandbeyond.music_disc_gale.desc": "Efekt - Gale",

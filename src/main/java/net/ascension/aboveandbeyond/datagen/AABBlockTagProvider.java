@@ -55,7 +55,11 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.WELKIN_DOOR.get())
                 .add(AABBlocks.WELKIN_TRAPDOOR.get())
                 .add(AABBlocks.WELKIN_FENCE.get())
-                .add(AABBlocks.WELKIN_FENCE_GATE.get());
+                .add(AABBlocks.WELKIN_FENCE_GATE.get())
+                .add(AABBlocks.WELKIN_SIGN.get())
+                .add(AABBlocks.WELKIN_WALL_SIGN.get())
+                .add(AABBlocks.WELKIN_HANGING_SIGN.get())
+                .add(AABBlocks.WELKIN_WALL_HANGING_SIGN.get());
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
@@ -89,7 +93,13 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.WELKIN_WOOD.get())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get());
-
+        tag(BlockTags.SIGNS)
+                .add(AABBlocks.WELKIN_SIGN.get())
+                .add(AABBlocks.WELKIN_WALL_SIGN.get());
+        tag(BlockTags.CEILING_HANGING_SIGNS)
+                .add(AABBlocks.WELKIN_HANGING_SIGN.get());
+        tag(BlockTags.WALL_HANGING_SIGNS)
+                .add(AABBlocks.WELKIN_WALL_HANGING_SIGN.get());
         tag(BlockTags.DIRT)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())

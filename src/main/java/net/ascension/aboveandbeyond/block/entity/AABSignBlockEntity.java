@@ -6,12 +6,12 @@ import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class AABSignBlockEntity extends SignBlockEntity {
-    public AABSignBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(AABBlockEntities.WELKIN_SIGN.get(), pPos, pBlockState);
+    public AABSignBlockEntity(BlockPos pos, BlockState state) {
+        super(pos, state);
     }
 
     @Override
-    public BlockEntityType<?> getType() {
+    public BlockEntityType<AABSignBlockEntity> getType() {
         return AABBlockEntities.WELKIN_SIGN.get();
     }
 }

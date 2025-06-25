@@ -59,10 +59,12 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.WELKIN_TRAPDOOR);
                         output.accept(AABBlocks.WELKIN_PRESSURE_PLATE);
                         output.accept(AABBlocks.WELKIN_BUTTON);
-                        output.accept(AABItems.WELKIN_SIGN);
-                        output.accept(AABItems.WELKIN_HANGING_SIGN);
                         output.accept(AABBlocks.WELKIN_LEAVES);
                         output.accept(AABBlocks.WELKIN_SAPLING);
+                        output.accept(AABItems.WELKIN_SIGN);
+                        output.accept(AABItems.WELKIN_HANGING_SIGN);
+               //         output.accept(AABItems.WELKIN_BOAT);
+               //         output.accept(AABItems.WELKIN_CHEST_BOAT);
                         output.accept(AABItems.KATANA);
                         output.accept(AABItems.FLOOF);
                         output.accept(AABItems.KOI_BUCKET);

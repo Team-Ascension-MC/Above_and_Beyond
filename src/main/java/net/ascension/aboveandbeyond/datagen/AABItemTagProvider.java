@@ -49,6 +49,10 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get().asItem());
         tag(ItemTags.PLANKS)
                 .add(AABBlocks.WELKIN_PLANKS.asItem());
+        tag(ItemTags.SIGNS)
+                .add(AABBlocks.WELKIN_SIGN.asItem());
+        tag(ItemTags.HANGING_SIGNS)
+                .add(AABBlocks.WELKIN_HANGING_SIGN.asItem());
         tag(ItemTags.LEAVES)
                 .add(AABBlocks.WELKIN_LEAVES.asItem());
         tag(ItemTags.SAPLINGS)

@@ -12,6 +12,10 @@
     "aboveandbeyond:welkin_door",
     "aboveandbeyond:welkin_trapdoor",
     "aboveandbeyond:welkin_fence",
-    "aboveandbeyond:welkin_fence_gate"
+    "aboveandbeyond:welkin_fence_gate",
+    "aboveandbeyond:welkin_sign",
+    "aboveandbeyond:welkin_wall_sign",
+    "aboveandbeyond:welkin_hanging_sign",
+    "aboveandbeyond:welkin_wall_hanging_sign"
   ]
 }

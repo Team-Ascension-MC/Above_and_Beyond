@@ -131,15 +131,15 @@ public class AABBlocks {
     public static final DeferredBlock<TrapDoorBlock> WELKIN_TRAPDOOR = registerBlock("welkin_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_TRAPDOOR).noOcclusion()));
 
-    public static final DeferredBlock<Block> WELKIN_SIGN = BLOCKS.register("welkin_sign",
-            () -> new AABStandingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SIGN), AABWoodTypes.WELKIN));
-    public static final DeferredBlock<Block> WELKIN_WALL_SIGN = BLOCKS.register("welkin_wall_sign",
-            () -> new AABWallSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WALL_SIGN), AABWoodTypes.WELKIN));
+    public static final DeferredBlock<StandingSignBlock> WELKIN_SIGN = BLOCKS.register("welkin_sign",
+            () -> new AABStandingSignBlock(AABWoodTypes.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SIGN)));
+    public static final DeferredBlock<WallSignBlock> WELKIN_WALL_SIGN = BLOCKS.register("welkin_wall_sign",
+            () -> new AABWallSignBlock(AABWoodTypes.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WALL_SIGN)));
 
-    public static final DeferredBlock<Block> WELKIN_HANGING_SIGN = BLOCKS.register("welkin_hanging_sign",
-            () -> new AABHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_HANGING_SIGN), AABWoodTypes.WELKIN));
-    public static final DeferredBlock<Block> WELKIN_WALL_HANGING_SIGN = BLOCKS.register("welkin_wall_hanging_sign",
-            () -> new AABWallHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WALL_HANGING_SIGN), AABWoodTypes.WELKIN));
+    public static final DeferredBlock<CeilingHangingSignBlock> WELKIN_HANGING_SIGN = BLOCKS.register("welkin_hanging_sign",
+            () -> new AABHangingSignBlock(AABWoodTypes.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_HANGING_SIGN)));
+    public static final DeferredBlock<WallHangingSignBlock> WELKIN_WALL_HANGING_SIGN = BLOCKS.register("welkin_wall_hanging_sign",
+            () -> new AABWallHangingSignBlock(AABWoodTypes.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WALL_HANGING_SIGN)));
 
     public static final DeferredBlock<LeavesBlock> WELKIN_LEAVES = registerBlock("welkin_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
