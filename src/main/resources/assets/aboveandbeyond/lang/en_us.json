@@ -57,8 +57,8 @@
   "block.aboveandbeyond.welkin_sapling": "Welkin Sapling",
   "block.aboveandbeyond.welkin_sign": "Welkin Sign",
   "block.aboveandbeyond.welkin_hanging_sign": "Welkin Hanging Sign",
-//  "item.aboveandbeyond.welkin_boat": "Welkin Boat",
-//  "item.aboveandbeyond.welkin_chest_boat": "Welkin Chest Boat",
+  //  "item.aboveandbeyond.welkin_boat": "Welkin Boat",
+  //  "item.aboveandbeyond.welkin_chest_boat": "Welkin Chest Boat",
 
   "item.aboveandbeyond.music_disc_gale": "Music Disc",
   "item.aboveandbeyond.music_disc_gale.desc": "Efekt - Gale",
@@ -90,6 +90,9 @@
   "block.aboveandbeyond.stormy_cloud_block": "Stormy Cloud Block",
   "item.aboveandbeyond.stormy_cloud_bucket": "Stormy Cloud Bucket",
 
+  "item.aboveandbeyond.lightning_bolt": "Lightning Bolt",
+  "item.aboveandbeyond.buzz_powder": "Buzz Powder",
+
   "block.aboveandbeyond.cobalt_block": "Block of Cobalt",
   "item.aboveandbeyond.cobalt_chunk": "Cobalt Chunk",
   "item.aboveandbeyond.cobalt_ingot": "Cobalt Ingot",
@@ -104,7 +107,6 @@
   "item.aboveandbeyond.cobalt_chestplate": "Cobalt Chestplate",
   "item.aboveandbeyond.cobalt_leggings": "Cobalt Leggings",
   "item.aboveandbeyond.cobalt_boots": "Cobalt Boots",
-  "item.aboveandbeyond.buzz_powder": "Buzz Powder",
   "item.aboveandbeyond.stormbringer_staff": "Stormbringer Staff",
 
   /*OTHER*/
