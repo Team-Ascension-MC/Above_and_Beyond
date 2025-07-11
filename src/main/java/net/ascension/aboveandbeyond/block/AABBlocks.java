@@ -156,8 +156,8 @@ public class AABBlocks {
             () -> new StormyCloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.POWDER_SNOW).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
     public static final DeferredBlock<RotatedPillarBlock> SHOCKROCK = registerBlock("shockrock",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
-    public static final DeferredBlock<Block> STATIC_SHOCKROCK = registerBlock("static_shockrock",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<RotatedPillarBlock> STATIC_SHOCKROCK = registerBlock("static_shockrock",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> SHOCKROCK_COPPER_ORE = registerBlock("shockrock_copper_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_COPPER_ORE)));
     public static final DeferredBlock<Block> STATIC_DEBRIS = registerBlock("static_debris",

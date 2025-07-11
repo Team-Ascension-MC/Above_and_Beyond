@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "aboveandbeyond:block/static_shockrock_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "aboveandbeyond:block/static_shockrock"
+    },
+    "axis=z": {
+      "model": "aboveandbeyond:block/static_shockrock_horizontal",
+      "x": 90
     }
   }
 }

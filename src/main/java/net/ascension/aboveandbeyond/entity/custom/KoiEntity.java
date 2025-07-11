@@ -74,7 +74,7 @@ public class KoiEntity extends Cod {
     public static AttributeSupplier.Builder createAttributes() {
         return TropicalFish.createAttributes()
                 .add(Attributes.MAX_HEALTH, 8.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.5D)
+                .add(Attributes.MOVEMENT_SPEED, 0.75)
                 .add(Attributes.FOLLOW_RANGE, 16.0D);
     }
 
