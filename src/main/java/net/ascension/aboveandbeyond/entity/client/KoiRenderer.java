@@ -16,17 +16,9 @@ import java.util.Map;
 public class KoiRenderer extends MobRenderer<KoiEntity, KoiModel<KoiEntity>> {
     private static final Map<KoiVariant, ResourceLocation> LOCATION_BY_VARIANT =
             Util.make(Maps.newEnumMap(KoiVariant.class), map -> {
-                map.put(KoiVariant.DEFAULT, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_default.png"));
-                map.put(KoiVariant.WHITE_RED, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_white_red.png"));
-                map.put(KoiVariant.WHITE_BLUE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_white_blue.png"));
-                map.put(KoiVariant.WHITE_PURPLE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_white_purple.png"));
-                map.put(KoiVariant.RED, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_red.png"));
-                map.put(KoiVariant.PURPLE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_purple.png"));
-                map.put(KoiVariant.YELLOW, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_yellow.png"));
-                map.put(KoiVariant.GOLD, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_gold.png"));
-                map.put(KoiVariant.END, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_end.png"));
-                map.put(KoiVariant.THUNDER, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_thunder.png"));
-                map.put(KoiVariant.WARDEN, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_warden.png"));
+                map.put(KoiVariant.KOHAKU, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_kohaku.png"));
+                map.put(KoiVariant.SANKE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_sanke.png"));
+                map.put(KoiVariant.SHOWA, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_showa.png"));
             });
 
     public KoiRenderer(EntityRendererProvider.Context context) {
