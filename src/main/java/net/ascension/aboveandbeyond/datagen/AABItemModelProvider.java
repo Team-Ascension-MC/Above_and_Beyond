@@ -56,6 +56,10 @@ public class AABItemModelProvider extends ItemModelProvider {
 
         //Nimbus Islands
         basicItem(AABItems.STORMY_CLOUD_BUCKET.get());
+
+        basicItem(AABItems.LIGHTNING_BOLT.get());
+        basicItem(AABItems.BUZZ_POWDER.get());
+
         basicItem(AABItems.COBALT_CHUNK.get());
         basicItem(AABItems.COBALT_INGOT.get());
         basicItem(AABItems.COBALT_NUGGET.get());
@@ -72,9 +76,6 @@ public class AABItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(AABItems.COBALT_BOOTS);
 
         basicItem(AABItems.COBALT_UPGRADE_SMITHING_TEMPLATE.get());
-
-        basicItem(AABItems.BUZZ_POWDER.get());
-        handheldItem(AABItems.STORMBRINGER_STAFF.get());
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {

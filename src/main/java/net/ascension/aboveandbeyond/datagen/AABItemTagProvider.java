@@ -31,6 +31,8 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABBlocks.WELKIN_WOOD.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_LOG.get().asItem())
                 .add(AABBlocks.STRIPPED_WELKIN_WOOD.get().asItem());
+        tag(AABTags.Items.COBALT_CROSSBOW_BOLTS)
+                .add(AABItems.LIGHTNING_BOLT.get());
 
         tag(ItemTags.LOGS)
                 .add(AABBlocks.WELKIN_LOG.get().asItem())
@@ -64,6 +66,8 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABBlocks.MYGALITH.asItem());
         tag(ItemTags.FOX_FOOD)
                 .add(AABItems.CLOUD_BERRIES.get());
+        tag(ItemTags.ARROWS)
+                .add(AABItems.LIGHTNING_BOLT.get());
 
         tag(ItemTags.SWORDS)
                 .add(AABItems.KATANA.get())
@@ -83,6 +87,9 @@ public class AABItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.HOES)
                 .add(AABItems.COBALT_HOE.get());
+
+        tag(ItemTags.CROSSBOW_ENCHANTABLE)
+                .add(AABItems.COBALT_CROSSBOW.get());
 
         this.tag(ItemTags.ARMOR_ENCHANTABLE)
                 .add(AABItems.COBALT_HELMET.get())

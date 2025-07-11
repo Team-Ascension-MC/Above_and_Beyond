@@ -33,7 +33,7 @@ public class AABItems {
             () -> new CloudBucket(AABBlocks.CLOUD_BLOCK.get(), SoundEvents.SNOW_PLACE, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> KOI_BUCKET = ITEMS.register("koi_bucket",
             () -> new KoiBucket(AABEntities.KOI.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH,
-                new Item.Properties().stacksTo(1)));
+                    new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> CLOUD_BERRIES = ITEMS.register("cloud_berries",
             () -> new ItemNameBlockItem(AABBlocks.CLOUD_BERRY_BUSH.get(), new Item.Properties()
                     .food(new FoodProperties.Builder()
@@ -68,6 +68,11 @@ public class AABItems {
                     new Item.Properties()));
 
     //Nimbus Islands
+    public static final DeferredItem<Item> BUZZ_POWDER = ITEMS.register("buzz_powder",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LIGHTNING_BOLT = ITEMS.register("lightning_bolt",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> COBALT_CHUNK = ITEMS.register("cobalt_chunk",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot",
@@ -112,8 +117,8 @@ public class AABItems {
                     .stacksTo(1)
                     .rarity(Rarity.COMMON)
             ));
-    public static final DeferredItem<Item> COBALT_CROSSBOW = ITEMS.register("cobalt_crossbow",
-            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<CrossbowItem> COBALT_CROSSBOW = ITEMS.register("cobalt_crossbow",
+            () -> new CrossbowItem(new Item.Properties()));
     public static final DeferredItem<ArmorItem> COBALT_HELMET = ITEMS.register("cobalt_helmet",
             () -> new ArmorItem(AABArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
@@ -128,12 +133,6 @@ public class AABItems {
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
     public static final DeferredItem<Item> COBALT_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("cobalt_upgrade_smithing_template",
             () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> BUZZ_POWDER = ITEMS.register("buzz_powder",
-            () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> STORMBRINGER_STAFF = ITEMS.register("stormbringer_staff",
-            () -> new Item(new Item.Properties().durability(8).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

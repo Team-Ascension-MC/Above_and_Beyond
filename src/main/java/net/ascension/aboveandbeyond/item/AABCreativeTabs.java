@@ -63,8 +63,8 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.WELKIN_SAPLING);
                         output.accept(AABItems.WELKIN_SIGN);
                         output.accept(AABItems.WELKIN_HANGING_SIGN);
-               //         output.accept(AABItems.WELKIN_BOAT);
-               //         output.accept(AABItems.WELKIN_CHEST_BOAT);
+                        //output.accept(AABItems.WELKIN_BOAT);
+                        //output.accept(AABItems.WELKIN_CHEST_BOAT);
                         output.accept(AABItems.KATANA);
                         output.accept(AABItems.FLOOF);
                         output.accept(AABItems.KOI_BUCKET);
@@ -80,6 +80,8 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.SHOCKROCK_COPPER_ORE);
                         output.accept(AABBlocks.STATIC_DEBRIS);
                         output.accept(AABItems.STORMY_CLOUD_BUCKET);
+                        output.accept(AABItems.BUZZ_POWDER);
+                        output.accept(AABItems.LIGHTNING_BOLT);
                         output.accept(AABBlocks.COBALT_BLOCK);
                         output.accept(AABItems.COBALT_CHUNK);
                         output.accept(AABItems.COBALT_NUGGET);
@@ -94,7 +96,6 @@ public class AABCreativeTabs {
                         output.accept(AABItems.COBALT_CHESTPLATE);
                         output.accept(AABItems.COBALT_LEGGINGS);
                         output.accept(AABItems.COBALT_BOOTS);
-                        output.accept(AABItems.BUZZ_POWDER);
                         output.accept(AABItems.STORMBRINGER_STAFF);
                     }).build());
     public static final Supplier<CreativeModeTab> AAB_OTHER_TAB = CREATIVE_MODE_TAB.register("aab_other_tab",
