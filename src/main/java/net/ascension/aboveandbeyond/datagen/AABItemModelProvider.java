@@ -68,7 +68,6 @@ public class AABItemModelProvider extends ItemModelProvider {
         handheldItem(AABItems.COBALT_AXE.get());
         handheldItem(AABItems.COBALT_SHOVEL.get());
         handheldItem(AABItems.COBALT_HOE.get());
-        handheldItem(AABItems.COBALT_CROSSBOW.get());
 
         trimmedArmorItem(AABItems.COBALT_HELMET);
         trimmedArmorItem(AABItems.COBALT_CHESTPLATE);

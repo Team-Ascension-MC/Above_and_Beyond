@@ -1,9 +1,12 @@
-// 1.21.1	2025-06-24T22:09:34.8862832	Tags for minecraft:item mod id aboveandbeyond
+// 1.21.1	2025-07-11T15:22:48.7599599	Tags for minecraft:item mod id aboveandbeyond
 3c0a22d47c5a45ced0e0fc0dfaad6d8568c50604 data/aboveandbeyond/tags/item/cloud_buckets.json
+b8e118eafc53102d88b7a36177a7971fcbc87eea data/aboveandbeyond/tags/item/cobalt_crossbow_bolts.json
 0c274465215ee87e25768eeba26e03eb8f85cb75 data/aboveandbeyond/tags/item/welkin_logs.json
+b8e118eafc53102d88b7a36177a7971fcbc87eea data/minecraft/tags/item/arrows.json
 7380098670ccee8c3cbf23fd7db1db4dc856b2fe data/minecraft/tags/item/axes.json
 b83789ece65d811875b7879766f5e89308a5f363 data/minecraft/tags/item/enchantable/armor.json
 ddcacbdaafa8098eb7c10044bbbfd4b2dfda98e5 data/minecraft/tags/item/enchantable/chest_armor.json
+a10f71cb7b9039541e46aa684733668202167539 data/minecraft/tags/item/enchantable/crossbow.json
 80f8955a9d4cb69c2435478c4e492afc5970fc43 data/minecraft/tags/item/enchantable/foot_armor.json
 32431d6c53add8d8bd1aec984f2c226826682027 data/minecraft/tags/item/enchantable/head_armor.json
 f98c2380120f8778807f16204a948d7d23c14d11 data/minecraft/tags/item/enchantable/leg_armor.json

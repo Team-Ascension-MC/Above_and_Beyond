@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "aboveandbeyond:item/cloud_block"
+    "layer0": "aboveandbeyond:item/lightning_bolt"
   }
 }

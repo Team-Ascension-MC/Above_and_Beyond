@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-29T20:16:07.0903665	Item Models: aboveandbeyond
+// 1.21.1	2025-07-11T15:22:48.7543318	Item Models: aboveandbeyond
 171009effadf3d61a45e12880e91bf326d0840ca assets/aboveandbeyond/models/item/buzz_powder.json
 589af699bc184258f9bc4e2fd2f0f76702229ff1 assets/aboveandbeyond/models/item/cloud_berries.json
 1819ded44ea322c40f12351b48c002793b471dbe assets/aboveandbeyond/models/item/cloud_block.json
@@ -27,7 +27,6 @@ ca21671c7fca83ec65a5ac2a8f7561c4e10ec5d0 assets/aboveandbeyond/models/item/cobal
 888637c40dd0319eaaefe4db01b9563bd3cde25b assets/aboveandbeyond/models/item/cobalt_chestplate_quartz_trim.json
 4ada78242e713c5e35887a947b703f4391915c41 assets/aboveandbeyond/models/item/cobalt_chestplate_redstone_trim.json
 643e606239c6128eb8c5279a6e643593e3c1d776 assets/aboveandbeyond/models/item/cobalt_chunk.json
-9f1a29a32355aad1dbe1aa48c974a3394e3e5a54 assets/aboveandbeyond/models/item/cobalt_crossbow.json
 2dfaded05671d92b0b36c5ced939c8b73679e918 assets/aboveandbeyond/models/item/cobalt_helmet.json
 f86d404ca3da6238a34d4057478481239350b350 assets/aboveandbeyond/models/item/cobalt_helmet_amethyst_trim.json
 102757e6dcf165255d6a3b55bbb2012f0dd467a4 assets/aboveandbeyond/models/item/cobalt_helmet_copper_trim.json
@@ -60,10 +59,10 @@ a29cc43b4b0be4074b72ccc251b7e254d0dd26cc assets/aboveandbeyond/models/item/cobal
 b2f24353b45c0e24fd4107653553691089ea6248 assets/aboveandbeyond/models/item/floof.json
 2024c87a9cde57ea1965f1392db1f7c7b0528540 assets/aboveandbeyond/models/item/koi_bucket.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/aboveandbeyond/models/item/koi_spawn_egg.json
+fa90279918d7dc6ad9ea6e05d2fe3d00d722bc47 assets/aboveandbeyond/models/item/lightning_bolt.json
 00fb3e9d6c09e39f5f9466d9f4d7250a6ef1fa9b assets/aboveandbeyond/models/item/music_disc_gale.json
 2e5ad67468697adcf30d2edfe67d6754fdc95616 assets/aboveandbeyond/models/item/music_disc_heist.json
 291c4a7d6d395e1b10c3430f01a1b2209e17341f assets/aboveandbeyond/models/item/music_disc_vivid.json
-7e249366ff5067a4d8e505b78df5c5ea9b73ef98 assets/aboveandbeyond/models/item/stormbringer_staff.json
 f15e8bc446bff2319b2cd185a57dceaa466793c3 assets/aboveandbeyond/models/item/stormy_cloud_bucket.json
 b38d2f0a2ccd5b9ecc4cd7fa5980df3a01c9500a assets/aboveandbeyond/models/item/welkin_door.json
 eb426c5f1a365845e1d23745e39a3abd2a5d895a assets/aboveandbeyond/models/item/welkin_hanging_sign.json
