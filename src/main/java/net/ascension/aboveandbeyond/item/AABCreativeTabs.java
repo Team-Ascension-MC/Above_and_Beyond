@@ -96,7 +96,6 @@ public class AABCreativeTabs {
                         output.accept(AABItems.COBALT_CHESTPLATE);
                         output.accept(AABItems.COBALT_LEGGINGS);
                         output.accept(AABItems.COBALT_BOOTS);
-                        output.accept(AABItems.STORMBRINGER_STAFF);
                     }).build());
     public static final Supplier<CreativeModeTab> AAB_OTHER_TAB = CREATIVE_MODE_TAB.register("aab_other_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.ZENSTONE.get()))
