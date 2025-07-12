@@ -15,9 +15,9 @@ public class AABCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AboveAndBeyond.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> AAB_SKY_ISLANDS_TAB = CREATIVE_MODE_TAB.register("aab_sky_islands_tab",
+    public static final Supplier<CreativeModeTab> AAB_TAB = CREATIVE_MODE_TAB.register("aab_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.PUFFGRASS_BLOCK.get()))
-                    .title(Component.translatable("creativetab.aboveandbeyond.skyisland.items"))
+                    .title(Component.translatable("creativetab.aboveandbeyond.tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         /* SKY ISLANDS */
                         /*Cloud Islands*/
@@ -71,7 +71,6 @@ public class AABCreativeTabs {
                         output.accept(AABItems.KOI_SPAWN_EGG);
                         output.accept(AABItems.MUSIC_DISC_GALE);
                         output.accept(AABItems.MUSIC_DISC_VIVID);
-                        output.accept(AABItems.MUSIC_DISC_HEIST);
 
                         //Nimbus Islands
                         output.accept(AABBlocks.NIMBUS_PUFFGRASS_BLOCK);
@@ -96,16 +95,15 @@ public class AABCreativeTabs {
                         output.accept(AABItems.COBALT_CHESTPLATE);
                         output.accept(AABItems.COBALT_LEGGINGS);
                         output.accept(AABItems.COBALT_BOOTS);
-                    }).build());
-    public static final Supplier<CreativeModeTab> AAB_OTHER_TAB = CREATIVE_MODE_TAB.register("aab_other_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(AABBlocks.ZENSTONE.get()))
-                    .title(Component.translatable("creativetab.aboveandbeyond.other.items"))
-                    .displayItems((itemDisplayParameters, output) -> {
+
+                        //Sanctums
                         output.accept(AABBlocks.EXPLOSIVE_BARREL);
+                        output.accept(AABItems.MUSIC_DISC_HEIST);
+
+                        //Spider Caves
                         output.accept(AABBlocks.MYGALITH);
                         output.accept(AABBlocks.POLISHED_MYGALITH);
                     }).build());
-
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
     }

@@ -35,5 +35,7 @@ public class DataGenerators {
 
         generator.addProvider(event.includeClient(), new AABItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new AABBlockStateProvider(packOutput, existingFileHelper));
+
+        generator.addProvider(event.includeServer(), new AABDatapackProvider(packOutput, lookupProvider));
     }
 }

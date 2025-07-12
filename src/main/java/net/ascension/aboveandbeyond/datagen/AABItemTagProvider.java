@@ -68,6 +68,8 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABItems.CLOUD_BERRIES.get());
         tag(ItemTags.ARROWS)
                 .add(AABItems.LIGHTNING_BOLT.get());
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(AABItems.COBALT_INGOT.get());
 
         tag(ItemTags.SWORDS)
                 .add(AABItems.KATANA.get())

@@ -1,0 +1,9 @@
+{
+  "asset_name": "cobalt",
+  "description": {
+    "color": "#66718B",
+    "translate": "trim_material.aboveandbeyond.cobalt"
+  },
+  "ingredient": "aboveandbeyond:cobalt_ingot",
+  "item_model_index": 1.0
+}

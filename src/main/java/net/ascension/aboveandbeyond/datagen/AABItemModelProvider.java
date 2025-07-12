@@ -3,6 +3,7 @@ package net.ascension.aboveandbeyond.datagen;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.item.AABItems;
+import net.ascension.aboveandbeyond.trim.AABTrimMaterials;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
