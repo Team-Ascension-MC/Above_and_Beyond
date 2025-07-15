@@ -3,6 +3,8 @@ package net.ascension.aboveandbeyond.item;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.entity.AABEntities;
+import net.ascension.aboveandbeyond.entity.custom.AABBoatEntity;
+import net.ascension.aboveandbeyond.item.custom.AABBoatItem;
 import net.ascension.aboveandbeyond.item.custom.CloudBucket;
 import net.ascension.aboveandbeyond.item.custom.KoiBucket;
 import net.ascension.aboveandbeyond.sound.AABSounds;
@@ -52,6 +54,11 @@ public class AABItems {
     public static final DeferredItem<Item> WELKIN_HANGING_SIGN = ITEMS.register("welkin_hanging_sign",
             () -> new HangingSignItem(AABBlocks.WELKIN_HANGING_SIGN.get(), AABBlocks.WELKIN_WALL_HANGING_SIGN.get(),
                     new Item.Properties().stacksTo(16)));
+
+    public static final DeferredItem<Item> WELKIN_BOAT = ITEMS.register("welkin_boat",
+            () -> new AABBoatItem(false, AABBoatEntity.Type.WELKIN, new Item.Properties()));
+    public static final DeferredItem<Item> WELKIN_CHEST_BOAT = ITEMS.register("welkin_chest_boat",
+            () -> new AABBoatItem(true, AABBoatEntity.Type.WELKIN, new Item.Properties()));
 
     public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
