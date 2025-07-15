@@ -16,7 +16,7 @@ public class AABEntities {
 
     public static final Supplier<EntityType<KoiEntity>> KOI =
             ENTITY_TYPES.register("koi", () -> EntityType.Builder.of(KoiEntity::new, MobCategory.WATER_CREATURE)
-                    .sized(0.75f, 0.65f).build("koi"));
+                    .sized(0.5f, 0.25f).build("koi"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
