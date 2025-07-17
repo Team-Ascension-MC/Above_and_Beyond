@@ -74,6 +74,7 @@ public class AABCreativeTabs {
 
                         //Nimbus Islands
                         output.accept(AABBlocks.NIMBUS_PUFFGRASS_BLOCK);
+                        output.accept(AABBlocks.AEROMUD);
                         output.accept(AABBlocks.SHOCKROCK);
                         output.accept(AABBlocks.STATIC_SHOCKROCK);
                         output.accept(AABBlocks.SHOCKROCK_COPPER_ORE);

@@ -152,6 +152,8 @@ public class AABBlocks {
     //Nimbus Islands
     public static final DeferredBlock<PuffgrassBlock> NIMBUS_PUFFGRASS_BLOCK = registerBlock("nimbus_puffgrass_block",
             () -> new PuffgrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+    public static final DeferredBlock<Block> AEROMUD = registerBlock("aeromud",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> STORMY_CLOUD_BLOCK = registerBlock("stormy_cloud_block",
             () -> new StormyCloudBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB).sound(SoundType.POWDER_SNOW).instabreak().instrument(NoteBlockInstrument.XYLOPHONE).noOcclusion()));
     public static final DeferredBlock<RotatedPillarBlock> SHOCKROCK = registerBlock("shockrock",

@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.function.IntFunction;
 
-public class AABBoatEntity extends Boat {
+public class AABBoatEntity { /*extends Boat {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
 
     public AABBoatEntity(EntityType<? extends Boat> pEntityType, Level pLevel) {
@@ -51,7 +51,6 @@ public class AABBoatEntity extends Boat {
     }
 
     protected void defineSynchedData() {
-        super.defineSynchedData();
         this.entityData.set(DATA_ID_TYPE, Type.WELKIN.ordinal());
     }
 
@@ -94,15 +93,12 @@ public class AABBoatEntity extends Boat {
             return this.name;
         }
 
-        /**
-         * Get a boat type by its enum ordinal
-         */
         public static AABBoatEntity.Type byId(int pId) {
             return BY_ID.apply(pId);
         }
 
         public static AABBoatEntity.Type byName(String pName) {
-            return CODEC.byName(pName, WALNUT);
+            return CODEC.byName(pName, WELKIN);
         }
-    }
+    }*/
 }

@@ -74,6 +74,7 @@ public class AABBlockStateProvider extends BlockStateProvider {
         saplingBlock(AABBlocks.WELKIN_SAPLING);
         makeBush(((SweetBerryBushBlock) AABBlocks.CLOUD_BERRY_BUSH.get()), "cloud_berry_bush_stage", "cloud_berry_bush_stage");
 
+        blockItem(AABBlocks.AEROMUD);
         logBlock(AABBlocks.SHOCKROCK.get());
         logBlock(AABBlocks.STATIC_SHOCKROCK.get());
         blockWithItem(AABBlocks.SHOCKROCK_COPPER_ORE);

@@ -22,7 +22,7 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class AABBoatItem extends Item {
+public class AABBoatItem { /*extends Item {
     private static final Predicate<Entity> ENTITY_PREDICATE = EntitySelector.NO_SPECTATORS.and(Entity::isPickable);
     private final AABBoatEntity.Type type;
     private final boolean hasChest;
@@ -83,5 +83,5 @@ public class AABBoatItem extends Item {
     private Boat getBoat(Level p_220017_, HitResult p_220018_) {
         return (this.hasChest ? new AABChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
                 new AABBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z));
-    }
+    }*/
 }

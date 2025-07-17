@@ -19,7 +19,7 @@ import javax.swing.*;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class AABBoatRenderer extends BoatRenderer {
+public class AABBoatRenderer { /*extends BoatRenderer {
     private final Map<AABBoatEntity.Type, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
 
     public AABBoatRenderer(EntityRendererProvider.Context pContext, boolean pChestBoat) {
@@ -58,5 +58,5 @@ public class AABBoatRenderer extends BoatRenderer {
         } else {
             return null;
         }
-    }
+    }*/
 }

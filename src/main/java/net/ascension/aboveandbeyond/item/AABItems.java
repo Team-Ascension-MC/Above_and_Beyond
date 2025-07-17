@@ -55,10 +55,10 @@ public class AABItems {
             () -> new HangingSignItem(AABBlocks.WELKIN_HANGING_SIGN.get(), AABBlocks.WELKIN_WALL_HANGING_SIGN.get(),
                     new Item.Properties().stacksTo(16)));
 
-    public static final DeferredItem<Item> WELKIN_BOAT = ITEMS.register("welkin_boat",
+  /*  public static final DeferredItem<Item> WELKIN_BOAT = ITEMS.register("welkin_boat",
             () -> new AABBoatItem(false, AABBoatEntity.Type.WELKIN, new Item.Properties()));
     public static final DeferredItem<Item> WELKIN_CHEST_BOAT = ITEMS.register("welkin_chest_boat",
-            () -> new AABBoatItem(true, AABBoatEntity.Type.WELKIN, new Item.Properties()));
+            () -> new AABBoatItem(true, AABBoatEntity.Type.WELKIN, new Item.Properties()));*/
 
     public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()

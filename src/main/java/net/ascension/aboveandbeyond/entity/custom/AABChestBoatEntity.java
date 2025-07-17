@@ -12,7 +12,7 @@ import net.minecraft.world.entity.vehicle.ChestBoat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 
-public class AABChestBoatEntity extends ChestBoat {
+public class AABChestBoatEntity { /*extends ChestBoat {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
 
     public AABChestBoatEntity(EntityType<? extends ChestBoat> pEntityType, Level pLevel) {
@@ -42,7 +42,6 @@ public class AABChestBoatEntity extends ChestBoat {
     }
 
     protected void defineSynchedData() {
-        super.defineSynchedData();
         this.entityData.set(DATA_ID_TYPE, AABBoatEntity.Type.WELKIN.ordinal());
     }
 
@@ -58,5 +57,5 @@ public class AABChestBoatEntity extends ChestBoat {
 
     public AABBoatEntity.Type getModVariant() {
         return AABBoatEntity.Type.byId(this.entityData.get(DATA_ID_TYPE));
-    }
+    }*/
 }

@@ -65,7 +65,8 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.AEROSOIL.get())
                 .add(AABBlocks.COARSE_AEROSOIL.get())
                 .add(AABBlocks.ZEN_GRAVEL.get())
-                .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
+                .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get())
+                .add(AABBlocks.AEROMUD.get());
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(AABBlocks.WELKIN_LEAVES.get());
 

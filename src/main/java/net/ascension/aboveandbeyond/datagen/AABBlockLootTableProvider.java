@@ -98,6 +98,7 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
 
         //Nimbus Islands
         this.dropWhenSilkTouch(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
+        this.dropSelf(AABBlocks.AEROMUD.get());
         this.dropSelf(AABBlocks.SHOCKROCK.get());
         this.dropSelf(AABBlocks.STATIC_SHOCKROCK.get());
         this.dropSelf(AABBlocks.SHOCKROCK_COPPER_ORE.get());
