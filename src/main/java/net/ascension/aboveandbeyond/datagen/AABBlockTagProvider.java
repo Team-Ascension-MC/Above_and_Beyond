@@ -6,7 +6,6 @@ import net.ascension.aboveandbeyond.util.AABTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -65,7 +64,7 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.AEROSOIL.get())
                 .add(AABBlocks.COARSE_AEROSOIL.get())
                 .add(AABBlocks.ZEN_GRAVEL.get())
-                .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get())
+                .add(AABBlocks.STATIC_PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROMUD.get());
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(AABBlocks.WELKIN_LEAVES.get());
@@ -105,7 +104,7 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())
                 .add(AABBlocks.COARSE_AEROSOIL.get())
-                .add(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
+                .add(AABBlocks.STATIC_PUFFGRASS_BLOCK.get());
         tag(BlockTags.ANIMALS_SPAWNABLE_ON)
                 .add(AABBlocks.PUFFGRASS_BLOCK.get())
                 .add(AABBlocks.AEROSOIL.get())

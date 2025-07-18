@@ -45,9 +45,6 @@ public class AABEvents {
                 new ItemStack(AABBlocks.WELKIN_SAPLING.get(), 1), 8, 3, 0.05f));
         genericTrades.add((entity, randomSource) -> new MerchantOffer(
                 new ItemCost(Items.EMERALD, 1),
-                new ItemStack(AABBlocks.SHORT_PUFFGRASS.get(), 1), 16, 1, 0.05f));
-        genericTrades.add((entity, randomSource) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
                 new ItemStack(AABBlocks.STARFLOWER.get(), 1), 16, 1, 0.05f));
         genericTrades.add((entity, randomSource) -> new MerchantOffer(
                 new ItemCost(Items.EMERALD, 1),
@@ -62,6 +59,9 @@ public class AABEvents {
         genericTrades.add((entity, randomSource) -> new MerchantOffer(
                 new ItemCost(AABItems.CLOUD_BERRIES, 4),
                 new ItemStack(Items.EMERALD, 1), 12, 3, 0.05f));
+        genericTrades.add((entity, randomSource) -> new MerchantOffer(
+                new ItemCost(AABItems.FLOOF, 1),
+                new ItemStack(Items.EMERALD, 2), 8, 5, 0.05f));
         rareTrades.add((entity, randomSource) -> new MerchantOffer(
                 new ItemCost(AABItems.STORMY_CLOUD_BUCKET, 1),
                 new ItemStack(Items.EMERALD, 3), 8, 5, 0.05f));

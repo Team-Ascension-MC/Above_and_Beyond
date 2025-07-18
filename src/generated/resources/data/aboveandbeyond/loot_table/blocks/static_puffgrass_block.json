@@ -23,11 +23,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aboveandbeyond:nimbus_puffgrass_block"
+          "name": "aboveandbeyond:static_puffgrass_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "aboveandbeyond:blocks/nimbus_puffgrass_block"
+  "random_sequence": "aboveandbeyond:blocks/static_puffgrass_block"
 }

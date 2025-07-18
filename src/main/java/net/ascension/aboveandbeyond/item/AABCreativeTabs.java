@@ -21,6 +21,10 @@ public class AABCreativeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         /* SKY ISLANDS */
                         /*Cloud Islands*/
+                        output.accept(AABItems.SHORT_PUFFGRASS);
+                        output.accept(AABItems.TALL_PUFFGRASS);
+                        output.accept(AABItems.STARFLOWER);
+                        output.accept(AABItems.SKYACINTH);
                         output.accept(AABBlocks.PUFFGRASS_BLOCK);
                         output.accept(AABBlocks.AEROSOIL_PATH);
                         output.accept(AABBlocks.AEROSOIL);
@@ -41,10 +45,6 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL);
                         output.accept(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
                         output.accept(AABItems.CLOUD_BUCKET);
-                        output.accept(AABItems.SHORT_PUFFGRASS);
-                        output.accept(AABItems.TALL_PUFFGRASS);
-                        output.accept(AABItems.STARFLOWER);
-                        output.accept(AABItems.SKYACINTH);
                         output.accept(AABItems.CLOUD_BERRIES);
                         output.accept(AABBlocks.WELKIN_LOG);
                         output.accept(AABBlocks.WELKIN_WOOD);
@@ -73,7 +73,10 @@ public class AABCreativeTabs {
                         output.accept(AABItems.MUSIC_DISC_VIVID);
 
                         //Nimbus Islands
-                        output.accept(AABBlocks.NIMBUS_PUFFGRASS_BLOCK);
+                        output.accept(AABItems.SHORT_STATIC_PUFFGRASS);
+                        output.accept(AABItems.TALL_STATIC_PUFFGRASS);
+                        output.accept(AABItems.TALL_PUFFGRASS);
+                        output.accept(AABBlocks.STATIC_PUFFGRASS_BLOCK);
                         output.accept(AABBlocks.AEROMUD);
                         output.accept(AABBlocks.SHOCKROCK);
                         output.accept(AABBlocks.STATIC_SHOCKROCK);

@@ -12,7 +12,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -30,10 +29,10 @@ public class AABBlocks {
 
     /* SKY ISLANDS */
     //Cloud Islands
-    public static final DeferredBlock<GrassBlock> SHORT_PUFFGRASS = BLOCKS.register("short_puffgrass",
-            () -> new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
-    public static final DeferredBlock<GrassBlock> TALL_PUFFGRASS = BLOCKS.register("tall_puffgrass",
-            () -> new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final DeferredBlock<TallGrassBlock> SHORT_PUFFGRASS = BLOCKS.register("short_puffgrass",
+            () -> new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final DeferredBlock<TallGrassBlock> TALL_PUFFGRASS = BLOCKS.register("tall_puffgrass",
+            () -> new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<FlowerBlock> STARFLOWER = BLOCKS.register("starflower",
             () -> new FlowerBlock(MobEffects.LUCK, 7, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final DeferredBlock<FlowerBlock> SKYACINTH = BLOCKS.register("skyacinth",
@@ -150,7 +149,11 @@ public class AABBlocks {
             () -> new CloudBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     //Nimbus Islands
-    public static final DeferredBlock<PuffgrassBlock> NIMBUS_PUFFGRASS_BLOCK = registerBlock("nimbus_puffgrass_block",
+    public static final DeferredBlock<TallGrassBlock> SHORT_STATIC_PUFFGRASS = BLOCKS.register("short_static_puffgrass",
+            () -> new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final DeferredBlock<TallGrassBlock> TALL_STATIC_PUFFGRASS = BLOCKS.register("tall_static_puffgrass",
+            () -> new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final DeferredBlock<PuffgrassBlock> STATIC_PUFFGRASS_BLOCK = registerBlock("static_puffgrass_block",
             () -> new PuffgrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> AEROMUD = registerBlock("aeromud",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));

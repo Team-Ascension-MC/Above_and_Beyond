@@ -30,6 +30,10 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropWhenSilkTouch(AABBlocks.SHORT_PUFFGRASS.get());
+        this.dropWhenSilkTouch(AABBlocks.TALL_PUFFGRASS.get());
+        this.dropSelf(AABBlocks.STARFLOWER.get());
+        this.dropSelf(AABBlocks.SKYACINTH.get());
         this.dropWhenSilkTouch(AABBlocks.PUFFGRASS_BLOCK.get());
         this.dropSelf(AABBlocks.AEROSOIL.get());
         this.dropWhenSilkTouch(AABBlocks.AEROSOIL_PATH.get());
@@ -61,10 +65,6 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(AABBlocks.WELKIN_BUTTON.get());
         this.dropSelf(AABBlocks.WELKIN_FENCE.get());
         this.dropSelf(AABBlocks.WELKIN_FENCE_GATE.get());
-        this.dropWhenSilkTouch(AABBlocks.SHORT_PUFFGRASS.get());
-        this.dropWhenSilkTouch(AABBlocks.TALL_PUFFGRASS.get());
-        this.dropSelf(AABBlocks.STARFLOWER.get());
-        this.dropSelf(AABBlocks.SKYACINTH.get());
         add(AABBlocks.WELKIN_DOOR.get(),
                 block -> createDoorTable(AABBlocks.WELKIN_DOOR.get()));
         this.dropSelf(AABBlocks.WELKIN_TRAPDOOR.get());
@@ -97,7 +97,9 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
                 )));
 
         //Nimbus Islands
-        this.dropWhenSilkTouch(AABBlocks.NIMBUS_PUFFGRASS_BLOCK.get());
+        this.dropWhenSilkTouch(AABBlocks.SHORT_STATIC_PUFFGRASS.get());
+        this.dropWhenSilkTouch(AABBlocks.TALL_STATIC_PUFFGRASS.get());
+        this.dropWhenSilkTouch(AABBlocks.STATIC_PUFFGRASS_BLOCK.get());
         this.dropSelf(AABBlocks.AEROMUD.get());
         this.dropSelf(AABBlocks.SHOCKROCK.get());
         this.dropSelf(AABBlocks.STATIC_SHOCKROCK.get());

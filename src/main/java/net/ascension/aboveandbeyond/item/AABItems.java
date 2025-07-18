@@ -3,8 +3,6 @@ package net.ascension.aboveandbeyond.item;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.entity.AABEntities;
-import net.ascension.aboveandbeyond.entity.custom.AABBoatEntity;
-import net.ascension.aboveandbeyond.item.custom.AABBoatItem;
 import net.ascension.aboveandbeyond.item.custom.CloudBucket;
 import net.ascension.aboveandbeyond.item.custom.KoiBucket;
 import net.ascension.aboveandbeyond.sound.AABSounds;
@@ -75,6 +73,11 @@ public class AABItems {
                     new Item.Properties()));
 
     //Nimbus Islands
+    public static final DeferredItem<Item> SHORT_STATIC_PUFFGRASS = ITEMS.register("short_static_puffgrass",
+            () -> new BlockItem(AABBlocks.SHORT_STATIC_PUFFGRASS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TALL_STATIC_PUFFGRASS = ITEMS.register("tall_static_puffgrass",
+            () -> new BlockItem(AABBlocks.TALL_STATIC_PUFFGRASS.get(), new Item.Properties()));
+
     public static final DeferredItem<Item> BUZZ_POWDER = ITEMS.register("buzz_powder",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> LIGHTNING_BOLT = ITEMS.register("lightning_bolt",

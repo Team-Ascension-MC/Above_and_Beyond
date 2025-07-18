@@ -13,6 +13,10 @@
 
   /* SKY ISLANDS */
   //Cloud Islands
+  "block.aboveandbeyond.short_puffgrass": "Short Puffgrass",
+  "block.aboveandbeyond.tall_puffgrass": "Tall Puffgrass",
+  "block.aboveandbeyond.starflower": "Starflower",
+  "block.aboveandbeyond.skyacinth": "Skyacinth",
   "block.aboveandbeyond.puffgrass_block": "Puffgrass Block",
   "block.aboveandbeyond.aerosoil_path": "Aerosoil Path",
   "block.aboveandbeyond.aerosoil": "Aerosoil",
@@ -35,10 +39,6 @@
   "block.aboveandbeyond.cloud_block": "Cloud Block",
   "item.aboveandbeyond.cloud_bucket": "Cloud Bucket",
   "item.aboveandbeyond.cloud_berries": "Cloud Berries",
-  "block.aboveandbeyond.short_puffgrass": "Short Puffgrass",
-  "block.aboveandbeyond.tall_puffgrass": "Tall Puffgrass",
-  "block.aboveandbeyond.starflower": "Starflower",
-  "block.aboveandbeyond.skyacinth": "Skyacinth",
 
   "block.aboveandbeyond.welkin_log": "Welkin Log",
   "block.aboveandbeyond.welkin_wood": "Welkin Wood",
@@ -82,7 +82,9 @@
   "item.aboveandbeyond.floof": "Floof",
 
   //Nimbus Islands
-  "block.aboveandbeyond.nimbus_puffgrass_block": "Nimbus Puffgrass Block",
+  "block.aboveandbeyond.short_static_puffgrass": "Short Static Puffgrass",
+  "block.aboveandbeyond.tall_static_puffgrass": "Tall Static Puffgrass",
+  "block.aboveandbeyond.static_puffgrass_block": "Static Puffgrass Block",
   "block.aboveandbeyond.aeromud": "Aeromud",
 
   "block.aboveandbeyond.shockrock": "Shockrock",
