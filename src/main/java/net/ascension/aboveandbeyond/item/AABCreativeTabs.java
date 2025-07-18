@@ -86,9 +86,6 @@ public class AABCreativeTabs {
                         output.accept(AABItems.BUZZ_POWDER);
                         output.accept(AABItems.LIGHTNING_BOLT);
                         output.accept(AABBlocks.COBALT_BLOCK);
-                        output.accept(AABItems.COBALT_CHUNK);
-                        output.accept(AABItems.COBALT_NUGGET);
-                        output.accept(AABItems.COBALT_INGOT);
                         output.accept(AABItems.COBALT_SHOVEL);
                         output.accept(AABItems.COBALT_PICKAXE);
                         output.accept(AABItems.COBALT_AXE);
@@ -99,6 +96,9 @@ public class AABCreativeTabs {
                         output.accept(AABItems.COBALT_CHESTPLATE);
                         output.accept(AABItems.COBALT_LEGGINGS);
                         output.accept(AABItems.COBALT_BOOTS);
+                        output.accept(AABItems.COBALT_CHUNK);
+                        output.accept(AABItems.COBALT_NUGGET);
+                        output.accept(AABItems.COBALT_INGOT);
 
                         //Sanctums
                         output.accept(AABBlocks.EXPLOSIVE_BARREL);
