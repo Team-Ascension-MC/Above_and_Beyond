@@ -8,7 +8,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -60,7 +59,7 @@ public class AABItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.SAPLINGS)
                 .add(AABBlocks.WELKIN_SAPLING.asItem());
         tag(ItemTags.STONE_BRICKS)
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICKS.asItem());
+                .add(AABBlocks.ZENSTONE_BRICKS.asItem());
         tag(ItemTags.STONE_TOOL_MATERIALS)
                 .add(AABBlocks.ZENSTONE.asItem())
                 .add(AABBlocks.MYGALITH.asItem());

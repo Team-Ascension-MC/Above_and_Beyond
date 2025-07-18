@@ -38,12 +38,12 @@ public class AABCreativeTabs {
                         output.accept(AABBlocks.POLISHED_ZENSTONE_STAIRS);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_SLAB);
                         output.accept(AABBlocks.POLISHED_ZENSTONE_WALL);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICKS);
-                        output.accept(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB);
-                        output.accept(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL);
-                        output.accept(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS);
+                        output.accept(AABBlocks.ZENSTONE_BRICKS);
+                        output.accept(AABBlocks.CRACKED_ZENSTONE_BRICKS);
+                        output.accept(AABBlocks.ZENSTONE_BRICK_STAIRS);
+                        output.accept(AABBlocks.ZENSTONE_BRICK_SLAB);
+                        output.accept(AABBlocks.ZENSTONE_BRICK_WALL);
+                        output.accept(AABBlocks.CHISELED_ZENSTONE_BRICKS);
                         output.accept(AABItems.CLOUD_BUCKET);
                         output.accept(AABItems.CLOUD_BERRIES);
                         output.accept(AABBlocks.WELKIN_LOG);

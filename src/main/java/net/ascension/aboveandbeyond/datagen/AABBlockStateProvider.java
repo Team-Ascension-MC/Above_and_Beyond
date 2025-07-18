@@ -12,9 +12,7 @@ import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
-import javax.naming.Name;
 import java.util.function.Function;
 
 public class AABBlockStateProvider extends BlockStateProvider {
@@ -31,11 +29,11 @@ public class AABBlockStateProvider extends BlockStateProvider {
         stairsBlock(AABBlocks.ZENSTONE_STAIRS.get(), blockTexture(AABBlocks.ZENSTONE.get()));
         slabBlock(AABBlocks.ZENSTONE_SLAB.get(), blockTexture(AABBlocks.ZENSTONE.get()), blockTexture(AABBlocks.ZENSTONE.get()));
         wallBlock(AABBlocks.ZENSTONE_WALL.get(), blockTexture(AABBlocks.ZENSTONE.get()));
-        blockWithItem(AABBlocks.POLISHED_ZENSTONE_BRICKS);
-        blockWithItem(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS);
-        stairsBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
-        slabBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
-        wallBlock(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE_BRICKS.get()));
+        blockWithItem(AABBlocks.ZENSTONE_BRICKS);
+        blockWithItem(AABBlocks.CRACKED_ZENSTONE_BRICKS);
+        stairsBlock(AABBlocks.ZENSTONE_BRICK_STAIRS.get(), blockTexture(AABBlocks.ZENSTONE_BRICKS.get()));
+        slabBlock(AABBlocks.ZENSTONE_BRICK_SLAB.get(), blockTexture(AABBlocks.ZENSTONE_BRICKS.get()), blockTexture(AABBlocks.ZENSTONE_BRICKS.get()));
+        wallBlock(AABBlocks.ZENSTONE_BRICK_WALL.get(), blockTexture(AABBlocks.ZENSTONE_BRICKS.get()));
         blockWithItem(AABBlocks.POLISHED_ZENSTONE);
         stairsBlock(AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE.get()));
         slabBlock(AABBlocks.POLISHED_ZENSTONE_SLAB.get(), blockTexture(AABBlocks.POLISHED_ZENSTONE.get()), blockTexture(AABBlocks.POLISHED_ZENSTONE.get()));

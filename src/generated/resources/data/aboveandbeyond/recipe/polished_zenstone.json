@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_zenstone",
+  "key": {
+    "S": {
+      "item": "aboveandbeyond:zenstone"
+    }
+  },
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "aboveandbeyond:polished_zenstone"
+  }
+}

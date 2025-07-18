@@ -7,12 +7,7 @@ import net.ascension.aboveandbeyond.util.AABTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -50,24 +45,65 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_welkin_log", has(AABBlocks.WELKIN_LOG))
                 .save(recipeOutput, "aboveandbeyond:welkin_planks_from_welkin_logs");
 
-        stairBuilder(AABBlocks.WELKIN_STAIRS.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS)).group("welkin")
-                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS)).save(recipeOutput);
-        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.WELKIN_SLAB.get(), AABBlocks.WELKIN_PLANKS.get());
-
-        buttonBuilder(AABBlocks.WELKIN_BUTTON.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
-                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        stairBuilder(AABBlocks.WELKIN_STAIRS.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS)).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS)).save(recipeOutput);
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.WELKIN_SLAB.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        buttonBuilder(AABBlocks.WELKIN_BUTTON.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
         pressurePlate(recipeOutput, AABBlocks.WELKIN_PRESSURE_PLATE.get(), AABBlocks.WELKIN_PLANKS.get());
+        fenceBuilder(AABBlocks.WELKIN_FENCE.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        fenceGateBuilder(AABBlocks.WELKIN_FENCE_GATE.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        doorBuilder(AABBlocks.WELKIN_DOOR.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        trapdoorBuilder(AABBlocks.WELKIN_TRAPDOOR.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        signBuilder(AABBlocks.WELKIN_SIGN.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin").unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, AABBlocks.WELKIN_HANGING_SIGN.get(), 6)
+                .pattern("C C")
+                .pattern("###")
+                .pattern("###")
+                .define('C', Items.CHAIN)
+                .define('#', AABBlocks.STRIPPED_WELKIN_LOG.get())
+                .unlockedBy("has_stripped_welkin_log", has(AABBlocks.STRIPPED_WELKIN_LOG)).save(recipeOutput);
 
-        fenceBuilder(AABBlocks.WELKIN_FENCE.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
-                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
-        fenceGateBuilder(AABBlocks.WELKIN_FENCE_GATE.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
-                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        //zenstone
+        chiseledBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.CHISELED_ZENSTONE_BRICKS.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICK_SLAB.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
+       // stonecutterResultFromBase((RecipeOutput) AABBlocks.CHISELED_ZENSTONE_BRICKS.get(), RecipeCategory.BUILDING_BLOCKS, AABBlocks.CHISELED_ZENSTONE_BRICKS.get(), AABBlocks.ZENSTONE.get(), 2);
 
-        doorBuilder(AABBlocks.WELKIN_DOOR.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
-                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
-        trapdoorBuilder(AABBlocks.WELKIN_TRAPDOOR.get(), Ingredient.of(AABBlocks.WELKIN_PLANKS.get())).group("welkin")
-                .unlockedBy("has_welkin_planks", has(AABBlocks.WELKIN_PLANKS.get())).save(recipeOutput);
+        stairBuilder(AABBlocks.ZENSTONE_STAIRS.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_SLAB.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_WALL.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
+        /*stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_SLAB.get(), AABBlocks.ZENSTONE.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_STAIRS.get(), AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_WALL.get(), AABBlocks.ZENSTONE.get(), 1);*/
 
+        polishedBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
+        stairBuilder(AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_SLAB.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_WALL.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
+     /*   stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE, AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_SLAB.get(), AABBlocks.ZENSTONE.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_WALL.get(), AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_SLAB.get(), AABBlocks.POLISHED_ZENSTONE.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_WALL.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);*/
+
+        polishedBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICKS.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("zenstone_bricks").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
+        stairBuilder(AABBlocks.ZENSTONE_BRICK_STAIRS.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICKS.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_SLAB.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICKS.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICKS.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
+       /* stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICKS, AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_SLAB.get(), AABBlocks.ZENSTONE.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_STAIRS.get(), AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICKS, AABBlocks.POLISHED_ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_SLAB.get(), AABBlocks.POLISHED_ZENSTONE.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_STAIRS.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_SLAB.get(), AABBlocks.ZENSTONE_BRICKS.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_STAIRS.get(), AABBlocks.ZENSTONE_BRICKS.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.ZENSTONE_BRICKS.get(), 1);*/
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(AABBlocks.ZENSTONE_BRICKS.asItem()), RecipeCategory.BUILDING_BLOCKS, AABBlocks.CRACKED_ZENSTONE_BRICKS.asItem(), 0.1f, 200);
+        
+        //idk
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE, 1)
                 .requires(AABItems.STARFLOWER)
                 .unlockedBy("has_starflower", has(AABBlocks.STARFLOWER))

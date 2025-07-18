@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "aboveandbeyond:block/zenstone_bricks",
+    "side": "aboveandbeyond:block/zenstone_bricks",
+    "top": "aboveandbeyond:block/zenstone_bricks"
+  }
+}

@@ -28,12 +28,12 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.POLISHED_ZENSTONE_STAIRS.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_SLAB.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_WALL.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICKS.get())
-                .add(AABBlocks.CRACKED_POLISHED_ZENSTONE_BRICKS.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get())
-                .add(AABBlocks.CHISELED_POLISHED_ZENSTONE_BRICKS.get())
+                .add(AABBlocks.ZENSTONE_BRICKS.get())
+                .add(AABBlocks.CRACKED_ZENSTONE_BRICKS.get())
+                .add(AABBlocks.ZENSTONE_BRICK_STAIRS.get())
+                .add(AABBlocks.ZENSTONE_BRICK_SLAB.get())
+                .add(AABBlocks.ZENSTONE_BRICK_WALL.get())
+                .add(AABBlocks.CHISELED_ZENSTONE_BRICKS.get())
                 .add(AABBlocks.SHOCKROCK.get())
                 .add(AABBlocks.STATIC_SHOCKROCK.get())
                 .add(AABBlocks.SHOCKROCK_COPPER_ORE.get())
@@ -114,14 +114,14 @@ public class AABBlockTagProvider extends BlockTagsProvider {
                 .add(AABBlocks.WELKIN_STAIRS.get())
                 .add(AABBlocks.ZENSTONE_STAIRS.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_STAIRS.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_STAIRS.get());
+                .add(AABBlocks.ZENSTONE_BRICK_STAIRS.get());
         tag(BlockTags.WOODEN_STAIRS)
                 .add(AABBlocks.WELKIN_STAIRS.get());
         tag(BlockTags.SLABS)
                 .add(AABBlocks.WELKIN_SLAB.get())
                 .add(AABBlocks.ZENSTONE_SLAB.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_SLAB.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_SLAB.get());
+                .add(AABBlocks.ZENSTONE_BRICK_SLAB.get());
         tag(BlockTags.WOODEN_SLABS)
                 .add(AABBlocks.WELKIN_SLAB.get());
         tag(BlockTags.WOODEN_FENCES)
@@ -135,6 +135,6 @@ public class AABBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS)
                 .add(AABBlocks.ZENSTONE_WALL.get())
                 .add(AABBlocks.POLISHED_ZENSTONE_WALL.get())
-                .add(AABBlocks.POLISHED_ZENSTONE_BRICK_WALL.get());
+                .add(AABBlocks.ZENSTONE_BRICK_WALL.get());
     }
 }

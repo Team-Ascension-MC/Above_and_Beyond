@@ -65,18 +65,18 @@ public class AABBlocks {
     public static final DeferredBlock<WallBlock> POLISHED_ZENSTONE_WALL = registerBlock("polished_zenstone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF_WALL)));
 
-    public static final DeferredBlock<Block> POLISHED_ZENSTONE_BRICKS = registerBlock("polished_zenstone_bricks",
+    public static final DeferredBlock<Block> ZENSTONE_BRICKS = registerBlock("zenstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
-    public static final DeferredBlock<Block> CRACKED_POLISHED_ZENSTONE_BRICKS = registerBlock("cracked_polished_zenstone_bricks",
+    public static final DeferredBlock<Block> CRACKED_ZENSTONE_BRICKS = registerBlock("cracked_zenstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS)));
-    public static final DeferredBlock<Block> CHISELED_POLISHED_ZENSTONE_BRICKS = registerBlock("chiseled_polished_zenstone_bricks",
+    public static final DeferredBlock<Block> CHISELED_ZENSTONE_BRICKS = registerBlock("chiseled_zenstone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CHISELED_TUFF_BRICKS)));
-    public static final DeferredBlock<StairBlock> POLISHED_ZENSTONE_BRICK_STAIRS = registerBlock("polished_zenstone_brick_stairs",
-            () -> new StairBlock(AABBlocks.POLISHED_ZENSTONE_BRICKS.get().defaultBlockState(),
+    public static final DeferredBlock<StairBlock> ZENSTONE_BRICK_STAIRS = registerBlock("zenstone_brick_stairs",
+            () -> new StairBlock(AABBlocks.ZENSTONE_BRICKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICK_STAIRS)));
-    public static final DeferredBlock<SlabBlock> POLISHED_ZENSTONE_BRICK_SLAB = registerBlock("polished_zenstone_brick_slab",
+    public static final DeferredBlock<SlabBlock> ZENSTONE_BRICK_SLAB = registerBlock("zenstone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICK_SLAB)));
-    public static final DeferredBlock<WallBlock> POLISHED_ZENSTONE_BRICK_WALL = registerBlock("polished_zenstone_brick_wall",
+    public static final DeferredBlock<WallBlock> ZENSTONE_BRICK_WALL = registerBlock("zenstone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICK_WALL)));
 
     public static final DeferredBlock<Block> ZEN_GRAVEL = registerBlock("zen_gravel",
