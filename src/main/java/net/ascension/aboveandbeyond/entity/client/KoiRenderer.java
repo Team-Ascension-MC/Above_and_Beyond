@@ -19,6 +19,7 @@ public class KoiRenderer extends MobRenderer<KoiEntity, KoiModel<KoiEntity>> {
                 map.put(KoiVariant.KOHAKU, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_kohaku.png"));
                 map.put(KoiVariant.SANKE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_sanke.png"));
                 map.put(KoiVariant.SHOWA, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_showa.png"));
+                map.put(KoiVariant.SHERBERT, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_sherbert.png"));
             });
 
     public KoiRenderer(EntityRendererProvider.Context context) {

@@ -8,7 +8,8 @@ import java.util.Comparator;
 public enum KoiVariant {
     KOHAKU(0),
     SANKE(1),
-    SHOWA(2);
+    SHOWA(2),
+    SHERBERT(3);
 
     public static final Codec<KoiVariant> CODEC = Codec.INT.xmap(KoiVariant::byID, KoiVariant::getId);
     private static final KoiVariant[] BY_ID = Arrays.stream(values())
