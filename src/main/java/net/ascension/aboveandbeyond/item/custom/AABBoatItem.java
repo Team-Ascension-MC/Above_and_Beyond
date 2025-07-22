@@ -1,8 +1,7 @@
 package net.ascension.aboveandbeyond.item.custom;
 
-
-import net.ascension.aboveandbeyond.entity.custom.AABBoatEntity;
-import net.ascension.aboveandbeyond.entity.custom.AABChestBoatEntity;
+import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
+import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -22,17 +21,18 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class AABBoatItem { /*extends Item {
+public class AABBoatItem extends Item {
     private static final Predicate<Entity> ENTITY_PREDICATE = EntitySelector.NO_SPECTATORS.and(Entity::isPickable);
-    private final AABBoatEntity.Type type;
+    private final WelkinBoatEntity.Type type;
     private final boolean hasChest;
 
-    public AABBoatItem(boolean pHasChest, AABBoatEntity.Type pType, Item.Properties pProperties) {
-        super(pProperties);
+    public AABBoatItem(boolean pHasChest, WelkinBoatEntity.Type pType, Properties pProperties) {
+        super(pProperties.stacksTo(1));
         this.hasChest = pHasChest;
         this.type = pType;
     }
 
+    @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
         HitResult hitresult = getPlayerPOVHitResult(pLevel, pPlayer, ClipContext.Fluid.ANY);
@@ -53,11 +53,11 @@ public class AABBoatItem { /*extends Item {
             }
 
             if (hitresult.getType() == HitResult.Type.BLOCK) {
-                Boat boat = this.get(pLevel, hitresult);
-                if(boat instanceof AABChestBoatEntity chestBoat) {
+                Boat boat = this.getBoat(pLevel, hitresult);
+                if(boat instanceof WelkinChestBoatEntity chestBoat) {
                     chestBoat.setVariant(this.type);
-                } else if(boat instanceof AABBoatEntity) {
-                    ((AABBoatEntity)boat).setVariant(this.type);
+                } else if(boat instanceof WelkinBoatEntity) {
+                    ((WelkinBoatEntity)boat).setVariant(this.type);
                 }
                 boat.setYRot(pPlayer.getYRot());
                 if (!pLevel.noCollision(boat, boat.getBoundingBox())) {
@@ -81,7 +81,7 @@ public class AABBoatItem { /*extends Item {
     }
 
     private Boat getBoat(Level p_220017_, HitResult p_220018_) {
-        return (this.hasChest ? new AABChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
-                new AABBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z));
-    }*/
+        return (Boat)(this.hasChest ? new WelkinChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
+                new WelkinBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z));
+    }
 }

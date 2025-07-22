@@ -3,10 +3,13 @@ package net.ascension.aboveandbeyond.item;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.entity.AABEntities;
-import net.ascension.aboveandbeyond.item.custom.CloudBucket;
-import net.ascension.aboveandbeyond.item.custom.KoiBucket;
+import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
+import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
+import net.ascension.aboveandbeyond.item.custom.*;
 import net.ascension.aboveandbeyond.sound.AABSounds;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.Fluids;
@@ -53,10 +56,10 @@ public class AABItems {
             () -> new HangingSignItem(AABBlocks.WELKIN_HANGING_SIGN.get(), AABBlocks.WELKIN_WALL_HANGING_SIGN.get(),
                     new Item.Properties().stacksTo(16)));
 
-  /*  public static final DeferredItem<Item> WELKIN_BOAT = ITEMS.register("welkin_boat",
-            () -> new AABBoatItem(false, AABBoatEntity.Type.WELKIN, new Item.Properties()));
+    public static final DeferredItem<Item> WELKIN_BOAT = ITEMS.register("welkin_boat",
+            () -> new WelkinBoatItem(false, WelkinBoatEntity.Type.WELKIN, new Item.Properties()));
     public static final DeferredItem<Item> WELKIN_CHEST_BOAT = ITEMS.register("welkin_chest_boat",
-            () -> new AABBoatItem(true, AABBoatEntity.Type.WELKIN, new Item.Properties()));*/
+            () -> new WelkinChestBoatItem(true, WelkinChestBoatEntity.Type.byName("welkin"), new Item.Properties()));
 
     public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
