@@ -121,5 +121,8 @@
 
   //Spider Caves
   "block.aboveandbeyond.mygalith": "Mygalith",
-  "block.aboveandbeyond.polished_mygalith": "Polished Mygalith"
+  "block.aboveandbeyond.polished_mygalith": "Polished Mygalith",
+
+  //Meteors
+  "block.aboveandbeyond.meteorite_block": "Meteorite Block"
 }

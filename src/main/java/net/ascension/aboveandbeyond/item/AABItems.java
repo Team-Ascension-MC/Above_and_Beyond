@@ -147,6 +147,11 @@ public class AABItems {
     public static final DeferredItem<Item> COBALT_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("cobalt_upgrade_smithing_template",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> COSMIC_CHUNK = ITEMS.register("cosmic_chunk",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> IRIDIUM_CHUNK = ITEMS.register("iridium_chunk",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
