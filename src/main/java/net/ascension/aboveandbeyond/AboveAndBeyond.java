@@ -1,21 +1,17 @@
 package net.ascension.aboveandbeyond;
 
+import com.mojang.logging.LogUtils;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.block.entity.AABBlockEntities;
 import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.AABEntities;
-import net.ascension.aboveandbeyond.entity.client.WelkinBoatRenderer;
 import net.ascension.aboveandbeyond.entity.client.KoiRenderer;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.resources.ResourceLocation;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -28,6 +24,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AboveAndBeyond.MOD_ID)
@@ -83,8 +80,8 @@ public class AboveAndBeyond {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
-            EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
+            //EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
+            //EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));)
 
             EntityRenderers.register(AABEntities.KOI.get(), KoiRenderer::new);
         }

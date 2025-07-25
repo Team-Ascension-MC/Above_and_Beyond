@@ -1,7 +1,5 @@
-package net.ascension.aboveandbeyond.item.custom;
+/*package net.ascension.aboveandbeyond.item.custom;
 
-import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
-import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -84,4 +82,4 @@ public class AABBoatItem extends Item {
         return (Boat)(this.hasChest ? new WelkinChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
                 new WelkinBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z));
     }
-}
+}*/

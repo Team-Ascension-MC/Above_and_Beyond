@@ -1,34 +1,111 @@
 {
-  "parent": "minecraft:item/crossbow",
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "aboveandbeyond:item/cobalt_crossbow_standby"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        -90,
+        0,
+        -60
+      ],
+      "translation": [
+        2,
+        0.1,
+        -3
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        -90,
+        0,
+        30
+      ],
+      "translation": [
+        2,
+        0.1,
+        -3
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -90,
+        0,
+        -55
+      ],
+      "translation": [
+        1.13,
+        3.2,
+        1.13
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -90,
+        0,
+        35
+      ],
+      "translation": [
+        1.13,
+        3.2,
+        1.13
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    }
+  },
   "overrides": [
     {
       "model": "aboveandbeyond:item/cobalt_crossbow_pulling_0",
       "predicate": {
-        "minecraft:pulling": 1.0
+        "pulling": 1
       }
     },
     {
       "model": "aboveandbeyond:item/cobalt_crossbow_pulling_1",
       "predicate": {
-        "minecraft:pull": 0.58,
-        "minecraft:pulling": 1.0
+        "pulling": 1,
+        "pull": 0.15
       }
     },
     {
       "model": "aboveandbeyond:item/cobalt_crossbow_pulling_2",
       "predicate": {
-        "minecraft:pull": 1.0,
-        "minecraft:pulling": 1.0
+        "pulling": 1,
+        "pull": 0.3
       }
     },
     {
-      "model": "aboveandbeyond:item/cobalt_crossbow_bolt",
       "predicate": {
-        "minecraft:charged": 1.0
-      }
+        "charged": 1
+      },
+      "model": "aboveandbeyond:item/cobalt_crossbow_bolt"
+    },
+    {
+      "predicate": {
+        "charged": 1,
+        "firework": 1
+      },
+      "model": "aboveandbeyond:item/cobalt_crossbow_bolt"
     }
-  ],
-  "textures": {
-    "layer0": "aboveandbeyond:item/cobalt_crossbow_standby"
-  }
+  ]
 }

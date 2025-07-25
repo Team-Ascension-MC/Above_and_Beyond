@@ -1,4 +1,4 @@
-package net.ascension.aboveandbeyond.entity.custom;
+/*package net.ascension.aboveandbeyond.entity.custom;
 
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.entity.AABEntities;
@@ -61,4 +61,4 @@ public class WelkinChestBoatEntity extends ChestBoat {
     public WelkinBoatEntity.Type getModVariant() {
         return WelkinBoatEntity.Type.byId(this.entityData.get(DATA_ID_TYPE));
     }
-}
+}*/

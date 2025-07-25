@@ -111,7 +111,7 @@ public class AABCreativeTabs {
                         output.accept(POLISHED_MYGALITH);
 
                         //Meteors
-                        output.accept(METEORITE_BLOCK);
+                   //     output.accept(METEORITE_BLOCK);
                     }).build());
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

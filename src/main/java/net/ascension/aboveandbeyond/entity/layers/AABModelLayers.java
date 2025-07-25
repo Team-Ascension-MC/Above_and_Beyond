@@ -9,10 +9,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
 public class AABModelLayers {
-    public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(
+   /* public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "boat/welkin"), "main");
     public static final ModelLayerLocation WELKIN_CHEST_BOAT_LAYER = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "chest_boat/welkin"), "main");
+            ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "chest_boat/welkin"), "main");*/
 
   /*  public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(
             new ResourceLocation(AboveAndBeyond.MOD_ID, "boat/welkin"), "main");
@@ -21,7 +21,7 @@ public class AABModelLayers {
 
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(WELKIN_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(WELKIN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+   /*     event.registerLayerDefinition(WELKIN_BOAT_LAYER, BoatModel::createBodyModel);
+        event.registerLayerDefinition(WELKIN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);*/
     }
 }
