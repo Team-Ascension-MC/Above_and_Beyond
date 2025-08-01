@@ -96,6 +96,8 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )));
 
+        this.dropSelf(AABBlocks.FLOOF_BLOCK.get());
+
         //Nimbus Islands
         this.dropWhenSilkTouch(AABBlocks.SHORT_STATIC_PUFFGRASS.get());
         this.dropWhenSilkTouch(AABBlocks.TALL_STATIC_PUFFGRASS.get());

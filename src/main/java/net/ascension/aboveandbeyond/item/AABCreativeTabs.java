@@ -69,6 +69,7 @@ public class AABCreativeTabs {
                         //output.accept(AABItems.WELKIN_BOAT);
                         //output.accept(AABItems.WELKIN_CHEST_BOAT);
                         output.accept(KATANA);
+                        output.accept(FLOOF_BLOCK);
                         output.accept(FLOOF);
                         output.accept(KOI_BUCKET);
                         output.accept(KOI_SPAWN_EGG);

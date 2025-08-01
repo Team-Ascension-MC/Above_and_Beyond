@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_floof": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aboveandbeyond:floof"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aboveandbeyond:floof_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_floof"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aboveandbeyond:floof_block"
+    ]
+  }
+}

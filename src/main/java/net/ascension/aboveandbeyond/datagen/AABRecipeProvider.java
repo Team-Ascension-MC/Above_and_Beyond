@@ -102,7 +102,7 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.ZENSTONE_BRICKS.get(), 1);*/
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(AABBlocks.ZENSTONE_BRICKS.asItem()), RecipeCategory.BUILDING_BLOCKS, AABBlocks.CRACKED_ZENSTONE_BRICKS.asItem(), 0.1f, 200);
-        
+
         //idk
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE, 1)
                 .requires(AABItems.STARFLOWER)
@@ -112,6 +112,12 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(AABItems.SKYACINTH)
                 .unlockedBy("has_skyacinth", has(AABBlocks.SKYACINTH))
                 .save(recipeOutput, "aboveandbeyond:light_blue_dye_from_skyacinth");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AABBlocks.FLOOF_BLOCK.get(), 1)
+                .pattern("##")
+                .pattern("##")
+                .define('#', AABItems.FLOOF.get())
+                .unlockedBy("has_floof", has(AABItems.FLOOF)).save(recipeOutput);
 
         List<ItemLike> COBALT_SMELTABLES = List.of(AABBlocks.STATIC_DEBRIS);
 

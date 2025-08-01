@@ -70,7 +70,10 @@ public class AABBlockStateProvider extends BlockStateProvider {
         hangingSignBlock(AABBlocks.WELKIN_HANGING_SIGN.get(), AABBlocks.WELKIN_WALL_HANGING_SIGN.get(), blockTexture(AABBlocks.WELKIN_PLANKS.get()));
         leavesBlock(AABBlocks.WELKIN_LEAVES);
         saplingBlock(AABBlocks.WELKIN_SAPLING);
+
         makeBush(((SweetBerryBushBlock) AABBlocks.CLOUD_BERRY_BUSH.get()), "cloud_berry_bush_stage", "cloud_berry_bush_stage");
+
+        blockWithItem(AABBlocks.FLOOF_BLOCK);
 
         blockWithItem(AABBlocks.AEROMUD);
         logBlock(AABBlocks.SHOCKROCK.get());

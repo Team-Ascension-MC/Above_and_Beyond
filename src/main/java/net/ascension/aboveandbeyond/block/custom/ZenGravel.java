@@ -49,7 +49,7 @@ public class ZenGravel extends FallingBlock {
         Direction pDirection = pPlayer.getDirection();
 
         if (heldItem.getItem() instanceof net.minecraft.world.item.HoeItem || offHeldItem.getItem() instanceof net.minecraft.world.item.HoeItem) {
-            if (pPlayer.isCrouching() || pPlayer.isShiftKeyDown() || pPlayer.isInLiquid()) {
+            if (pPlayer.isCrouching() || pPlayer.isVisuallyCrawling() || pPlayer.isShiftKeyDown()) {
                 pLevel.playSound(null, pPos, SoundEvents.ENDERMAN_DEATH, SoundSource.BLOCKS, 1.0F, 1.0F);
                 BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, 0).setValue(FACING, pDirection);
                 pLevel.setBlock(pPos, newState, 3);
@@ -66,13 +66,10 @@ public class ZenGravel extends FallingBlock {
                 BlockState newState = pState.setValue(ZEN_GRAVEL_STYLE, newStyle).setValue(FACING, pDirection);
                 pLevel.setBlock(pPos, newState, 3);
             }
-
             pLevel.playSound(null, pPos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F);
 
             return InteractionResult.SUCCESS;
         }
-
-        // If not a hoe, call the super method for default behavior
         return super.useWithoutItem(pState, pLevel, pPos, pPlayer, pHitResult);
     }
 }
