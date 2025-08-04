@@ -146,7 +146,7 @@ public class AABBlocks {
             () -> new SaplingBlock(AABTreeGrowers.WELKIN, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final DeferredBlock<FloofBlock> FLOOF_BLOCK = registerBlock("floof_block",
-            () -> new FloofBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).destroyTime(0.2f).));
+            () -> new FloofBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).destroyTime(0.2f)));
 
     public static final DeferredBlock<Block> CLOUD_BERRY_BUSH = registerBlock("cloud_berry_bush",
             () -> new CloudBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));

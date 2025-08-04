@@ -2,7 +2,10 @@ package net.ascension.aboveandbeyond.event;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.entity.AABEntities;
+import net.ascension.aboveandbeyond.entity.client.FlooferModel;
+import net.ascension.aboveandbeyond.entity.client.FlooferRenderer;
 import net.ascension.aboveandbeyond.entity.client.KoiModel;
+import net.ascension.aboveandbeyond.entity.custom.FlooferEntity;
 import net.ascension.aboveandbeyond.entity.custom.KoiEntity;
 import net.ascension.aboveandbeyond.entity.layers.AABModelLayers;
 import net.minecraft.client.model.BoatModel;
@@ -21,10 +24,12 @@ public class AABEventBusEvents {
         event.registerLayerDefinition(AABModelLayers.WELKIN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);*/
 
         event.registerLayerDefinition(KoiModel.LAYER_LOCATION, KoiModel::createBodyLayer);
+        event.registerLayerDefinition(FlooferModel.LAYER_LOCATION, FlooferModel::createBodyLayer);
     }
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(AABEntities.KOI.get(), KoiEntity.createAttributes().build());
+        event.put(AABEntities.FLOOFER.get(), FlooferEntity.createAttributes().build());
     }
 }
