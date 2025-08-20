@@ -3,8 +3,6 @@ package net.ascension.aboveandbeyond.entity.client;
 
 import com.google.common.collect.ImmutableMap;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.entity.custom.AABBoatEntity;
-import net.ascension.aboveandbeyond.entity.custom.AABChestBoatEntity;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;

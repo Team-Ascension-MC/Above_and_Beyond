@@ -95,6 +95,7 @@ public class FlooferModel<T extends FlooferEntity> extends HierarchicalModel<T> 
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.animateWalk(FlooferAnimation.walk, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.animate(entity.idleAnimationState, FlooferAnimation.idle, ageInTicks, 1f);
+        this.animate(entity.flappingAnimationState, FlooferAnimation.flap, ageInTicks, 1f);
     }
 
     @Override
