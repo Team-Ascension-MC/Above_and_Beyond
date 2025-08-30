@@ -1,6 +1,7 @@
 package net.ascension.aboveandbeyond.entity;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.entity.custom.FlooferEntity;
 import net.ascension.aboveandbeyond.entity.custom.KoiEntity;
 import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
 import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
@@ -27,6 +28,9 @@ public class AABEntities {
     public static final Supplier<EntityType<KoiEntity>> KOI =
             ENTITY_TYPES.register("koi", () -> EntityType.Builder.of(KoiEntity::new, MobCategory.WATER_CREATURE)
                     .sized(0.5f, 0.25f).build("koi"));
+    public static final Supplier<EntityType<FlooferEntity>> FLOOFER =
+            ENTITY_TYPES.register("floofer", () -> EntityType.Builder.of(FlooferEntity::new, MobCategory.CREATURE)
+                    .sized(0.5f, 0.5f).build("floofer"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
