@@ -8,6 +8,7 @@ import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
 import net.ascension.aboveandbeyond.item.custom.*;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.Fluids;
@@ -75,6 +76,9 @@ public class AABItems {
 
     public static final DeferredItem<Item> KOI_SPAWN_EGG = ITEMS.register("koi_spawn_egg",
             () -> new DeferredSpawnEggItem(AABEntities.KOI, 0xede9dd, 0xb7d2cf,
+                    new Item.Properties()));
+    public static final DeferredItem<Item> FLOOFER_SPAWN_EGG = ITEMS.register("floofer_spawn_egg",
+            () -> new DeferredSpawnEggItem(AABEntities.FLOOFER, 0xeacc8f, 0xb7d2cf,
                     new Item.Properties()));
 
     //Nimbus Islands

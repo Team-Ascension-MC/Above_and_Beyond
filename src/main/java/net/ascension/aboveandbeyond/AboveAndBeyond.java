@@ -5,6 +5,7 @@ import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.block.entity.AABBlockEntities;
 import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.AABEntities;
+import net.ascension.aboveandbeyond.entity.client.FlooferRenderer;
 import net.ascension.aboveandbeyond.entity.client.KoiRenderer;
 import net.ascension.aboveandbeyond.entity.client.WelkinBoatRenderer;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
@@ -80,6 +81,7 @@ public class AboveAndBeyond {
             EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
 
             EntityRenderers.register(AABEntities.KOI.get(), KoiRenderer::new);
+            EntityRenderers.register(AABEntities.FLOOFER.get(), FlooferRenderer::new);
         }
     }
 }
