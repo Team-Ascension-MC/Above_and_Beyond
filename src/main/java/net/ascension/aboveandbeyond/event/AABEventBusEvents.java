@@ -17,9 +17,6 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 public class AABEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-      /*  event.registerLayerDefinition(AABModelLayers.WELKIN_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(AABModelLayers.WELKIN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);*/
-
         event.registerLayerDefinition(KoiModel.LAYER_LOCATION, KoiModel::createBodyLayer);
     }
 

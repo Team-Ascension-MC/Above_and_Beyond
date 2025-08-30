@@ -3,8 +3,9 @@ package net.ascension.aboveandbeyond.item;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.entity.AABEntities;
-import net.ascension.aboveandbeyond.item.custom.CloudBucket;
-import net.ascension.aboveandbeyond.item.custom.KoiBucket;
+import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
+import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
+import net.ascension.aboveandbeyond.item.custom.*;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
@@ -53,10 +54,10 @@ public class AABItems {
             () -> new HangingSignItem(AABBlocks.WELKIN_HANGING_SIGN.get(), AABBlocks.WELKIN_WALL_HANGING_SIGN.get(),
                     new Item.Properties().stacksTo(16)));
 
-  //  public static final DeferredItem<Item> WELKIN_BOAT = ITEMS.register("welkin_boat",
-       //     () -> new WelkinBoatItem(false, WelkinBoatEntity.Type.WELKIN, new Item.Properties()));
-  //  public static final DeferredItem<Item> WELKIN_CHEST_BOAT = ITEMS.register("welkin_chest_boat",
-        //    () -> new WelkinChestBoatItem(true, WelkinChestBoatEntity.Type.byName("welkin"), new Item.Properties()));
+    public static final DeferredItem<WelkinBoatItem> WELKIN_BOAT =
+            ITEMS.register("nut_boat", () -> new WelkinBoatItem(new Item.Properties()));
+    public static final DeferredItem<WelkinChestBoatItem> WELKIN_CHEST_BOAT =
+            ITEMS.register("nut_chest_boat", () -> new WelkinChestBoatItem(new Item.Properties()));
 
     public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()
@@ -68,6 +69,10 @@ public class AABItems {
 
     public static final DeferredItem<Item> FLOOF = ITEMS.register("floof",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<ArmorItem> AIRSKIPPER_BOOTS = ITEMS.register("airskipper_boots",
+            () -> new AirskipperBoots(ArmorMaterials.LEATHER, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
     public static final DeferredItem<Item> KOI_SPAWN_EGG = ITEMS.register("koi_spawn_egg",
             () -> new DeferredSpawnEggItem(AABEntities.KOI, 0xede9dd, 0xb7d2cf,
                     new Item.Properties()));

@@ -1,102 +1,61 @@
-/*package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client;
 
 import com.google.common.collect.ImmutableMap;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.datafixers.util.Pair;
-import com.mojang.math.Axis;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
-import net.minecraft.client.model.ListModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Mth;
 import net.minecraft.world.entity.vehicle.Boat;
-import org.joml.Quaternionf;
+import org.graalvm.collections.Pair;
 
+import javax.swing.*;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class WelkinBoatRenderer extends EntityRenderer<WelkinBoatEntity> {
+public class WelkinBoatRenderer extends BoatRenderer {
     private final Map<WelkinBoatEntity.Type, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
 
-    public WelkinBoatRenderer(EntityRendererProvider.Context context, boolean chest) {
-        super(context);
-        this.shadowRadius = 0.8F;
-        this.boatResources = Stream.of(WelkinBoatEntity.Type.values()).collect(ImmutableMap.toImmutableMap((type) -> type, (type) -> Pair.of(AboveAndBeyond.asResource(getTextureLocation(type, chest)), this.createBoatModel(context, type, chest))));
+    public WelkinBoatRenderer(EntityRendererProvider.Context pContext, boolean pChestBoat) {
+        super(pContext, pChestBoat);
+        this.boatResources = Stream.of(WelkinBoatEntity.Type.values()).collect(ImmutableMap.toImmutableMap(type -> type,
+                type -> Pair.of(AboveAndBeyond.asResource(getTextureLocation(type, pChestBoat)),
+                        this.createBoatModel(pContext, type, pChestBoat))));
     }
 
-    private static ModelLayerLocation createLocation(String path, String model) {
-        return new ModelLayerLocation(AboveAndBeyond.asResource(path), model);
+    private static String getTextureLocation(WelkinBoatEntity.Type pType, boolean pChestBoat) {
+        return pChestBoat ? "textures/entity/chest_boat/" + pType.getName() + ".png" : "textures/entity/boat/" + pType.getName() + ".png";
+    }
+
+    private ListModel<Boat> createBoatModel(EntityRendererProvider.Context pContext, WelkinBoatEntity.Type pType, boolean pChestBoat) {
+        ModelLayerLocation modellayerlocation = pChestBoat ? WelkinBoatRenderer.createChestBoatModelName(pType) : WelkinBoatRenderer.createBoatModelName(pType);
+        ModelPart modelpart = pContext.bakeLayer(modellayerlocation);
+        return pChestBoat ? new ChestBoatModel(modelpart) : new BoatModel(modelpart);
     }
 
     public static ModelLayerLocation createBoatModelName(WelkinBoatEntity.Type pType) {
         return createLocation("boat/" + pType.getName(), "main");
     }
 
-    public static ModelLayerLocation createChestBoatModelName(WelkinBoatEntity.Type type) {
-        return createLocation("chest_boat/" + type.getName(), "main");
+    public static ModelLayerLocation createChestBoatModelName(WelkinBoatEntity.Type pType) {
+        return createLocation("chest_boat/" + pType.getName(), "main");
     }
 
-    private ListModel<Boat> createBoatModel(EntityRendererProvider.Context context, WelkinBoatEntity.Type type, boolean chest) {
-        ModelLayerLocation modellayerlocation = chest ? createChestBoatModelName(type) : createBoatModelName(type);
-        return chest ? new ChestBoatModel(context.bakeLayer(modellayerlocation)) : new BoatModel(context.bakeLayer(modellayerlocation));
+    private static ModelLayerLocation createLocation(String pPath, String pModel) {
+        return new ModelLayerLocation(AboveAndBeyond.asResource(pPath), pModel);
     }
 
-    private static String getTextureLocation(WelkinBoatEntity.Type type, boolean chest) {
-        return chest ? "textures/entity/chest_boat/" + type.getName() + ".png" : "textures/entity/boat/" + type.getName() + ".png";
-    }
-
-    @Override
-    public void render(WelkinBoatEntity boat, float boatYaw, float partialTicks, PoseStack stack, MultiBufferSource buffer, int light) {
-        stack.pushPose();
-        stack.translate(0.0F, 0.375F, 0.0F);
-        stack.mulPose(Axis.YP.rotationDegrees(180.0F - boatYaw));
-        float f = (float) boat.getHurtTime() - partialTicks;
-        float f1 = boat.getDamage() - partialTicks;
-        if (f1 < 0.0F) {
-            f1 = 0.0F;
+    public Pair<ResourceLocation, ListModel<Boat>> getModelWithLocation(Boat boat) {
+        if(boat instanceof WelkinBoatEntity modBoat) {
+            return this.boatResources.get(modBoat.getModVariant());
+        } else if(boat instanceof WelkinChestBoatEntity modChestBoatEntity) {
+            return this.boatResources.get(modChestBoatEntity.getModVariant());
+        } else {
+            return null;
         }
-
-        if (f > 0.0F) {
-            stack.mulPose(Axis.XP.rotationDegrees(Mth.sin(f) * f * f1 / 10.0F * (float) boat.getHurtDir()));
-        }
-
-        float f2 = boat.getBubbleAngle(partialTicks);
-        if (!Mth.equal(f2, 0.0F)) {
-            stack.mulPose((new Quaternionf()).setAngleAxis(boat.getBubbleAngle(partialTicks) * ((float) Math.PI / 180F), 1.0F, 0.0F, 1.0F));
-        }
-
-        Pair<ResourceLocation, ListModel<Boat>> pair = this.getModelWithLocation(boat);
-        ResourceLocation resourcelocation = pair.getFirst();
-        ListModel<Boat> model = pair.getSecond();
-        stack.scale(-1.0F, -1.0F, 1.0F);
-        stack.mulPose(Axis.YP.rotationDegrees(90.0F));
-        model.setupAnim(boat, partialTicks, 0.0F, -0.1F, 0.0F, 0.0F);
-        VertexConsumer vertexconsumer = buffer.getBuffer(model.renderType(resourcelocation));
-        model.renderToBuffer(stack, vertexconsumer, light, OverlayTexture.NO_OVERLAY);
-        if (model instanceof BoatModel boatModel && !boat.isUnderWater()) {
-            VertexConsumer vertexconsumer1 = buffer.getBuffer(RenderType.waterMask());
-            boatModel.waterPatch().render(stack, vertexconsumer1, light, OverlayTexture.NO_OVERLAY);
-        }
-
-        stack.popPose();
-        super.render(boat, boatYaw, partialTicks, stack, buffer, light);
     }
-
-    @Override
-    public ResourceLocation getTextureLocation(WelkinBoatEntity entity) {
-        return this.boatResources.get(entity.getWelkinBoatEntityType()).getFirst();
-    }
-
-    public Pair<ResourceLocation, ListModel<Boat>> getModelWithLocation(WelkinBoatEntity boat) {
-        return this.boatResources.get(boat.getWelkinBoatEntityType());
-    }
-}*/
+}

@@ -6,6 +6,7 @@ import net.ascension.aboveandbeyond.block.entity.AABBlockEntities;
 import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.AABEntities;
 import net.ascension.aboveandbeyond.entity.client.KoiRenderer;
+import net.ascension.aboveandbeyond.entity.client.WelkinBoatRenderer;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.ascension.aboveandbeyond.sound.AABSounds;
@@ -26,16 +27,11 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AboveAndBeyond.MOD_ID)
 public class AboveAndBeyond {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "aboveandbeyond";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public AboveAndBeyond(IEventBus modEventBus, ModContainer modContainer)
     {
         modEventBus.addListener(this::commonSetup);
@@ -80,8 +76,8 @@ public class AboveAndBeyond {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            //EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
-            //EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));)
+            EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
+            EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
 
             EntityRenderers.register(AABEntities.KOI.get(), KoiRenderer::new);
         }

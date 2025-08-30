@@ -17,8 +17,8 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.function.IntFunction;
 
-//public class WelkinBoatEntity extends Boat {
-  /*  private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(WelkinBoatEntity.class, EntityDataSerializers.INT);
+public class WelkinBoatEntity extends Boat {
+    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(WelkinBoatEntity.class, EntityDataSerializers.INT);
 
     public WelkinBoatEntity(EntityType<? extends Boat> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -30,10 +30,6 @@ import java.util.function.IntFunction;
         this.xo = pX;
         this.yo = pY;
         this.zo = pZ;
-    }
-
-    public WelkinBoatEntity.Type getWelkinBoatEntityType() {
-        return WelkinBoatEntity.Type.byId(this.getEntityData().get(DATA_ID_TYPE));
     }
 
     @Override
@@ -99,12 +95,12 @@ import java.util.function.IntFunction;
         /**
          * Get a boat type by its enum ordinal
          */
-       // public static WelkinBoatEntity.Type byId(int pId) {
-    //        return BY_ID.apply(pId);
-      //  }
+        public static WelkinBoatEntity.Type byId(int pId) {
+            return BY_ID.apply(pId);
+        }
 
-     //   public static WelkinBoatEntity.Type byName(String pName) {
-    //        return CODEC.byName(pName, WELKIN);
-   //     }
-  //  }
-//}
+        public static WelkinBoatEntity.Type byName(String pName) {
+            return CODEC.byName(pName, WELKIN);
+        }
+    }
+}
