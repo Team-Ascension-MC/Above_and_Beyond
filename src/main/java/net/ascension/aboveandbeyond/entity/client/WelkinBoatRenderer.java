@@ -1,6 +1,7 @@
-package net.ascension.aboveandbeyond.entity.client;
+/*package net.ascension.aboveandbeyond.entity.client;
 
 import com.google.common.collect.ImmutableMap;
+import com.ibm.icu.impl.Pair;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
 import net.minecraft.client.model.BoatModel;
@@ -11,7 +12,6 @@ import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.vehicle.Boat;
-import org.graalvm.collections.Pair;
 
 import javax.swing.*;
 import java.util.Map;
@@ -58,4 +58,4 @@ public class WelkinBoatRenderer extends BoatRenderer {
             return null;
         }
     }
-}
+}*/

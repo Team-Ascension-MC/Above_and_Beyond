@@ -33,8 +33,8 @@ public class FlooferEntity extends Chicken {
             --this.idleAnimationTimeout;
         }
 
-        Vec3 motion = this.getDeltaMovement();
-        boolean currentlyFalling = !this.onGround() && motion.y < -0.01; // Small threshold to avoid twitching
+        Vec3 vec3 = this.getDeltaMovement();
+        boolean currentlyFalling = !this.onGround() && vec3.y < (double) 0.0F;
 
         this.isFalling = currentlyFalling;
 

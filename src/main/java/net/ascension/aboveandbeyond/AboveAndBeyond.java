@@ -7,7 +7,6 @@ import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.AABEntities;
 import net.ascension.aboveandbeyond.entity.client.FlooferRenderer;
 import net.ascension.aboveandbeyond.entity.client.KoiRenderer;
-import net.ascension.aboveandbeyond.entity.client.WelkinBoatRenderer;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.ascension.aboveandbeyond.sound.AABSounds;
@@ -77,8 +76,8 @@ public class AboveAndBeyond {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
-            EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
+            //EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
+            //EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
 
             EntityRenderers.register(AABEntities.KOI.get(), KoiRenderer::new);
             EntityRenderers.register(AABEntities.FLOOFER.get(), FlooferRenderer::new);
