@@ -3,6 +3,7 @@ package net.ascension.aboveandbeyond.entity.client;
 import com.google.common.collect.ImmutableMap;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
+import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -11,7 +12,7 @@ import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.vehicle.Boat;
-import org.graalvm.collections.Pair;
+import com.mojang.datafixers.util.Pair;
 
 import javax.swing.*;
 import java.util.Map;
@@ -49,13 +50,13 @@ public class WelkinBoatRenderer extends BoatRenderer {
         return new ModelLayerLocation(AboveAndBeyond.asResource(pPath), pModel);
     }
 
-    public Pair<ResourceLocation, ListModel<Boat>> getModelWithLocation(Boat boat) {
-        if(boat instanceof WelkinBoatEntity modBoat) {
-            return this.boatResources.get(modBoat.getModVariant());
-        } else if(boat instanceof WelkinChestBoatEntity modChestBoatEntity) {
-            return this.boatResources.get(modChestBoatEntity.getModVariant());
+    /*public Pair<ResourceLocation, net.minecraft.client.model.ListModel<Boat>> getModelWithLocation(Boat boat) {
+        if(boat instanceof WelkinBoatEntity welkinBoat) {
+            return this.boatResources.get(welkinBoat.getModVariant());
+        } else if(boat instanceof WelkinChestBoatEntity welkinChestBoatEntity) {
+            return this.boatResources.get(welkinChestBoatEntity.getModVariant());
         } else {
             return null;
         }
-    }
+    }*/
 }
