@@ -23,6 +23,6 @@ public class AABDatapackProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.TRIM_MATERIAL, AABTrimMaterials::bootstrap);
 
     public AABDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(AboveAndBeyond.MOD_ID));
+        super(output, registries, BUILDER, Set.of(AboveAndBeyond.ID));
     }
 }

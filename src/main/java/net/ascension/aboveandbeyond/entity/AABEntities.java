@@ -16,14 +16,14 @@ import java.util.function.Supplier;
 
 public class AABEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, AboveAndBeyond.MOD_ID);
+            DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, AboveAndBeyond.ID);
 
     public static final DeferredHolder<EntityType<?>, EntityType<WelkinBoatEntity>> WELKIN_BOAT =
-            ENTITY_TYPES.register("nut_boat", () -> EntityType.Builder.<WelkinBoatEntity>of(WelkinBoatEntity::new, MobCategory.MISC)
-                    .sized(1.375f, 0.5625f).build("nut_boat"));
+            ENTITY_TYPES.register("welkin_boat", () -> EntityType.Builder.<WelkinBoatEntity>of(WelkinBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375f, 0.5625f).build("welkin_boat"));
     public static final DeferredHolder<EntityType<?>, EntityType<WelkinChestBoatEntity>> WELKIN_CHEST_BOAT =
-            ENTITY_TYPES.register("nut_chest_boat", () -> EntityType.Builder.<WelkinChestBoatEntity>of(WelkinChestBoatEntity::new, MobCategory.MISC)
-                    .sized(1.375f, 0.5625f).build("nut_chest_boat"));
+            ENTITY_TYPES.register("welkin_chest_boat", () -> EntityType.Builder.<WelkinChestBoatEntity>of(WelkinChestBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375f, 0.5625f).build("welkin_chest_boat"));
 
     public static final Supplier<EntityType<KoiEntity>> KOI =
             ENTITY_TYPES.register("koi", () -> EntityType.Builder.of(KoiEntity::new, MobCategory.WATER_CREATURE)

@@ -15,7 +15,7 @@ import net.neoforged.neoforge.event.village.WandererTradesEvent;
 
 import java.util.List;
 
-@EventBusSubscriber(modid = AboveAndBeyond.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = AboveAndBeyond.ID, bus = EventBusSubscriber.Bus.GAME)
 public class AABEvents {
     @SubscribeEvent
     public static void addWanderingTrades(WandererTradesEvent event) {

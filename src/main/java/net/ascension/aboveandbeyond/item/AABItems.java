@@ -3,12 +3,9 @@ package net.ascension.aboveandbeyond.item;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.entity.AABEntities;
-import net.ascension.aboveandbeyond.entity.custom.WelkinBoatEntity;
-import net.ascension.aboveandbeyond.entity.custom.WelkinChestBoatEntity;
 import net.ascension.aboveandbeyond.item.custom.*;
 import net.ascension.aboveandbeyond.sound.AABSounds;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.damagesource.DamageEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.Fluids;
@@ -18,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class AABItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AboveAndBeyond.MOD_ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AboveAndBeyond.ID);
 
     /* SKY ISLANDS */
 
@@ -56,9 +53,9 @@ public class AABItems {
                     new Item.Properties().stacksTo(16)));
 
     public static final DeferredItem<WelkinBoatItem> WELKIN_BOAT =
-            ITEMS.register("nut_boat", () -> new WelkinBoatItem(new Item.Properties()));
+            ITEMS.register("welkin_boat", () -> new WelkinBoatItem(new Item.Properties()));
     public static final DeferredItem<WelkinChestBoatItem> WELKIN_CHEST_BOAT =
-            ITEMS.register("nut_chest_boat", () -> new WelkinChestBoatItem(new Item.Properties()));
+            ITEMS.register("welkin_chest_boat", () -> new WelkinChestBoatItem(new Item.Properties()));
 
     public static final DeferredItem<SwordItem> KATANA = ITEMS.register("katana",
             () -> new SwordItem(Tiers.DIAMOND, new Item.Properties()

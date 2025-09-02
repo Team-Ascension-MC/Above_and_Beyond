@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-12T21:34:52.2099462	Item Models: aboveandbeyond
+// 1.21.1	2025-09-02T08:19:22.1613749	Item Models: aboveandbeyond
 171009effadf3d61a45e12880e91bf326d0840ca assets/aboveandbeyond/models/item/buzz_powder.json
 589af699bc184258f9bc4e2fd2f0f76702229ff1 assets/aboveandbeyond/models/item/cloud_berries.json
 c61624967fcf2581a77f00b326337ea5715e097b assets/aboveandbeyond/models/item/cloud_bucket.json
@@ -63,6 +63,8 @@ fa90279918d7dc6ad9ea6e05d2fe3d00d722bc47 assets/aboveandbeyond/models/item/light
 2e5ad67468697adcf30d2edfe67d6754fdc95616 assets/aboveandbeyond/models/item/music_disc_heist.json
 291c4a7d6d395e1b10c3430f01a1b2209e17341f assets/aboveandbeyond/models/item/music_disc_vivid.json
 f15e8bc446bff2319b2cd185a57dceaa466793c3 assets/aboveandbeyond/models/item/stormy_cloud_bucket.json
+79b4475135696c51db7b2fa583bbb28872de2e74 assets/aboveandbeyond/models/item/welkin_boat.json
+81fb231bf1303e2e66fbce218c8b584953294955 assets/aboveandbeyond/models/item/welkin_chest_boat.json
 b38d2f0a2ccd5b9ecc4cd7fa5980df3a01c9500a assets/aboveandbeyond/models/item/welkin_door.json
 eb426c5f1a365845e1d23745e39a3abd2a5d895a assets/aboveandbeyond/models/item/welkin_hanging_sign.json
 afea41911f970679ed11747dd64ed1fa2b0f895c assets/aboveandbeyond/models/item/welkin_sapling.json

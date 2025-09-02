@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-import static net.ascension.aboveandbeyond.AboveAndBeyond.MOD_ID;
+import static net.ascension.aboveandbeyond.AboveAndBeyond.ID;
 
 public class FlooferRenderer extends MobRenderer<FlooferEntity, FlooferModel<FlooferEntity>> {
     public FlooferRenderer(EntityRendererProvider.Context context) {
@@ -16,7 +16,7 @@ public class FlooferRenderer extends MobRenderer<FlooferEntity, FlooferModel<Flo
 
     @Override
     public ResourceLocation getTextureLocation(FlooferEntity entity) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, "textures/entity/floofer.png");
+        return ResourceLocation.fromNamespaceAndPath(ID, "textures/entity/floofer.png");
     }
 
     @Override

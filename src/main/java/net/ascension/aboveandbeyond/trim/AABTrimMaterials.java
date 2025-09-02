@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class AABTrimMaterials {
     public static final ResourceKey<TrimMaterial> COBALT =
-            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "cobalt"));
+            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "cobalt"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
         register(context, COBALT, AABItems.COBALT_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#66718b").getOrThrow()), 1.0F);

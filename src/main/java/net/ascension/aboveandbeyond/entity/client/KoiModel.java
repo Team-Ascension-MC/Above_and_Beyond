@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class KoiModel<T extends KoiEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION =
-            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "koi"), "main");
+            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "koi"), "main");
     private final ModelPart koi;
 
     public KoiModel(ModelPart root) {

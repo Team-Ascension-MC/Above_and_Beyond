@@ -7,9 +7,13 @@ import net.ascension.aboveandbeyond.component.AABDataComponent;
 import net.ascension.aboveandbeyond.entity.AABEntities;
 import net.ascension.aboveandbeyond.entity.client.FlooferRenderer;
 import net.ascension.aboveandbeyond.entity.client.KoiRenderer;
+import net.ascension.aboveandbeyond.entity.client.WelkinBoatRenderer;
 import net.ascension.aboveandbeyond.item.AABCreativeTabs;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.ascension.aboveandbeyond.sound.AABSounds;
+import net.minecraft.client.model.BoatModel;
+import net.minecraft.client.model.ChestBoatModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -23,13 +27,14 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
-@Mod(AboveAndBeyond.MOD_ID)
+@Mod(AboveAndBeyond.ID)
 public class AboveAndBeyond {
-    public static final String MOD_ID = "aboveandbeyond";
+    public static final String ID = "aboveandbeyond";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public AboveAndBeyond(IEventBus modEventBus, ModContainer modContainer)
@@ -50,7 +55,7 @@ public class AboveAndBeyond {
     }
 
     public static ResourceLocation asResource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(ID, path);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -70,17 +75,28 @@ public class AboveAndBeyond {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            //EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
-            //EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
+            EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
+            EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
 
             EntityRenderers.register(AABEntities.KOI.get(), KoiRenderer::new);
             EntityRenderers.register(AABEntities.FLOOFER.get(), FlooferRenderer::new);
+        }
+
+        public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(
+                AboveAndBeyond.asResource("boat/welkin"), "main");
+        public static final ModelLayerLocation WELKIN_CHEST_BOAT_LAYER = new ModelLayerLocation(
+                AboveAndBeyond.asResource("chest_boat/welkin"), "main");
+
+        @SubscribeEvent
+        public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(WELKIN_BOAT_LAYER, BoatModel::createBodyModel);
+            event.registerLayerDefinition(WELKIN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
         }
     }
 }

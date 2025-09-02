@@ -1,19 +1,17 @@
 package net.ascension.aboveandbeyond.component;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.entity.KoiVariant;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.text.NumberFormat;
 import java.util.function.UnaryOperator;
 
 public class AABDataComponent {
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES =
-        DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, AboveAndBeyond.MOD_ID);
+        DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, AboveAndBeyond.ID);
 
     /* DATA */
 

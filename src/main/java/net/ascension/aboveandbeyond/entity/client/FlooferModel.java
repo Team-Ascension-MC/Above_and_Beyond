@@ -10,7 +10,7 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class FlooferModel<T extends FlooferEntity> extends HierarchicalModel<T> {
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "floofer"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "floofer"), "main");
     private final ModelPart root;
     private final ModelPart body;
     private final ModelPart head_sneeze;

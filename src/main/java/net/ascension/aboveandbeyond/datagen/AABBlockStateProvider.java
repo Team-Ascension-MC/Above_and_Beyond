@@ -17,7 +17,7 @@ import java.util.function.Function;
 
 public class AABBlockStateProvider extends BlockStateProvider {
     public AABBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, AboveAndBeyond.MOD_ID, exFileHelper);
+        super(output, AboveAndBeyond.ID, exFileHelper);
     }
 
     /*Cloud Islands*/
@@ -107,7 +107,7 @@ public class AABBlockStateProvider extends BlockStateProvider {
     private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(SweetBerryBushBlock.AGE),
-                ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "block/" + textureName + state.getValue(SweetBerryBushBlock.AGE))).renderType("cutout"));
+                ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "block/" + textureName + state.getValue(SweetBerryBushBlock.AGE))).renderType("cutout"));
 
         return models;
     }

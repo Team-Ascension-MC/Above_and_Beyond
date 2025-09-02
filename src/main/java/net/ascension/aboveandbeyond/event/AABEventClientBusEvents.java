@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 
-@EventBusSubscriber(modid = AboveAndBeyond.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = AboveAndBeyond.ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AABEventClientBusEvents {
     @net.neoforged.bus.api.SubscribeEvent
     public static void registerBER(net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers event) {

@@ -1,7 +1,6 @@
 package net.ascension.aboveandbeyond.item;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,7 +15,7 @@ import static net.ascension.aboveandbeyond.block.AABBlocks.*;
 
 public class AABCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AboveAndBeyond.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AboveAndBeyond.ID);
 
     public static final Supplier<CreativeModeTab> AAB_TAB = CREATIVE_MODE_TAB.register("aab_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(PUFFGRASS_BLOCK.get()))
@@ -66,8 +65,8 @@ public class AABCreativeTabs {
                         output.accept(WELKIN_SAPLING);
                         output.accept(AABItems.WELKIN_SIGN);
                         output.accept(AABItems.WELKIN_HANGING_SIGN);
-                        //output.accept(AABItems.WELKIN_BOAT);
-                        //output.accept(AABItems.WELKIN_CHEST_BOAT);
+                        output.accept(AABItems.WELKIN_BOAT);
+                        output.accept(AABItems.WELKIN_CHEST_BOAT);
                         output.accept(KATANA);
                         output.accept(FLOOF_BLOCK);
                         output.accept(FLOOF);

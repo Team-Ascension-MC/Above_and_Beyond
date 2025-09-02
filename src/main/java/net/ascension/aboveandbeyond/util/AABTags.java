@@ -14,7 +14,7 @@ public class AABTags {
         public static final TagKey<Block> WELKIN_LOGS = createTag("welkin_logs");
 
         private static TagKey<Block> createTag(String name) {
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name));
         }
     }
 
@@ -25,7 +25,7 @@ public class AABTags {
         public static final TagKey<Item> COBALT_CROSSBOW_BOLTS = createTag("cobalt_crossbow_bolts");
 
         private static TagKey<Item> createTag(String name) {
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name));
         }
     }
 }

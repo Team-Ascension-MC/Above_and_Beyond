@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 public class AABItemTagProvider extends ItemTagsProvider {
     public AABItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                               CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, blockTags, AboveAndBeyond.MOD_ID, existingFileHelper);
+        super(output, lookupProvider, blockTags, AboveAndBeyond.ID, existingFileHelper);
     }
 
     @Override

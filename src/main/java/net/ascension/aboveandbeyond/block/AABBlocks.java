@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class AABBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AboveAndBeyond.MOD_ID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AboveAndBeyond.ID);
 
     /* SKY ISLANDS */
     //Cloud Islands

@@ -211,7 +211,7 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
                                                                        List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(recipeOutput, AboveAndBeyond.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+                    .save(recipeOutput, AboveAndBeyond.ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
 }

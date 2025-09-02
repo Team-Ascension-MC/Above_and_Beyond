@@ -16,10 +16,10 @@ import java.util.Map;
 public class KoiRenderer extends MobRenderer<KoiEntity, KoiModel<KoiEntity>> {
     private static final Map<KoiVariant, ResourceLocation> LOCATION_BY_VARIANT =
             Util.make(Maps.newEnumMap(KoiVariant.class), map -> {
-                map.put(KoiVariant.KOHAKU, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_kohaku.png"));
-                map.put(KoiVariant.SANKE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_sanke.png"));
-                map.put(KoiVariant.SHOWA, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_showa.png"));
-                map.put(KoiVariant.SHERBERT, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, "textures/entity/koi/koi_sherbert.png"));
+                map.put(KoiVariant.KOHAKU, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_kohaku.png"));
+                map.put(KoiVariant.SANKE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_sanke.png"));
+                map.put(KoiVariant.SHOWA, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_showa.png"));
+                map.put(KoiVariant.SHERBERT, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_sherbert.png"));
             });
 
     public KoiRenderer(EntityRendererProvider.Context context) {

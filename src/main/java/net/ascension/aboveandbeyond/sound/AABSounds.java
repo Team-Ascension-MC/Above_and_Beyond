@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public class AABSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, AboveAndBeyond.MOD_ID);
+            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, AboveAndBeyond.ID);
 
     /* Cloud Islands */
     public static final Supplier<SoundEvent> GALE = registerSoundEvent("gale");
@@ -27,11 +27,11 @@ public class AABSounds {
     public static final ResourceKey<JukeboxSong> HEIST_KEY = createSong("heist");
 
     private static ResourceKey<JukeboxSong> createSong(String name) {
-        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, name));
+        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name));
     }
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
     public static void register(IEventBus eventBus) {

@@ -3,7 +3,6 @@ package net.ascension.aboveandbeyond.datagen;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.ascension.aboveandbeyond.item.AABItems;
-import net.ascension.aboveandbeyond.trim.AABTrimMaterials;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -36,7 +35,7 @@ public class AABItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
     public AABItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, AboveAndBeyond.MOD_ID, existingFileHelper);
+        super(output, AboveAndBeyond.ID, existingFileHelper);
     }
 
     @Override
@@ -47,6 +46,8 @@ public class AABItemModelProvider extends ItemModelProvider {
         basicItem(AABItems.CLOUD_BUCKET.get());
         basicItem(AABItems.KOI_BUCKET.get());
         basicItem(AABBlocks.WELKIN_DOOR.asItem());
+        basicItem(AABItems.WELKIN_BOAT.get());
+        basicItem(AABItems.WELKIN_CHEST_BOAT.get());
         basicItem(AABItems.WELKIN_SIGN.asItem());
         basicItem(AABItems.WELKIN_HANGING_SIGN.asItem());
         saplingItem(AABBlocks.WELKIN_SAPLING);
@@ -78,7 +79,7 @@ public class AABItemModelProvider extends ItemModelProvider {
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-        final String MOD_ID = AboveAndBeyond.MOD_ID;
+        final String MOD_ID = AboveAndBeyond.ID;
 
         if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
@@ -122,6 +123,6 @@ public class AABItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder saplingItem(DeferredBlock<SaplingBlock> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID,"block/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID,"block/" + item.getId().getPath()));
     }
 }

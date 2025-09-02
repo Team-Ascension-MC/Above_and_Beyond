@@ -1,7 +1,6 @@
 package net.ascension.aboveandbeyond.item;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.block.AABBlocks;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -31,7 +30,7 @@ public class AABArmorMaterials {
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {
-        ResourceLocation location = ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.MOD_ID, name);
+        ResourceLocation location = ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name);
         Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_NETHERITE;
         Supplier<Ingredient> ingredient = () -> Ingredient.of(ingredientItem.get());
         List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(location));
