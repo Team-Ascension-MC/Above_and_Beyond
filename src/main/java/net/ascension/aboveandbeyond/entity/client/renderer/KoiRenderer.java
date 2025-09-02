@@ -1,9 +1,10 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.renderer;
 
 import com.google.common.collect.Maps;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.entity.KoiVariant;
+import net.ascension.aboveandbeyond.entity.variants.KoiVariant;
+import net.ascension.aboveandbeyond.entity.client.model.KoiModel;
 import net.ascension.aboveandbeyond.entity.custom.KoiEntity;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.MultiBufferSource;

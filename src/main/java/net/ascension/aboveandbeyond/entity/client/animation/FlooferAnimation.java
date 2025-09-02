@@ -1,4 +1,4 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.animation;
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
@@ -6,7 +6,7 @@ import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
 
 public class FlooferAnimation {
-        public static final AnimationDefinition idle = AnimationDefinition.Builder.withLength(6.0F).looping()
+        public static final AnimationDefinition ANIM_FLOOFER_IDLE = AnimationDefinition.Builder.withLength(6.0F).looping()
                 .addAnimation("left_ear", new AnimationChannel(AnimationChannel.Targets.ROTATION,
                         new Keyframe(1.0625F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
                         new Keyframe(1.1875F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -53,7 +53,7 @@ public class FlooferAnimation {
                 ))
                 .build();
 
-        public static final AnimationDefinition walk = AnimationDefinition.Builder.withLength(0.5F).looping()
+        public static final AnimationDefinition ANIM_FLOOFER_MOVE = AnimationDefinition.Builder.withLength(0.5F).looping()
                 .addAnimation("body", new AnimationChannel(AnimationChannel.Targets.ROTATION,
                         new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
                         new Keyframe(0.125F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 1.25F), AnimationChannel.Interpolations.CATMULLROM),
@@ -119,7 +119,7 @@ public class FlooferAnimation {
                 ))
                 .build();
 
-        public static final AnimationDefinition flap = AnimationDefinition.Builder.withLength(2.0F).looping()
+        public static final AnimationDefinition ANIM_FLOOFER_FLAP = AnimationDefinition.Builder.withLength(2.0F).looping()
                 .addAnimation("root", new AnimationChannel(AnimationChannel.Targets.ROTATION,
                         new Keyframe(0.0F, KeyframeAnimations.degreeVec(-2.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
                         new Keyframe(1.0F, KeyframeAnimations.degreeVec(2.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -219,7 +219,7 @@ public class FlooferAnimation {
                 ))
                 .build();
 
-        public static final AnimationDefinition hop = AnimationDefinition.Builder.withLength(2.0F).looping()
+        public static final AnimationDefinition ANIM_FLOOFER_HOP = AnimationDefinition.Builder.withLength(2.0F).looping()
                 .addAnimation("root", new AnimationChannel(AnimationChannel.Targets.ROTATION,
                         new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
                         new Keyframe(0.25F, KeyframeAnimations.degreeVec(-7.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
@@ -316,7 +316,7 @@ public class FlooferAnimation {
                 ))
                 .build();
 
-        public static final AnimationDefinition sneeze = AnimationDefinition.Builder.withLength(3.0F).looping()
+        public static final AnimationDefinition ANIM_FLOOFER_SNEEZE = AnimationDefinition.Builder.withLength(3.0F).looping()
                 .addAnimation("root", new AnimationChannel(AnimationChannel.Targets.POSITION,
                         new Keyframe(0.3125F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
                         new Keyframe(0.4375F, KeyframeAnimations.posVec(0.0F, 2.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),

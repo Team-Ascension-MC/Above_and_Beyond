@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.entity.custom;
 
-import net.ascension.aboveandbeyond.entity.KoiVariant;
+import net.ascension.aboveandbeyond.entity.variants.KoiVariant;
 import net.ascension.aboveandbeyond.item.AABItems;
 import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;

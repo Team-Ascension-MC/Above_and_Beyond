@@ -70,6 +70,7 @@ public class AABCreativeTabs {
                         output.accept(KATANA);
                         output.accept(FLOOF_BLOCK);
                         output.accept(FLOOF);
+                        output.accept(FLOOFER_SPAWN_EGG);
                         output.accept(KOI_BUCKET);
                         output.accept(KOI_SPAWN_EGG);
                         output.accept(MUSIC_DISC_GALE);

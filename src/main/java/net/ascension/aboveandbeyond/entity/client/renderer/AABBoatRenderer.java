@@ -1,20 +1,5 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.renderer;
 
-
-import com.google.common.collect.ImmutableMap;
-import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.minecraft.client.model.BoatModel;
-import net.minecraft.client.model.ChestBoatModel;
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.renderer.entity.BoatRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.vehicle.Boat;
-
-import javax.swing.*;
-import java.util.Map;
-import java.util.stream.Stream;
 
 public class AABBoatRenderer { /*extends BoatRenderer {
     private final Map<AABBoatEntity.Type, Pair<ResourceLocation, ListModel<Boat>>> boatResources;

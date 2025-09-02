@@ -1,4 +1,4 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.animation;
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;

@@ -1,4 +1,4 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.renderer;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.datafixers.util.Pair;

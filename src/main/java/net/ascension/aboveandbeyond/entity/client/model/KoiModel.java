@@ -1,8 +1,9 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.entity.client.animation.KoiAnimation;
 import net.ascension.aboveandbeyond.entity.custom.KoiEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;

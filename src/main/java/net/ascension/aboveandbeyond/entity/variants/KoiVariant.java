@@ -1,4 +1,4 @@
-package net.ascension.aboveandbeyond.entity;
+package net.ascension.aboveandbeyond.entity.variants;
 
 import com.mojang.serialization.Codec;
 

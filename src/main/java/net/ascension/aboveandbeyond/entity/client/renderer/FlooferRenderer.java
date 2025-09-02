@@ -1,6 +1,7 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.ascension.aboveandbeyond.entity.client.model.FlooferModel;
 import net.ascension.aboveandbeyond.entity.custom.FlooferEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

@@ -1,6 +1,7 @@
-package net.ascension.aboveandbeyond.entity.client;
+package net.ascension.aboveandbeyond.entity.client.model;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.entity.client.animation.FlooferAnimation;
 import net.ascension.aboveandbeyond.entity.custom.FlooferEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -93,9 +94,9 @@ public class FlooferModel<T extends FlooferEntity> extends HierarchicalModel<T> 
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root().getAllParts().forEach(ModelPart::resetPose);
-        this.animateWalk(FlooferAnimation.walk, limbSwing, limbSwingAmount, 2f, 2.5f);
-        this.animate(entity.idleAnimationState, FlooferAnimation.idle, ageInTicks, 1f);
-        this.animate(entity.flappingAnimationState, FlooferAnimation.flap, ageInTicks, 1f);
+        this.animateWalk(FlooferAnimation.ANIM_FLOOFER_MOVE, limbSwing, limbSwingAmount, 1f, 2.5f);
+        this.animate(entity.idleAnimationState, FlooferAnimation.ANIM_FLOOFER_IDLE, ageInTicks, 1f);
+        this.animate(entity.flappingAnimationState, FlooferAnimation.ANIM_FLOOFER_FLAP, ageInTicks, 1f);
     }
 
     @Override

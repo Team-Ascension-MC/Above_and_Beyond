@@ -20,8 +20,8 @@ public class FlooferEntity extends Chicken {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Chicken.createAttributes()
-                .add(Attributes.MAX_HEALTH, 10.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.45D)
+                .add(Attributes.MAX_HEALTH, 9.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.ATTACK_DAMAGE, 2.0D);
     }
 
@@ -37,11 +37,10 @@ public class FlooferEntity extends Chicken {
         boolean currentlyFalling = !this.onGround() && vec3.y < (double) 0.0F;
 
         this.isFalling = currentlyFalling;
-
         if (this.isFalling) {
             this.flappingAnimationState.start(this.tickCount);
         } else {
-            this.flappingAnimationState.stop(); // Stop if not falling or flying
+            this.flappingAnimationState.stop();
         }
     }
 

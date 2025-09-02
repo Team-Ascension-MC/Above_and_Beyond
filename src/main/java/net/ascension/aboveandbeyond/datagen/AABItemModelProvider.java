@@ -53,6 +53,7 @@ public class AABItemModelProvider extends ItemModelProvider {
         saplingItem(AABBlocks.WELKIN_SAPLING);
         basicItem(AABItems.CLOUD_BERRIES.get());
         basicItem(AABItems.FLOOF.get());
+        withExistingParent(AABItems.FLOOFER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(AABItems.KOI_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         //Nimbus Islands

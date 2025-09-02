@@ -2,8 +2,8 @@ package net.ascension.aboveandbeyond.event;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
 import net.ascension.aboveandbeyond.entity.AABEntities;
-import net.ascension.aboveandbeyond.entity.client.FlooferModel;
-import net.ascension.aboveandbeyond.entity.client.KoiModel;
+import net.ascension.aboveandbeyond.entity.client.model.FlooferModel;
+import net.ascension.aboveandbeyond.entity.client.model.KoiModel;
 import net.ascension.aboveandbeyond.entity.custom.FlooferEntity;
 import net.ascension.aboveandbeyond.entity.custom.KoiEntity;
 import net.neoforged.bus.api.SubscribeEvent;
