@@ -1,9 +1,9 @@
 package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.block.AABBlocks;
-import net.ascension.aboveandbeyond.item.AABItems;
-import net.ascension.aboveandbeyond.util.AABTags;
+import net.ascension.aboveandbeyond.registry.AABBlocks;
+import net.ascension.aboveandbeyond.registry.AABItems;
+import net.ascension.aboveandbeyond.registry.AABTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -71,10 +71,8 @@ public class AABItemTagProvider extends ItemTagsProvider {
                 .add(AABItems.COBALT_INGOT.get());
 
         tag(ItemTags.SWORDS)
-                .add(AABItems.KATANA.get())
                 .add(AABItems.COBALT_SWORD.get());
         tag(ItemTags.SWORD_ENCHANTABLE)
-                .add(AABItems.KATANA.get())
                 .add(AABItems.COBALT_SWORD.get());
 
         tag(ItemTags.PICKAXES)

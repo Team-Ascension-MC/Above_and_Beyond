@@ -1,5 +1,5 @@
 {
-  "creativetab.aboveandbeyond.tab": "Above & Beyond",
+  "tab.aboveandbeyond.tab": "Above & Beyond",
 
   "painting.aboveandbeyond.above_the_water.title": "Above The Water",
   "painting.aboveandbeyond.above_the_water.author": "P0LYHIST0R",
@@ -11,8 +11,8 @@
   "tag.item.aboveandbeyond.welkin_logs": "Welkin Logs",
   "tag.item.aboveandbeyond.cobalt_crossbow_bolts": "Cobalt Crossbow Bolts",
 
-  /* SKY ISLANDS */
-  //Cloud Islands
+
+
   "block.aboveandbeyond.short_puffgrass": "Short Puffgrass",
   "block.aboveandbeyond.tall_puffgrass": "Tall Puffgrass",
   "block.aboveandbeyond.starflower": "Starflower",
@@ -75,14 +75,13 @@
   "item.aboveandbeyond.koi_bucket": "Koi Bucket",
   "entity.aboveandbeyond.koi": "Koi",
 
-  "item.aboveandbeyond.katana": "Katana",
-
   "item.aboveandbeyond.floofer_spawn_egg": "Floofer Spawn Egg",
   "entity.aboveandbeyond.floofer": "Floofer",
   "block.aboveandbeyond.floof_block": "Floof Block",
   "item.aboveandbeyond.floof": "Floof",
 
-  //Nimbus Islands
+
+
   "block.aboveandbeyond.short_static_puffgrass": "Short Static Puffgrass",
   "block.aboveandbeyond.tall_static_puffgrass": "Tall Static Puffgrass",
   "block.aboveandbeyond.static_puffgrass_block": "Static Puffgrass Block",
@@ -116,14 +115,16 @@
 
   "trim_material.aboveandbeyond.cobalt": "Cobalt Material",
 
-  /*OTHER*/
-  //Ridge Temple
+
+
   "block.aboveandbeyond.explosive_barrel": "Explosive Barrel",
 
-  //Spider Caves
+
+
   "block.aboveandbeyond.mygalith": "Mygalith",
   "block.aboveandbeyond.polished_mygalith": "Polished Mygalith",
 
-  //Meteors
+
+
   "block.aboveandbeyond.meteorite_block": "Meteorite Block"
 }

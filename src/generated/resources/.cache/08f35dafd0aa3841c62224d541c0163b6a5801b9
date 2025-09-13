@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-18T15:57:17.3191403	Tags for minecraft:item mod id aboveandbeyond
+// 1.21.1	2025-09-13T17:09:36.6159222	Tags for minecraft:item mod id aboveandbeyond
 3c0a22d47c5a45ced0e0fc0dfaad6d8568c50604 data/aboveandbeyond/tags/item/cloud_buckets.json
 b8e118eafc53102d88b7a36177a7971fcbc87eea data/aboveandbeyond/tags/item/cobalt_crossbow_bolts.json
 0c274465215ee87e25768eeba26e03eb8f85cb75 data/aboveandbeyond/tags/item/welkin_logs.json
@@ -10,7 +10,7 @@ a10f71cb7b9039541e46aa684733668202167539 data/minecraft/tags/item/enchantable/cr
 80f8955a9d4cb69c2435478c4e492afc5970fc43 data/minecraft/tags/item/enchantable/foot_armor.json
 32431d6c53add8d8bd1aec984f2c226826682027 data/minecraft/tags/item/enchantable/head_armor.json
 f98c2380120f8778807f16204a948d7d23c14d11 data/minecraft/tags/item/enchantable/leg_armor.json
-3c940385410659bb996c047a3f11123ddae2e3c8 data/minecraft/tags/item/enchantable/sword.json
+d82a4dfa16698d703859bf504fafb4f9d7a00c40 data/minecraft/tags/item/enchantable/sword.json
 f12c7a6ac792b1351f7c5a1bcbf0d914c5a5a4fc data/minecraft/tags/item/fox_food.json
 0876d1b894b236656ac3b5d2e4571f32377e6b67 data/minecraft/tags/item/hanging_signs.json
 dc862a2508d1bcad5fc811b212f7461eacdf98ea data/minecraft/tags/item/hoes.json
@@ -24,6 +24,6 @@ e8f03adb7f46ab7b6ec98fdbb51fd8a5bf7b5e89 data/minecraft/tags/item/logs_that_burn
 17c842e5802b20d81b0c24dc43f8afa4c7ee1f86 data/minecraft/tags/item/signs.json
 c2ddda886140a26a899834c2d403f63338c235ef data/minecraft/tags/item/stone_bricks.json
 88d289827e2725a03e71c69884361ff9a4fa770f data/minecraft/tags/item/stone_tool_materials.json
-3c940385410659bb996c047a3f11123ddae2e3c8 data/minecraft/tags/item/swords.json
+d82a4dfa16698d703859bf504fafb4f9d7a00c40 data/minecraft/tags/item/swords.json
 b83789ece65d811875b7879766f5e89308a5f363 data/minecraft/tags/item/trimmable_armor.json
 52ee0d1198917212514737f6d8de975be475818b data/minecraft/tags/item/trim_materials.json

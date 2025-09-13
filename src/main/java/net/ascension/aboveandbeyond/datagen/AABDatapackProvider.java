@@ -1,9 +1,9 @@
 package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.trim.AABTrimMaterials;
-import net.ascension.aboveandbeyond.worldgen.AABBiomeModifiers;
-import net.ascension.aboveandbeyond.worldgen.AABPlacedFeatures;
+import net.ascension.aboveandbeyond.registry.AABTrimMaterials;
+import net.ascension.aboveandbeyond.registry.AABBiomeModifiers;
+import net.ascension.aboveandbeyond.registry.AABPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;

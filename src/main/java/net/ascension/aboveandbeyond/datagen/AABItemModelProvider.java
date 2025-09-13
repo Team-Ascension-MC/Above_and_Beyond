@@ -1,8 +1,8 @@
 package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.block.AABBlocks;
-import net.ascension.aboveandbeyond.item.AABItems;
+import net.ascension.aboveandbeyond.registry.AABBlocks;
+import net.ascension.aboveandbeyond.registry.AABItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -34,9 +34,7 @@ public class AABItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
-    public AABItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, AboveAndBeyond.ID, existingFileHelper);
-    }
+    public AABItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {super(output, AboveAndBeyond.ID, existingFileHelper); }
 
     @Override
     protected void registerModels() {

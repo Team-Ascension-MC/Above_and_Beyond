@@ -1,8 +1,8 @@
 package net.ascension.aboveandbeyond.datagen;
 
 import net.ascension.aboveandbeyond.AboveAndBeyond;
-import net.ascension.aboveandbeyond.block.AABBlocks;
-import net.ascension.aboveandbeyond.util.AABTags;
+import net.ascension.aboveandbeyond.registry.AABBlocks;
+import net.ascension.aboveandbeyond.registry.AABTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

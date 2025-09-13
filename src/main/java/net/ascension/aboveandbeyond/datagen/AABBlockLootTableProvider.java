@@ -1,7 +1,7 @@
 package net.ascension.aboveandbeyond.datagen;
 
-import net.ascension.aboveandbeyond.block.AABBlocks;
-import net.ascension.aboveandbeyond.item.AABItems;
+import net.ascension.aboveandbeyond.registry.AABBlocks;
+import net.ascension.aboveandbeyond.registry.AABItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;

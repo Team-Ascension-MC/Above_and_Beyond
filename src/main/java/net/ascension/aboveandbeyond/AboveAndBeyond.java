@@ -1,47 +1,31 @@
 package net.ascension.aboveandbeyond;
 
-import com.mojang.logging.LogUtils;
-import net.ascension.aboveandbeyond.block.AABBlocks;
-import net.ascension.aboveandbeyond.block.entity.AABBlockEntities;
-import net.ascension.aboveandbeyond.component.AABDataComponent;
-import net.ascension.aboveandbeyond.entity.AABEntities;
-import net.ascension.aboveandbeyond.entity.client.renderer.FlooferRenderer;
-import net.ascension.aboveandbeyond.entity.client.renderer.KoiRenderer;
-import net.ascension.aboveandbeyond.entity.client.renderer.WelkinBoatRenderer;
-import net.ascension.aboveandbeyond.item.AABCreativeTabs;
-import net.ascension.aboveandbeyond.item.AABItems;
-import net.ascension.aboveandbeyond.sound.AABSounds;
+import net.ascension.aboveandbeyond.entity.renderer.FlooferRenderer;
+import net.ascension.aboveandbeyond.entity.renderer.KoiRenderer;
+import net.ascension.aboveandbeyond.entity.renderer.WelkinBoatRenderer;
+import net.ascension.aboveandbeyond.registry.*;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import org.slf4j.Logger;
 
 @Mod(AboveAndBeyond.ID)
 public class AboveAndBeyond {
     public static final String ID = "aboveandbeyond";
-    private static final Logger LOGGER = LogUtils.getLogger();
 
-    public AboveAndBeyond(IEventBus modEventBus, ModContainer modContainer)
+    public AboveAndBeyond(IEventBus modEventBus/*, ModContainer modContainer*/)
     {
         modEventBus.addListener(this::commonSetup);
-
-        NeoForge.EVENT_BUS.register(this);
+        //NeoForge.EVENT_BUS.register(this);
 
         AABCreativeTabs.register(modEventBus);
         AABBlocks.register(modEventBus);
@@ -49,35 +33,16 @@ public class AboveAndBeyond {
         AABBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         AABEntities.register(modEventBus);
         AABSounds.register(modEventBus);
-        AABDataComponent.register(modEventBus);
-
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        //AABDataComponents.register(modEventBus);
     }
-
-    public static ResourceLocation asResource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(ID, path);
-    }
+    public static ResourceLocation asResource(String path) {return ResourceLocation.fromNamespaceAndPath(ID, path); }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        if (Config.logDirtBlock)
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-
-        LOGGER.info("{}{}", Config.magicNumberIntroduction, Config.magicNumber);
-
-        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
 
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
@@ -88,10 +53,8 @@ public class AboveAndBeyond {
             EntityRenderers.register(AABEntities.FLOOFER.get(), FlooferRenderer::new);
         }
 
-        public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(
-                AboveAndBeyond.asResource("boat/welkin"), "main");
-        public static final ModelLayerLocation WELKIN_CHEST_BOAT_LAYER = new ModelLayerLocation(
-                AboveAndBeyond.asResource("chest_boat/welkin"), "main");
+        public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(AboveAndBeyond.asResource("boat/welkin"), "main");
+        public static final ModelLayerLocation WELKIN_CHEST_BOAT_LAYER = new ModelLayerLocation(AboveAndBeyond.asResource("chest_boat/welkin"), "main");
 
         @SubscribeEvent
         public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -99,4 +62,4 @@ public class AboveAndBeyond {
             event.registerLayerDefinition(WELKIN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
         }
     }
-}
+
