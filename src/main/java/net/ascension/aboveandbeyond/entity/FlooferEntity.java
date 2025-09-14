@@ -9,6 +9,7 @@ import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.bus.api.SubscribeEvent;
 
 public class FlooferEntity extends Chicken {
     public final AnimationState idleAnimationState = new AnimationState();

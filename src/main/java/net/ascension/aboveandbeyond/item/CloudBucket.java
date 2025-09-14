@@ -1,25 +1,32 @@
 package net.ascension.aboveandbeyond.item;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 
 public class CloudBucket extends SolidBucketItem {
     private final SoundEvent placeSound;
 
-    public CloudBucket(Block blockToPlace, SoundEvent placeSound, Properties properties) {
-        super(blockToPlace, placeSound, properties);
+    public CloudBucket(Block block, SoundEvent placeSound, Item.Properties properties) {
+        super(block, placeSound, properties);
         this.placeSound = placeSound;
     }
 
@@ -56,5 +63,13 @@ public class CloudBucket extends SolidBucketItem {
         } else {
             return false;
         }
+    }
+
+    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
+        double scale = player.blockInteractionRange() * (player.isShiftKeyDown() ? (double)0.5F : (double)1.0F);
+        Vec3 eyePos = player.getEyePosition();
+        Vec3 lookVec = eyePos.add(player.calculateViewVector(player.getXRot(), player.getYRot()).scale(scale));
+        BlockHitResult rayTrace = level.clip(new ClipContext(eyePos, lookVec, net.minecraft.world.level.ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, player));
+        return new InteractionResultHolder<>(this.useOn(new UseOnContext(player, usedHand, rayTrace)), player.getItemInHand(usedHand));
     }
 }
