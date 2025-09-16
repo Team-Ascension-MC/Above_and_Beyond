@@ -2,7 +2,7 @@ package net.ascension.aboveandbeyond.entity.renderer;
 
 import com.google.common.collect.Maps;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.entity.variant.KoiVariant;
 import net.ascension.aboveandbeyond.entity.model.KoiModel;
 import net.ascension.aboveandbeyond.entity.KoiEntity;
@@ -17,10 +17,10 @@ import java.util.Map;
 public class KoiRenderer extends MobRenderer<KoiEntity, KoiModel<KoiEntity>> {
     private static final Map<KoiVariant, ResourceLocation> LOCATION_BY_VARIANT =
             Util.make(Maps.newEnumMap(KoiVariant.class), map -> {
-                map.put(KoiVariant.KOHAKU, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_kohaku.png"));
-                map.put(KoiVariant.SANKE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_sanke.png"));
-                map.put(KoiVariant.SHOWA, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_showa.png"));
-                map.put(KoiVariant.SHERBERT, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "textures/entity/koi/koi_sherbert.png"));
+                map.put(KoiVariant.KOHAKU, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "textures/entity/koi/koi_kohaku.png"));
+                map.put(KoiVariant.SANKE, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "textures/entity/koi/koi_sanke.png"));
+                map.put(KoiVariant.SHOWA, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "textures/entity/koi/koi_showa.png"));
+                map.put(KoiVariant.SHERBERT, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "textures/entity/koi/koi_sherbert.png"));
             });
 
     public KoiRenderer(EntityRendererProvider.Context context) {

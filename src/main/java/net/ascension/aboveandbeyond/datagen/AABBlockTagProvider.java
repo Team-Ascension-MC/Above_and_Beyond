@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.datagen;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.registry.AABBlocks;
 import net.ascension.aboveandbeyond.registry.AABTags;
 import net.minecraft.core.HolderLookup;
@@ -14,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class AABBlockTagProvider extends BlockTagsProvider {
     public AABBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, AboveAndBeyond.ID, existingFileHelper);
+        super(output, lookupProvider, SparkingSkies.ID, existingFileHelper);
     }
 
     @Override

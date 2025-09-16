@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class AABTrimMaterials {
     public static final ResourceKey<TrimMaterial> COBALT =
-            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "cobalt"));
+            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "cobalt"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
         register(context, COBALT, AABItems.COBALT_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#66718b").getOrThrow()), 1.0F);

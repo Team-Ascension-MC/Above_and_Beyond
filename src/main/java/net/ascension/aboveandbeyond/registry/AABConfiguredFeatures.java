@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -30,7 +30,7 @@ public class AABConfiguredFeatures {
 
     }
 
-    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name)); }
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, name)); }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {context.register(key, new ConfiguredFeature<>(feature, configuration)); }
 }

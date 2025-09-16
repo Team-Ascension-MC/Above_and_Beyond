@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.entity.FlooferEntity;
 import net.ascension.aboveandbeyond.entity.KoiEntity;
 import net.ascension.aboveandbeyond.entity.WelkinBoatEntity;
@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 public class AABEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, AboveAndBeyond.ID);
+            DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, SparkingSkies.ID);
 
     public static final DeferredHolder<EntityType<?>, EntityType<WelkinBoatEntity>> WELKIN_BOAT =
             ENTITY_TYPES.register("welkin_boat", () -> EntityType.Builder.<WelkinBoatEntity>of(WelkinBoatEntity::new, MobCategory.MISC)

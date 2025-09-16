@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.block.*;
 import net.ascension.aboveandbeyond.template.*;
 import net.minecraft.core.BlockPos;
@@ -23,7 +23,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class AABBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AboveAndBeyond.ID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(SparkingSkies.ID);
 
     /* SKY ISLANDS */
     //Cloud Islands

@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.datagen;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.registry.AABBlocks;
 import net.ascension.aboveandbeyond.registry.AABItems;
 import net.minecraft.data.PackOutput;
@@ -34,7 +34,7 @@ public class AABItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
-    public AABItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {super(output, AboveAndBeyond.ID, existingFileHelper); }
+    public AABItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {super(output, SparkingSkies.ID, existingFileHelper); }
 
     @Override
     protected void registerModels() {
@@ -78,7 +78,7 @@ public class AABItemModelProvider extends ItemModelProvider {
     }
 
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
-        final String MOD_ID = AboveAndBeyond.ID;
+        final String MOD_ID = SparkingSkies.ID;
 
         if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
@@ -122,6 +122,6 @@ public class AABItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder saplingItem(DeferredBlock<SaplingBlock> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID,"block/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID,"block/" + item.getId().getPath()));
     }
 }

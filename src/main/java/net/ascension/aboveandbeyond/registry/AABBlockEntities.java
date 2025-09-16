@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.template.AABHangingSignBlockEntity;
 import net.ascension.aboveandbeyond.template.AABSignBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class AABBlockEntities {
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, AboveAndBeyond.ID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, SparkingSkies.ID);
 
 /*    public static final Supplier<BlockEntityType<AABSignBlockEntity>> WELKIN_SIGN =
             BLOCK_ENTITIES.register("welkin_sign", () ->

@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public class AABSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, AboveAndBeyond.ID);
+            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, SparkingSkies.ID);
 
     /* Cloud Islands */
     public static final Supplier<SoundEvent> GALE = registerSoundEvent("gale");
@@ -27,11 +27,11 @@ public class AABSounds {
     public static final ResourceKey<JukeboxSong> HEIST_KEY = createSong("heist");
 
     private static ResourceKey<JukeboxSong> createSong(String name) {
-        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name));
+        return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, name));
     }
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
     public static void register(IEventBus eventBus) {

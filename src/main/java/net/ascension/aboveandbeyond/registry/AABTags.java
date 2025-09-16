@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -13,7 +13,7 @@ public class AABTags {
         public static final TagKey<Block> CLOUD_BLOCKS = createTag("cloud_blocks");
         public static final TagKey<Block> WELKIN_LOGS = createTag("welkin_logs");
 
-        private static TagKey<Block> createTag(String name) {return BlockTags.create(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name)); }
+        private static TagKey<Block> createTag(String name) {return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, name)); }
     }
 
     public static class Items {
@@ -22,6 +22,6 @@ public class AABTags {
 
         public static final TagKey<Item> COBALT_CROSSBOW_BOLTS = createTag("cobalt_crossbow_bolts");
 
-        private static TagKey<Item> createTag(String name) {return ItemTags.create(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name)); }
+        private static TagKey<Item> createTag(String name) {return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, name)); }
     }
 }

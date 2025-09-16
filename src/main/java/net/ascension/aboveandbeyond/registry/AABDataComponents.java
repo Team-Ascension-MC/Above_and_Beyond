@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.bus.api.IEventBus;
@@ -11,7 +11,7 @@ import java.util.function.UnaryOperator;
 
 public class AABDataComponents {
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES =
-        DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, AboveAndBeyond.ID);
+        DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, SparkingSkies.ID);
 
     /* DATA */
 

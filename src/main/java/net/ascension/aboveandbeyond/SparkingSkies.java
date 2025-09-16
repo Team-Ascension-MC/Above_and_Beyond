@@ -15,11 +15,11 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
-@Mod(AboveAndBeyond.ID)
-public class AboveAndBeyond {
+@Mod(SparkingSkies.ID)
+public class SparkingSkies {
     public static final String ID = "aboveandbeyond";
 
-    public AboveAndBeyond(IEventBus modEventBus, ModContainer modContainer) {
+    public SparkingSkies(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
         AABCreativeTabs.register(modEventBus);
@@ -36,7 +36,7 @@ public class AboveAndBeyond {
 
     }
 
-    @Mod(value = AboveAndBeyond.ID, dist = Dist.CLIENT) @EventBusSubscriber(modid = AboveAndBeyond.ID, value = Dist.CLIENT)
+    @Mod(value = SparkingSkies.ID, dist = Dist.CLIENT) @EventBusSubscriber(modid = SparkingSkies.ID, value = Dist.CLIENT)
     public static class AABClient {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {

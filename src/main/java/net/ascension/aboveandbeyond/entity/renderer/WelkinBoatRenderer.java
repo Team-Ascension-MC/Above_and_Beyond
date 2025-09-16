@@ -2,7 +2,7 @@ package net.ascension.aboveandbeyond.entity.renderer;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.datafixers.util.Pair;
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.entity.WelkinBoatEntity;
 import net.ascension.aboveandbeyond.entity.WelkinChestBoatEntity;
 import net.minecraft.client.model.BoatModel;
@@ -24,7 +24,7 @@ public class WelkinBoatRenderer extends BoatRenderer {
     public WelkinBoatRenderer(EntityRendererProvider.Context pContext, boolean pChestBoat) {
         super(pContext, pChestBoat);
         this.boatResources = Stream.of(WelkinBoatEntity.Type.values()).collect(ImmutableMap.toImmutableMap(type -> type,
-                type -> Pair.of(AboveAndBeyond.asResource(getTextureLocation(type, pChestBoat)),
+                type -> Pair.of(SparkingSkies.asResource(getTextureLocation(type, pChestBoat)),
                         this.createBoatModel(pContext, type, pChestBoat))));
     }
 
@@ -47,7 +47,7 @@ public class WelkinBoatRenderer extends BoatRenderer {
     }
 
     private static ModelLayerLocation createLocation(String pPath, String pModel) {
-        return new ModelLayerLocation(AboveAndBeyond.asResource(pPath), pModel);
+        return new ModelLayerLocation(SparkingSkies.asResource(pPath), pModel);
     }
 
     public Pair<ResourceLocation, ListModel<Boat>> getModelWithLocation(Boat boat) {

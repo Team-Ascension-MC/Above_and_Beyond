@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.datagen;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@Mod(value = AboveAndBeyond.ID) @EventBusSubscriber(modid = AboveAndBeyond.ID)
+@Mod(value = SparkingSkies.ID) @EventBusSubscriber(modid = SparkingSkies.ID)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {

@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.datagen;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.registry.AABBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -17,7 +17,7 @@ import java.util.function.Function;
 
 public class AABBlockStateProvider extends BlockStateProvider {
     public AABBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, AboveAndBeyond.ID, exFileHelper);
+        super(output, SparkingSkies.ID, exFileHelper);
     }
 
     /*Cloud Islands*/
@@ -107,7 +107,7 @@ public class AABBlockStateProvider extends BlockStateProvider {
     private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(SweetBerryBushBlock.AGE),
-                ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "block/" + textureName + state.getValue(SweetBerryBushBlock.AGE))).renderType("cutout"));
+                ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "block/" + textureName + state.getValue(SweetBerryBushBlock.AGE))).renderType("cutout"));
 
         return models;
     }

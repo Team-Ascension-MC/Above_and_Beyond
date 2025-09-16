@@ -2,7 +2,7 @@ package net.ascension.aboveandbeyond.entity.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.entity.animation.KoiAnimation;
 import net.ascension.aboveandbeyond.entity.KoiEntity;
 import net.minecraft.client.model.HierarchicalModel;
@@ -14,7 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class KoiModel<T extends KoiEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION =
-            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, "koi"), "main");
+            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "koi"), "main");
     private final ModelPart koi;
 
     public KoiModel(ModelPart root) {

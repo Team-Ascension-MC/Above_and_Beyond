@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.datagen;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.registry.AABTrimMaterials;
 import net.ascension.aboveandbeyond.registry.AABBiomeModifiers;
 import net.ascension.aboveandbeyond.registry.AABPlacedFeatures;
@@ -23,6 +23,6 @@ public class AABDatapackProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.TRIM_MATERIAL, AABTrimMaterials::bootstrap);
 
     public AABDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(AboveAndBeyond.ID));
+        super(output, registries, BUILDER, Set.of(SparkingSkies.ID));
     }
 }

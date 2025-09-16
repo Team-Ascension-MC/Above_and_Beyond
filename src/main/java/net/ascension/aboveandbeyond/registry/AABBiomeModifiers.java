@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -25,5 +25,5 @@ public class AABBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
-    private static ResourceKey<BiomeModifier> registerKey(String name) {return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(AboveAndBeyond.ID, name)); }
+    private static ResourceKey<BiomeModifier> registerKey(String name) {return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, name)); }
 }

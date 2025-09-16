@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.item.*;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class AABItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AboveAndBeyond.ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SparkingSkies.ID);
 
     /* SKY ISLANDS */
 

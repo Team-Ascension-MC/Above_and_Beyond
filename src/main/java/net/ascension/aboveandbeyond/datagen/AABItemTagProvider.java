@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.datagen;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.registry.AABBlocks;
 import net.ascension.aboveandbeyond.registry.AABItems;
 import net.ascension.aboveandbeyond.registry.AABTags;
@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 public class AABItemTagProvider extends ItemTagsProvider {
     public AABItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                               CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, blockTags, AboveAndBeyond.ID, existingFileHelper);
+        super(output, lookupProvider, blockTags, SparkingSkies.ID, existingFileHelper);
     }
 
     @Override

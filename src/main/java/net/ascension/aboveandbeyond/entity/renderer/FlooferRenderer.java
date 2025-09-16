@@ -1,7 +1,7 @@
 package net.ascension.aboveandbeyond.entity.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.ascension.aboveandbeyond.entity.model.FlooferModel;
 import net.ascension.aboveandbeyond.entity.FlooferEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -16,7 +16,7 @@ public class FlooferRenderer extends MobRenderer<FlooferEntity, FlooferModel<Flo
 
     @Override
     public ResourceLocation getTextureLocation(FlooferEntity entity) {
-        return AboveAndBeyond.asResource("textures/entity/floofer.png");
+        return SparkingSkies.asResource("textures/entity/floofer.png");
     }
 
     @Override

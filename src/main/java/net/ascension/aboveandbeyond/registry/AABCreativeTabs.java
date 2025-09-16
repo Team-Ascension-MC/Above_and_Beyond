@@ -1,6 +1,6 @@
 package net.ascension.aboveandbeyond.registry;
 
-import net.ascension.aboveandbeyond.AboveAndBeyond;
+import net.ascension.aboveandbeyond.SparkingSkies;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -15,7 +15,7 @@ import static net.ascension.aboveandbeyond.registry.AABBlocks.*;
 
 public class AABCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AboveAndBeyond.ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SparkingSkies.ID);
 
     public static final Supplier<CreativeModeTab> AAB_TAB = CREATIVE_MODE_TAB.register("aab_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(PUFFGRASS_BLOCK.get()))
