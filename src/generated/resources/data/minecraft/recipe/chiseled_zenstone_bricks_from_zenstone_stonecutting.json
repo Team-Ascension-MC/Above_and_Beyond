@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "aboveandbeyond:zenstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "aboveandbeyond:chiseled_zenstone_bricks"
+  }
+}

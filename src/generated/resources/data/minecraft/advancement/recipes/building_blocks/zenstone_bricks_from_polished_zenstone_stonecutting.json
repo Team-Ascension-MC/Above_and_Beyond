@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_zenstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "aboveandbeyond:polished_zenstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:zenstone_bricks_from_polished_zenstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_zenstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:zenstone_bricks_from_polished_zenstone_stonecutting"
+    ]
+  }
+}

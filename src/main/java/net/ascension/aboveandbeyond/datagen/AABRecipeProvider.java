@@ -64,32 +64,32 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //zenstone
         chiseledBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.CHISELED_ZENSTONE_BRICKS.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICK_SLAB.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
-       // stonecutterResultFromBase((RecipeOutput) AABBlocks.CHISELED_ZENSTONE_BRICKS.get(), RecipeCategory.BUILDING_BLOCKS, AABBlocks.CHISELED_ZENSTONE_BRICKS.get(), AABBlocks.ZENSTONE.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.CHISELED_ZENSTONE_BRICKS.get(), AABBlocks.ZENSTONE.get(), 1);
 
         stairBuilder(AABBlocks.ZENSTONE_STAIRS.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_SLAB.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
         wallBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_WALL.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
-        /*stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_SLAB.get(), AABBlocks.ZENSTONE.get(), 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_SLAB.get(), AABBlocks.ZENSTONE.get(), 2);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_STAIRS.get(), AABBlocks.ZENSTONE.get(), 1);
-        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_WALL.get(), AABBlocks.ZENSTONE.get(), 1);*/
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_WALL.get(), AABBlocks.ZENSTONE.get(), 1);
 
         polishedBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE.get(), Ingredient.of(AABBlocks.ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_zenstone", has(AABBlocks.ZENSTONE.get())).save(recipeOutput);
         stairBuilder(AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_SLAB.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
         wallBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_WALL.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("polished_zenstone").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
-     /*   stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE, AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE, AABBlocks.ZENSTONE.get(), 1);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_SLAB.get(), AABBlocks.ZENSTONE.get(), 2);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), AABBlocks.ZENSTONE.get(), 1);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_WALL.get(), AABBlocks.ZENSTONE.get(), 1);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_SLAB.get(), AABBlocks.POLISHED_ZENSTONE.get(), 2);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_STAIRS.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);
-        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_WALL.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);*/
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.POLISHED_ZENSTONE_WALL.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);
 
         polishedBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICKS.get(), Ingredient.of(AABBlocks.POLISHED_ZENSTONE.get())).group("zenstone_bricks").unlockedBy("has_polished_zenstone", has(AABBlocks.POLISHED_ZENSTONE.get())).save(recipeOutput);
         stairBuilder(AABBlocks.ZENSTONE_BRICK_STAIRS.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICKS.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_SLAB.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICKS.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
         wallBuilder(RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), Ingredient.of(AABBlocks.ZENSTONE_BRICKS.get())).group("zenstone_bricks").unlockedBy("has_zenstone_bricks", has(AABBlocks.ZENSTONE_BRICKS.get())).save(recipeOutput);
-       /* stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICKS, AABBlocks.ZENSTONE.get(), 1);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICKS, AABBlocks.ZENSTONE.get(), 1);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_SLAB.get(), AABBlocks.ZENSTONE.get(), 2);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_STAIRS.get(), AABBlocks.ZENSTONE.get(), 1);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.ZENSTONE.get(), 1);
@@ -99,7 +99,7 @@ public class AABRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.POLISHED_ZENSTONE.get(), 1);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_SLAB.get(), AABBlocks.ZENSTONE_BRICKS.get(), 2);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_STAIRS.get(), AABBlocks.ZENSTONE_BRICKS.get(), 1);
-        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.ZENSTONE_BRICKS.get(), 1);*/
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, AABBlocks.ZENSTONE_BRICK_WALL.get(), AABBlocks.ZENSTONE_BRICKS.get(), 1);
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(AABBlocks.ZENSTONE_BRICKS.asItem()), RecipeCategory.BUILDING_BLOCKS, AABBlocks.CRACKED_ZENSTONE_BRICKS.asItem(), 0.1f, 200);
 
