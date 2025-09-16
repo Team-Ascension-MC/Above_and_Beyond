@@ -32,7 +32,5 @@ public class AABEntities {
             ENTITY_TYPES.register("koi", () -> EntityType.Builder.of(KoiEntity::new, MobCategory.WATER_CREATURE)
                     .sized(0.5f, 0.25f).build("koi"));
 
-    public static void register(IEventBus eventBus) {
-        ENTITY_TYPES.register(eventBus);
-    }
+    public static void register(IEventBus eventBus) {ENTITY_TYPES.register(eventBus); }
 }

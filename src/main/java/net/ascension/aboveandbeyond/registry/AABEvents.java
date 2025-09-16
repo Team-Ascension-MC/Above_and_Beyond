@@ -5,6 +5,9 @@ import net.ascension.aboveandbeyond.entity.FlooferEntity;
 import net.ascension.aboveandbeyond.entity.KoiEntity;
 import net.ascension.aboveandbeyond.entity.model.FlooferModel;
 import net.ascension.aboveandbeyond.entity.model.KoiModel;
+import net.minecraft.client.model.BoatModel;
+import net.minecraft.client.model.ChestBoatModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.entity.npc.VillagerTrades;
@@ -75,25 +78,27 @@ public class AABEvents {
                 new ItemStack(Items.EMERALD, 3), 8, 5, 0.05f));
     }
 
-    public static class AABEventBusEvents {
-        @SubscribeEvent
-        public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-            event.registerLayerDefinition(KoiModel.LAYER_LOCATION, KoiModel::createBodyLayer);
-            event.registerLayerDefinition(FlooferModel.LAYER_LOCATION, FlooferModel::createBodyLayer);
-        }
+    public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(AboveAndBeyond.asResource("boat/welkin"), "main");
+    public static final ModelLayerLocation WELKIN_CHEST_BOAT_LAYER = new ModelLayerLocation(AboveAndBeyond.asResource("chest_boat/welkin"), "main");
+    @SubscribeEvent
+    public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(WELKIN_BOAT_LAYER, BoatModel::createBodyModel);
+        event.registerLayerDefinition(WELKIN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
 
-        @SubscribeEvent
-        public static void registerAttributes(EntityAttributeCreationEvent event) {
-            event.put(AABEntities.KOI.get(), KoiEntity.createAttributes().build());
-            event.put(AABEntities.FLOOFER.get(), FlooferEntity.createAttributes().build());
-        }
+        event.registerLayerDefinition(FlooferModel.LAYER_LOCATION, FlooferModel::createBodyLayer);
+        event.registerLayerDefinition(KoiModel.LAYER_LOCATION, KoiModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(AABEntities.FLOOFER.get(), FlooferEntity.createAttributes().build());
+        event.put(AABEntities.KOI.get(), KoiEntity.createAttributes().build());
     }
 
     @Mod(value = AboveAndBeyond.ID, dist = Dist.CLIENT) @EventBusSubscriber(modid = AboveAndBeyond.ID, value = Dist.CLIENT)
     public static class AABEventClientBusEvents {
         @net.neoforged.bus.api.SubscribeEvent
         public static void registerBER(net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
-
             event.registerBlockEntityRenderer(AABBlockEntities.WELKIN_SIGN.get(), SignRenderer::new);
             event.registerBlockEntityRenderer(AABBlockEntities.WELKIN_HANGING_SIGN.get(), HangingSignRenderer::new);
         }
