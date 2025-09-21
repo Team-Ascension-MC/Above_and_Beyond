@@ -22,6 +22,7 @@ eclipse
 run
 runs
 run-data
+src/main/resources/assets/minecraft/textures/entity/slim/efe.png
 
 repo
 .DS_Store

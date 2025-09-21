@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "aboveandbeyond:block/buzz_bomb",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "aboveandbeyond:block/buzz_bomb"
+    },
+    "axis=z": {
+      "model": "aboveandbeyond:block/buzz_bomb",
+      "x": 90
+    }
+  }
+}
