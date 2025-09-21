@@ -173,8 +173,8 @@ public class AABBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
 
     //Ridge Temples
-    public static final DeferredBlock<Block> EXPLOSIVE_BARREL = registerBlock("explosive_barrel",
-            () -> new ExplosiveBarrel(BlockBehaviour.Properties.ofFullCopy(Blocks.TNT)));
+    public static final DeferredBlock<Block> BUZZ_BOMB = registerBlock("buzz_bomb",
+            () -> new BuzzBomb(BlockBehaviour.Properties.ofFullCopy(Blocks.TNT)));
 
     //Spider Caves
     public static final DeferredBlock<Block> MYGALITH = registerBlock("mygalith",

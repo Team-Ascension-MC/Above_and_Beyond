@@ -23,11 +23,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "aboveandbeyond:explosive_barrel"
+          "name": "aboveandbeyond:buzz_bomb"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "aboveandbeyond:blocks/explosive_barrel"
+  "random_sequence": "aboveandbeyond:blocks/buzz_bomb"
 }

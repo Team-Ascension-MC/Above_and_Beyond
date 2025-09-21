@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class ExplosiveBarrel extends RotatedPillarBlock {
-    public ExplosiveBarrel(Properties properties) {
+public class BuzzBomb extends RotatedPillarBlock {
+    public BuzzBomb(Properties properties) {
         super(properties);
     }
 

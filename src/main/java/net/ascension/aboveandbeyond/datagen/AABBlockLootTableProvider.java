@@ -111,7 +111,7 @@ public class AABBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(AABBlocks.COBALT_BLOCK.get());
 
         //Ridge Temples
-        this.dropWhenSilkTouch(AABBlocks.EXPLOSIVE_BARREL.get());
+        this.dropWhenSilkTouch(AABBlocks.BUZZ_BOMB.get());
         this.dropSelf(AABBlocks.MYGALITH.get());
         this.dropSelf(AABBlocks.POLISHED_MYGALITH.get());
     }

@@ -80,6 +80,7 @@ public class AABEvents {
 
     public static final ModelLayerLocation WELKIN_BOAT_LAYER = new ModelLayerLocation(SparkingSkies.asResource("boat/welkin"), "main");
     public static final ModelLayerLocation WELKIN_CHEST_BOAT_LAYER = new ModelLayerLocation(SparkingSkies.asResource("chest_boat/welkin"), "main");
+
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(WELKIN_BOAT_LAYER, BoatModel::createBodyModel);
@@ -95,7 +96,8 @@ public class AABEvents {
         event.put(AABEntities.KOI.get(), KoiEntity.createAttributes().build());
     }
 
-    @Mod(value = SparkingSkies.ID, dist = Dist.CLIENT) @EventBusSubscriber(modid = SparkingSkies.ID, value = Dist.CLIENT)
+    @Mod(value = SparkingSkies.ID, dist = Dist.CLIENT)
+    @EventBusSubscriber(modid = SparkingSkies.ID, value = Dist.CLIENT)
     public static class AABEventClientBusEvents {
         @net.neoforged.bus.api.SubscribeEvent
         public static void registerBER(net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers event) {

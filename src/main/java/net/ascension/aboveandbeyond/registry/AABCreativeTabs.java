@@ -65,8 +65,8 @@ public class AABCreativeTabs {
                         output.accept(WELKIN_SAPLING);
                         output.accept(AABItems.WELKIN_SIGN);
                         output.accept(AABItems.WELKIN_HANGING_SIGN);
-                        output.accept(AABItems.WELKIN_BOAT);
-                        output.accept(AABItems.WELKIN_CHEST_BOAT);
+                        output.accept(WELKIN_BOAT);
+                        output.accept(WELKIN_CHEST_BOAT);
                         output.accept(FLOOF_BLOCK);
                         output.accept(FLOOF);
                         output.accept(FLOOFER_SPAWN_EGG);
@@ -103,7 +103,7 @@ public class AABCreativeTabs {
                         output.accept(COBALT_INGOT);
 
                         //Sanctums
-                        output.accept(EXPLOSIVE_BARREL);
+                        output.accept(BUZZ_BOMB);
                         output.accept(MUSIC_DISC_HEIST);
 
                         //Spider Caves
