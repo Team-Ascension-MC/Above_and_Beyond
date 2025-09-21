@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/crossbow",
   "textures": {
-    "layer0": "aboveandbeyond:item/cobalt_crossbow_pulling_1"
+    "layer0": "aboveandbeyond:item/cobalt_crossbow_arrow"
   }
 }

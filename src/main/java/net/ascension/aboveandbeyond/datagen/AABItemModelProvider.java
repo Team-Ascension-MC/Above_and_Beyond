@@ -22,6 +22,7 @@ import java.util.LinkedHashMap;
 
 public class AABItemModelProvider extends ItemModelProvider {
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
         trimMaterials.put(TrimMaterials.IRON, 0.2F);
@@ -34,7 +35,10 @@ public class AABItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
-    public AABItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {super(output, SparkingSkies.ID, existingFileHelper); }
+
+    public AABItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, SparkingSkies.ID, existingFileHelper);
+    }
 
     @Override
     protected void registerModels() {
@@ -80,7 +84,7 @@ public class AABItemModelProvider extends ItemModelProvider {
     private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
         final String MOD_ID = SparkingSkies.ID;
 
-        if(itemDeferredItem.get() instanceof ArmorItem armorItem) {
+        if (itemDeferredItem.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
                 float trimValue = value;
 
@@ -111,7 +115,7 @@ public class AABItemModelProvider extends ItemModelProvider {
                 this.withExistingParent(itemDeferredItem.getId().getPath(),
                                 mcLoc("item/generated"))
                         .override()
-                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace()  + ":item/" + trimNameResLoc.getPath()))
+                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace() + ":item/" + trimNameResLoc.getPath()))
                         .predicate(mcLoc("trim_type"), trimValue).end()
                         .texture("layer0",
                                 ResourceLocation.fromNamespaceAndPath(MOD_ID,
@@ -119,9 +123,10 @@ public class AABItemModelProvider extends ItemModelProvider {
             });
         }
     }
+
     private ItemModelBuilder saplingItem(DeferredBlock<SaplingBlock> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID,"block/" + item.getId().getPath()));
+                ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, "block/" + item.getId().getPath()));
     }
 }

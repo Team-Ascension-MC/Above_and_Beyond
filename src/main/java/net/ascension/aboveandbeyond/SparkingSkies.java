@@ -5,7 +5,12 @@ import net.ascension.aboveandbeyond.entity.renderer.KoiRenderer;
 import net.ascension.aboveandbeyond.entity.renderer.WelkinBoatRenderer;
 import net.ascension.aboveandbeyond.registry.*;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CrossbowItem;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.ChargedProjectiles;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -30,16 +35,27 @@ public class SparkingSkies {
         AABSounds.register(modEventBus);
         AABDataComponents.register(modEventBus);
     }
-    public static ResourceLocation asResource(String path) {return ResourceLocation.fromNamespaceAndPath(ID, path); }
+
+    public static ResourceLocation asResource(String path) {
+        return ResourceLocation.fromNamespaceAndPath(ID, path);
+    }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
 
-    @Mod(value = SparkingSkies.ID, dist = Dist.CLIENT) @EventBusSubscriber(modid = SparkingSkies.ID, value = Dist.CLIENT)
+    @Mod(value = SparkingSkies.ID, dist = Dist.CLIENT)
+    @EventBusSubscriber(modid = SparkingSkies.ID, value = Dist.CLIENT)
     public static class AABClient {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemProperties.register(AABItems.COBALT_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("pulling"), (stack, level, entity, i) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack && !CrossbowItem.isCharged(stack) ? 1.0F : 0.0F);
+            ItemProperties.register(AABItems.COBALT_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("charged"), (stack, level, entity, i) -> CrossbowItem.isCharged(stack) ? 1.0F : 0.0F);
+            ItemProperties.register(AABItems.COBALT_CROSSBOW.get(), ResourceLocation.withDefaultNamespace("firework"), (stack, level, entity, i) -> {
+                ChargedProjectiles chargedProjectiles = stack.get(DataComponents.CHARGED_PROJECTILES);
+                return chargedProjectiles != null && chargedProjectiles.contains(Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            });
+
             EntityRenderers.register(AABEntities.WELKIN_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, false));
             EntityRenderers.register(AABEntities.WELKIN_CHEST_BOAT.get(), pContext -> new WelkinBoatRenderer(pContext, true));
 

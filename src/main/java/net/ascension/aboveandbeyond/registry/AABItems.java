@@ -83,7 +83,7 @@ public class AABItems {
                     .durability(1562)
                     .stacksTo(1)
                     .rarity(Rarity.COMMON)));
-    public static final DeferredItem<CrossbowItem> COBALT_CROSSBOW = ITEMS.register("cobalt_crossbow", () -> new CrossbowItem(new Item.Properties()));
+    public static final DeferredItem<Item> COBALT_CROSSBOW = ITEMS.register("cobalt_crossbow", () -> new CrossbowItem(new Item.Properties().durability(1600)));
     public static final DeferredItem<ArmorItem> COBALT_HELMET = ITEMS.register("cobalt_helmet", () -> new ArmorItem(AABArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredItem<ArmorItem> COBALT_CHESTPLATE = ITEMS.register("cobalt_chestplate", () -> new ArmorItem(AABArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
     public static final DeferredItem<ArmorItem> COBALT_LEGGINGS = ITEMS.register("cobalt_leggings", () -> new ArmorItem(AABArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
