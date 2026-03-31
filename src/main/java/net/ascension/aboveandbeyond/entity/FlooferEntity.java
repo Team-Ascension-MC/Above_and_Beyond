@@ -1,5 +1,9 @@
 package net.ascension.aboveandbeyond.entity;
 
+import net.ascension.aboveandbeyond.registry.AABEntities;
+import net.ascension.aboveandbeyond.registry.AABTags;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -7,9 +11,9 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.animal.Pig;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.bus.api.SubscribeEvent;
 
 public class FlooferEntity extends Chicken {
     public final AnimationState idleAnimationState = new AnimationState();
@@ -26,6 +30,8 @@ public class FlooferEntity extends Chicken {
         this.goalSelector.addGoal(0, new BreathAirGoal(this));
         this.goalSelector.addGoal(1, new TryFindWaterGoal(this));
         this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
+        this.goalSelector.addGoal(2, new BreedGoal(this, 1));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1, stack -> stack.is(AABTags.Items.FLOOFER_FOOD), false));
         this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1.0D, 40));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
     }
@@ -54,6 +60,16 @@ public class FlooferEntity extends Chicken {
         } else {
             this.flappingAnimationState.stop();
         }
+    }
+
+    @Override
+    public boolean isFood(ItemStack stack) {
+        return stack.is(AABTags.Items.FLOOFER_FOOD);
+    }
+
+    @Override
+    public FlooferEntity getBreedOffspring(ServerLevel level, AgeableMob otherParent) {
+        return AABEntities.FLOOFER.get().create(level);
     }
 
     @Override
