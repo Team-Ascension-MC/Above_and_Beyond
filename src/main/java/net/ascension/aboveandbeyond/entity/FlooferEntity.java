@@ -142,6 +142,7 @@ public class FlooferEntity extends Chicken {
                 vec3.x, 0, vec3.z
         );
         this.playSound(AABSounds.ENTITY_FLOOFER_SNEEZE.get(), 1, 1);
+        this.recoil(0.4F);
 
         if (this.isSnotty()) return;
 
@@ -157,6 +158,16 @@ public class FlooferEntity extends Chicken {
 
             table.getRandomItems(parameters).forEach(this::spawnAtLocation);
         }
+    }
+
+    public void recoil(float power) {
+        Vec3 vec3 = this.getDeltaMovement();
+        float angle = this.yBodyRot * ((float)Math.PI / 180F);
+        double knockbackX = Mth.sin(angle) * power;
+        double knockbackZ = -Mth.cos(angle) * power;
+
+        this.setDeltaMovement(vec3.add(knockbackX, power / 2, knockbackZ));
+        this.hasImpulse = true;
     }
 
     @Override
