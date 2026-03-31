@@ -27,7 +27,12 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         BlockTagsProvider blockTagsProvider = new AABBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
 
-        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(AABBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        List<LootTableProvider.SubProviderEntry> subProviderEntries = List.of(
+                new LootTableProvider.SubProviderEntry(AABBlockLootTableProvider::new, LootContextParamSets.BLOCK),
+                new LootTableProvider.SubProviderEntry(AABEntityLootTableProvider::new, LootContextParamSets.ENTITY),
+                new LootTableProvider.SubProviderEntry(AABGiftLootTableProvider::new, LootContextParamSets.GIFT)
+        );
+        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(), subProviderEntries, lookupProvider));
         generator.addProvider(event.includeServer(), new AABRecipeProvider(packOutput, lookupProvider));
 
         generator.addProvider(event.includeServer(), blockTagsProvider);
