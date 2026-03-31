@@ -125,5 +125,8 @@
 
 
 
-  "block.aboveandbeyond.meteorite_block": "Meteorite Block"
+  "block.aboveandbeyond.meteorite_block": "Meteorite Block",
+
+  "subtitles.entity.aboveandbeyond.floofer.pre_sneeze": "Floofer's nose tickles",
+  "subtitles.entity.aboveandbeyond.floofer.sneeze": "Floofer sneezes"
 }

@@ -26,6 +26,10 @@ public class AABSounds {
     public static final Supplier<SoundEvent> HEIST = registerSoundEvent("heist");
     public static final ResourceKey<JukeboxSong> HEIST_KEY = createSong("heist");
 
+    /* Entity */
+    public static final Supplier<SoundEvent> ENTITY_FLOOFER_PRE_SNEEZE = registerSoundEvent("entity.floofer.pre_sneeze");
+    public static final Supplier<SoundEvent> ENTITY_FLOOFER_SNEEZE = registerSoundEvent("entity.floofer.sneeze");
+
     private static ResourceKey<JukeboxSong> createSong(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(SparkingSkies.ID, name));
     }

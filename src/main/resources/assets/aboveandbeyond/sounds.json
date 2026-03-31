@@ -1,4 +1,18 @@
 {
+  "entity.floofer.pre_sneeze": {
+    "sounds": [
+      "mob/panda/pre_sneeze"
+    ],
+    "subtitle": "subtitles.entity.aboveandbeyond.floofer.pre_sneeze"
+  },
+  "entity.floofer.sneeze": {
+    "sounds": [
+      "mob/panda/sneeze1",
+      "mob/panda/sneeze2",
+      "mob/panda/sneeze3"
+    ],
+    "subtitle": "subtitles.entity.aboveandbeyond.floofer.sneeze"
+  },
   "gale": {
     "sounds": [
       {

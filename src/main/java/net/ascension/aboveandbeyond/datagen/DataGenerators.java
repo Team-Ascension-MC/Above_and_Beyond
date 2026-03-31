@@ -13,7 +13,6 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -30,7 +29,8 @@ public class DataGenerators {
 
         List<LootTableProvider.SubProviderEntry> subProviderEntries = List.of(
                 new LootTableProvider.SubProviderEntry(AABBlockLootTableProvider::new, LootContextParamSets.BLOCK),
-                new LootTableProvider.SubProviderEntry(AABEntityLootTableProvider::new, LootContextParamSets.ENTITY)
+                new LootTableProvider.SubProviderEntry(AABEntityLootTableProvider::new, LootContextParamSets.ENTITY),
+                new LootTableProvider.SubProviderEntry(AABGiftLootTableProvider::new, LootContextParamSets.GIFT)
         );
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(), subProviderEntries, lookupProvider));
         generator.addProvider(event.includeServer(), new AABRecipeProvider(packOutput, lookupProvider));

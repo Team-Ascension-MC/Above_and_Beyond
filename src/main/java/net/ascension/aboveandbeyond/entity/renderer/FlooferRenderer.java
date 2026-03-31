@@ -10,19 +10,34 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 public class FlooferRenderer extends MobRenderer<FlooferEntity, FlooferModel<FlooferEntity>> {
+
     public FlooferRenderer(EntityRendererProvider.Context context) {
         super(context, new FlooferModel<>(context.bakeLayer(FlooferModel.LAYER_LOCATION)), 0.25f);
     }
 
     @Override
     public ResourceLocation getTextureLocation(FlooferEntity entity) {
-        return SparkingSkies.asResource("textures/entity/floofer.png");
+        String base = "textures/entity/floofer/";
+        if (entity.isSneezing()) {
+            base += "sneezing";
+        } else if (entity.isSnotty()) {
+            base += "snotty";
+        } else {
+            base += "default";
+        }
+        return SparkingSkies.asResource(base + ".png");
     }
 
     @Override
     public void render(FlooferEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        if(entity.isBaby()) {poseStack.scale(0.45f, 0.45f, 0.45f); } else {poseStack.scale(1f, 1f, 1f); }
+        if (entity.isBaby()) {
+            poseStack.scale(0.45f, 0.45f, 0.45f);
+        }
+//        else {
+//            poseStack.scale(1, 1, 1);
+//        }
 
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
     }
+
 }

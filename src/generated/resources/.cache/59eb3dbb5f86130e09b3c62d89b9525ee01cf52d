@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-31T22:09:10.944632353	Loot Tables
+// 1.21.1	2026-03-31T23:17:46.261630062	Loot Tables
 5299c27ac226ff3997123adbd263c19dbdef3e88 data/aboveandbeyond/loot_table/blocks/aeromud.json
 28b1f646152028a3d269b25bfcdaf176730c5178 data/aboveandbeyond/loot_table/blocks/aerosoil.json
 865dd36e1b1a1146b1dce45e3ebf42b5bb26798e data/aboveandbeyond/loot_table/blocks/aerosoil_path.json
@@ -59,3 +59,4 @@ acc6b7dc3f662e00fddd2dc9f0d652e4820a232c data/aboveandbeyond/loot_table/blocks/z
 210226d65dec0ab13475c1d78a5c7995ddf7e18c data/aboveandbeyond/loot_table/blocks/zenstone_wall.json
 9d615f691a63e9de0a21e9a4b29820df32c94abf data/aboveandbeyond/loot_table/entities/floofer.json
 f0892fd41dace83225883f7aff61dc8b8b123bb3 data/aboveandbeyond/loot_table/entities/koi.json
+af92387ef4bda9abce890c002834fc93a9e73dc5 data/aboveandbeyond/loot_table/gameplay/floofer_sneeze.json
