@@ -13,6 +13,7 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -27,7 +28,11 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         BlockTagsProvider blockTagsProvider = new AABBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
 
-        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(AABBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        List<LootTableProvider.SubProviderEntry> subProviderEntries = List.of(
+                new LootTableProvider.SubProviderEntry(AABBlockLootTableProvider::new, LootContextParamSets.BLOCK),
+                new LootTableProvider.SubProviderEntry(AABEntityLootTableProvider::new, LootContextParamSets.ENTITY)
+        );
+        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(), subProviderEntries, lookupProvider));
         generator.addProvider(event.includeServer(), new AABRecipeProvider(packOutput, lookupProvider));
 
         generator.addProvider(event.includeServer(), blockTagsProvider);

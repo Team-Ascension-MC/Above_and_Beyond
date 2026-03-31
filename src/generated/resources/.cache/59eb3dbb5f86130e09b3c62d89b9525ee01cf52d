@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-21T09:11:12.797529	Loot Tables
+// 1.21.1	2026-03-31T22:09:10.944632353	Loot Tables
 5299c27ac226ff3997123adbd263c19dbdef3e88 data/aboveandbeyond/loot_table/blocks/aeromud.json
 28b1f646152028a3d269b25bfcdaf176730c5178 data/aboveandbeyond/loot_table/blocks/aerosoil.json
 865dd36e1b1a1146b1dce45e3ebf42b5bb26798e data/aboveandbeyond/loot_table/blocks/aerosoil_path.json
@@ -48,12 +48,14 @@ f108499581a589cdf4a742d9bc04e9ed58f88a29 data/aboveandbeyond/loot_table/blocks/w
 dab94a467019fed332f4ac2ba87639cea1f2a234 data/aboveandbeyond/loot_table/blocks/welkin_wall_hanging_sign.json
 b1136a0b0995e3db60d9333304a96acf43ea5775 data/aboveandbeyond/loot_table/blocks/welkin_wall_sign.json
 a4b471cbe64210a53b4c48de31276f710c664f5e data/aboveandbeyond/loot_table/blocks/welkin_wood.json
+17c624867a293c26c1b8ddb95a597c46bd02c44f data/aboveandbeyond/loot_table/blocks/zen_gravel.json
 e0ae74413a591c53495155dd8ce5a7622135f71d data/aboveandbeyond/loot_table/blocks/zenstone.json
-acc6b7dc3f662e00fddd2dc9f0d652e4820a232c data/aboveandbeyond/loot_table/blocks/zenstone_bricks.json
 f0993455c7a5f3d3ec0822e7c656089d81da5da9 data/aboveandbeyond/loot_table/blocks/zenstone_brick_slab.json
 31da828ff18d1efc1bc5a11e84c91f8763abad75 data/aboveandbeyond/loot_table/blocks/zenstone_brick_stairs.json
 4bb45a3d71fe1607026bea58267b611e0d305554 data/aboveandbeyond/loot_table/blocks/zenstone_brick_wall.json
+acc6b7dc3f662e00fddd2dc9f0d652e4820a232c data/aboveandbeyond/loot_table/blocks/zenstone_bricks.json
 19d5f023543d787b252a4279b456cd03b90baca7 data/aboveandbeyond/loot_table/blocks/zenstone_slab.json
 1b3200d6a48d0dd8038341bacca8242b1c8f0d08 data/aboveandbeyond/loot_table/blocks/zenstone_stairs.json
 210226d65dec0ab13475c1d78a5c7995ddf7e18c data/aboveandbeyond/loot_table/blocks/zenstone_wall.json
-17c624867a293c26c1b8ddb95a597c46bd02c44f data/aboveandbeyond/loot_table/blocks/zen_gravel.json
+9d615f691a63e9de0a21e9a4b29820df32c94abf data/aboveandbeyond/loot_table/entities/floofer.json
+f0892fd41dace83225883f7aff61dc8b8b123bb3 data/aboveandbeyond/loot_table/entities/koi.json
